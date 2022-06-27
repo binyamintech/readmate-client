@@ -7,7 +7,7 @@ export default function Input(props) {
       <fieldset>
         <legend>{props.txt}</legend>
 
-        <input type="text" placeholder={""} />
+        <input type={props.type} placeholder={""} name={props.name} />
       </fieldset>
     </>
   );

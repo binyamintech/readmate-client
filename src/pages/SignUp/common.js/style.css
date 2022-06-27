@@ -5,13 +5,14 @@
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  gap: 0.5rem;
+  /* gap: 0.5rem; */
   /* font-size: 1.7rem; */
   /* position: absolute; */
   width: 81%;
   height: 8%;
-  left: 2.5rem;
-  top: 90%;
+  margin: 20px;
+  /* left: 2.5rem; */
+  /* top: 90%; */
   /* align-self: baseline; */
   background-color: var(--primary-color);
   color: var(--back-box-color);
@@ -27,9 +28,8 @@ fieldset {
   margin: 1rem;
 }
 
-input[type="text"] {
+input {
   box-sizing: border-box;
-
   position: relative;
   width: 85%;
   height: 6vh;
@@ -37,7 +37,6 @@ input[type="text"] {
   font-weight: 600;
   font-size: 100%;
   line-height: 2rem;
-
   background: #ffff;
   border: none;
   outline: 0;

@@ -6,17 +6,27 @@ import SignButton from "../common.js/SignButton";
 import React from "react";
 import Input from "../common.js/Input";
 import SubTitleLogin from "../../../components/common/SubTitleLogin";
-// import InputLogin from "../../../components/common/InputLogin";
+import SubmitForm from "../../../components/common/forms/SubmitForm/SubmitForm";
+import { useState } from "react";
 export const SignUp = () => {
+  const [formData, setFormData] = useState({});
   return (
     <div className="sign-up">
-      <FormTitle />
-      <SubTitleLogin />
-      <Input txt="last name" />
-      <PasswordInput name="password" />
-      <PasswordInput name="confirm password" />
-      <SignButton />
-      <FooterGoogle />
+      <SubmitForm
+        onSubmit={() => {
+          setFormData();
+        }}
+      >
+        <FormTitle />
+        <SubTitleLogin />
+        <Input txt="first name" type="text" name="firstName" />
+        <Input txt="last name" type="text" name="lastName" />
+        <Input txt="email" type="email" name="email" />
+        <Input type="password" name="password" />
+        <Input name="confirm-password" type="password" />
+        <SignButton title="Sign In" type="submit" />
+        <FooterGoogle />
+      </SubmitForm>
     </div>
   );
 };
