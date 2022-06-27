@@ -1,16 +1,17 @@
 import Test from "../../test/Test";
 import Header from "../header";
 import Nav from "../Nav";
-import Popup from "../popup/Popup";
+// import Popup from "../popup/Popup";
 import { Outlet, Route, Routes } from "react-router-dom"
-import TextArea from "../common/TextArea/Index";
-import Context from "../../../context";
+import { SignIn } from "../../../pages/SignIn/Sign-in/SignIn";
+// import TextArea from "../common/TextArea/Index";
+// import Context from "../../../context";
 
 
 function Main() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
 
       {/* content */}
       <Routes>
@@ -64,13 +65,13 @@ function Main() {
 
 
         {/* Test */}
-        <Route path='/test' element={<Test />} />
+        <Route path='/test' element={<SignIn />} />
 
 
       </Routes>
 
       <Nav />
-      <Popup />
+      {/* <Popup /> */}
     </>
   );
 }

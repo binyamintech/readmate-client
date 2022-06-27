@@ -1,11 +1,16 @@
 .FormTitle {
-  width: 192px;
-  height: 25px;
-  font-family: "Poppins";
-  font-style: normal;
+  display: flex;
+  position: relative;
+justify-content: center;
+  
+}
+
+.title{
+  color: var(--main-title-color);
   font-weight: 600;
   font-size: 20px;
-  color: #252525;
-  margin-left: 23%;
+  width: 192px;
+  height: 25px;
   margin-top: 15px;
 }
+

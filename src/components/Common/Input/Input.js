@@ -1,6 +1,6 @@
-import styles from './style.module.css'
+import './style.css'
 
-
+// Creator : Team d - oriya
 export default function Input(props) {
   return (
    <>

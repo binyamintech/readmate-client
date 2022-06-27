@@ -2,10 +2,10 @@ import "./style.css";
 
 import React from "react";
 // Creator : Team D - Dov
-export const FormTitle = () => {
+export const FormTitle = (props) => {
   return (
     <div className="FormTitle">
-      <div className="title">Create an Account</div>
+      <div className="title">{props.content}</div>
     </div>
   );
 };
