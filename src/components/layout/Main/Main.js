@@ -8,7 +8,7 @@ import SignUp from "../../../pages/SignUp/SignUp/SignUp";
 function Main() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
 
       {/* content */}
       <Routes>

@@ -1,9 +1,11 @@
 import "./style.css";
 
-export default function SignButton() {
+export default function SignButton(props) {
   return (
     <div>
-      <button className="submit_btn"> Sign In</button>;
+      <button className="submit_btn" type={props.type}>
+        {props.title}
+      </button>
     </div>
   );
 }
