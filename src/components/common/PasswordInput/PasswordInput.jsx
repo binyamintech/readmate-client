@@ -6,7 +6,7 @@ const PasswordInput = (props) => {
   return (
     <>
       <fieldset>
-        <legend>password</legend>
+        <legend>{props.name}</legend>
         <input className="password-input" type="password" placeholder="" />
         <AiOutlineEyeInvisible className="hide-icon" />
       </fieldset>

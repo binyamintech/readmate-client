@@ -6,10 +6,13 @@ function FooterGoogle() {
   return (
     <>
       <div className="footer-google">
-        <div className="google-button">
+        <button className="google-button">
           {" "}
           <AiOutlineGoogle className="google-icon" />
           <p>Sign Up With Google</p>
+        </button>
+        <div className="terms">
+          By Click signup you agree to our Terms of service and privacy policy
         </div>
       </div>
     </>

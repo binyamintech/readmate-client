@@ -1,3 +1,6 @@
-body {
-  text-align: center;
+.sign-up {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
