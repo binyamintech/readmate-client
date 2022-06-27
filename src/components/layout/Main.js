@@ -1,17 +1,14 @@
-import Test from "../../test/Test";
-import Header from "../header";
-import Nav from "../Nav";
-// import Popup from "../popup/Popup";
+import Header from "./Header";
+import Nav from "./Nav";
+import Popup from "./Popup";
 import { Outlet, Route, Routes } from "react-router-dom";
-// import TextArea from "../common/TextArea/Index";
-// import Context from "../../../context";
+import Test from "../test/Test";
 
 function Main() {
   return (
     <>
       <Header />
 
-      {/* content */}
       <Routes>
         {/* Team A */}
         <Route path="teams-path">

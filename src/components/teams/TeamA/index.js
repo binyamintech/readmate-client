@@ -1,7 +1,9 @@
-
+import Page4 from "../../../pages/Assessments/Page4"
 function TeamA() {
     return (
-        <div>TeamA</div>
+        <div>
+            <Page4 />
+        </div>
     )
 }
 
