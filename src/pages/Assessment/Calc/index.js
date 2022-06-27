@@ -24,6 +24,7 @@ function Calc() {
   std = std ** 0.5;
   console.log("avg:" + avg);
   console.log("std:" + std);
+  return {avg,std,wpm}
 
   return (
     <div>

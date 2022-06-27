@@ -3,11 +3,11 @@ import styles from "./style.module.css";
 import QuestionBoard from '../../../components/Common/QuestionBoard'
 import SubmitBtn from '../../../components/Common/SubmitBtn'
 import { useState } from 'react';
-
+import Calc from '../Calc';
 export default function Page5() {
     const [result, setResult] = useState([])
     const n = useNavigate();
-
+    let a = Calc()
     // const [arrOfAnswers,setarrOfAnswers]=useState([{orderNum:'',answer:''}])
     const arrOfAnswers = []
     // result.length=4;
@@ -37,7 +37,6 @@ export default function Page5() {
 
         }]
     const checkResults = () => {
-
         let count = 0;
         ans.map((v, i) => {
             if (v.ans == arr1[(i + 1)].answer) {
@@ -48,17 +47,14 @@ export default function Page5() {
             else {
                 // setarrOfAnswers({orderNum:v.orderNum,answer:false})
                 arrOfAnswers.push({ orderNum: arr1.orderNum, answer: false })
-
             }
 
         })
-        // console.log(arrOfAnswers)
-        // console.log(count)
+        
         console.log(arr1)
         console.log(count);
         console.log(arrOfAnswers)
-
-        n('/page6', { state: { count: count } })
+        n('/page6', { state: { count: count, WPM: a.wpm, STD: a.std, AVG: a.avg } })
     }
 
     const arr = [1, 2, 3, 4, 5, 6, 7]
