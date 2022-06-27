@@ -18,6 +18,7 @@ function Main() {
         <Route path="teams-path">
           <Route index element={<>team's components</>} />
           <Route path="components-path" element={<>team's components</>} />
+          {/* <Route path="/page5" element={<Page5 />} /> */}
         </Route>
 
         {/* Team B */}
