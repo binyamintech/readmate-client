@@ -1,6 +1,6 @@
 .footer-google {
   box-sizing: border-box;
-  height: 96px;
+  /* height: 96px; */
   background: #7d56a5;
   border: 1.5px solid #000000;
   border-radius: 40px 40px 0px 0px;
@@ -9,10 +9,14 @@
   width: 95%;
   text-align: center;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .google-button {
   box-sizing: border-box;
   margin: auto;
+  margin-top: 10%;
   display: flex;
   /* flex-direction: column; */
   justify-content: center;
@@ -34,4 +38,20 @@
   font-weight: bold;
   font-size: 25px;
   margin-right: 5px;
+}
+.terms {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  width: 253px;
+  height: 37px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }

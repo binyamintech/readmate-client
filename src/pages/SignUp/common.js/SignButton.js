@@ -1,6 +1,9 @@
-import styles from './style.module.css'
+import "./style.css";
 
-export function SignButton() {
-  return <button> Sign In</button>
-
+export default function SignButton() {
+  return (
+    <div>
+      <button className="submit_btn"> Sign In</button>;
+    </div>
+  );
 }
