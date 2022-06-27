@@ -2,7 +2,9 @@
     display: flex;
     /* justify-content: center; */
      flex-direction: column;
-   
+     height: 600px;
+     overflow-y: scroll;
+     
     gap: 120px;
 
 }

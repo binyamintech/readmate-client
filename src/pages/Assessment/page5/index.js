@@ -6,13 +6,15 @@ import { useState } from 'react';
 
 export default function Page5() {
     const [result, setResult] = useState([])
+    const n = useNavigate();
+
     // const [arrOfAnswers,setarrOfAnswers]=useState([{orderNum:'',answer:''}])
     const arrOfAnswers = []
     // result.length=4;
     let arr1 = [];
     arr1.length = 5;
-    result.map((v,i)=>{
-        arr1[v.orderNum]=v;
+    result.map((v, i) => {
+        arr1[v.orderNum] = v;
         console.log(arr1)
     })
     const ans = [
@@ -38,7 +40,7 @@ export default function Page5() {
 
         let count = 0;
         ans.map((v, i) => {
-            if ( v.ans == arr1[(i+1)].answer) {
+            if (v.ans == arr1[(i + 1)].answer) {
                 //    setarrOfAnswers({orderNum:v.orderNum,answer:true})
                 arrOfAnswers.push({ orderNum: arr1.orderNum, answer: true })
                 count++;
@@ -55,10 +57,11 @@ export default function Page5() {
         console.log(arr1)
         console.log(count);
         console.log(arrOfAnswers)
-        return count;
+
+        n('/page6', { state: { count: count } })
     }
 
-    const arr = [1, 2, 3, 4]
+    const arr = [1, 2, 3, 4, 5, 6, 7]
     return (
         <>
             <ul className={styles.questions}>
@@ -73,7 +76,6 @@ export default function Page5() {
             </ul>
             <div>
                 <SubmitBtn checkResults={checkResults} />
-
             </div>
             {
 
