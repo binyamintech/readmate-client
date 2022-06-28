@@ -12,14 +12,16 @@ import RoundedButton from "../RoundedButton";
 // Creator : Team H - Milka
 
 //instructions: when you use this component you should
-//  send a props named "freeStyle" with a value:false.
-// and a props named "time" with the number of seconds you want to excercise
-//for example: for 3 minutes, enter 180
+//  send the following props:
+//  1. "freeStyle" with a value:false.
+//  2. "time" with the value 180 for 3 minutes clock.
+//  3. object named "funcs" with the keys: "onPlay","onPause" and "onComplete"
+//     and values which are your functions for those situations.
 
 function Clock(props) {
-  const [play, setPlay] = useState(true);
-  let freeStyle = true; //Todo: change to props.freeStyle
-  let timeInSeconds = 10; //Todo: change to props.time;
+  const [play, setPlay] = useState(!props.freeStyle);
+  let freeStyle = props.freeStyle; //Todo: change to props.freeStyle
+  let timeInSeconds = 180; //Todo: change to props.time;
   const [rapid, setRapid] = useState(0);
   const [isFinish, setIsFinish] = useState(false);
 
@@ -48,7 +50,7 @@ function Clock(props) {
               !freeStyle && setPlay(!play);
             }}
           >
-            <RoundedButton></RoundedButton>
+            <RoundedButton isPlay={props.freeStyle}></RoundedButton>
           </div>
         }
       </div>
@@ -57,6 +59,7 @@ function Clock(props) {
 
   return (
     <>
+      {/*  this clock refers to freeStyle */}
       {freeStyle && (
         <button
           className={styles.plusMinus}
@@ -88,9 +91,6 @@ function Clock(props) {
       )}
     </>
   );
-
-  // return <CountdownCircleTimer></CountdownCircleTimer>;
-  // console.log("stop");
 }
 
 export default Clock;
