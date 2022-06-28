@@ -15,11 +15,12 @@ function Page3() {
   const [stream, setStream] = useState();
   let count = 0;
   let sucsses;
+  let loadCamera = async () => {
+    let str = await UmooveApi.API_loadUmooveLibrary();
+    if (str) setStream(str);
+  };
   useEffect(() => {
-    // UmooveApi.API_loadUmooveLibrary();
-    setTimeout(() => {
-      setStream(UmooveApi.API_getUmooveStream());
-    }, 4000);
+    loadCamera();
   }, []);
   useEffect(() => {
     console.log(stream);

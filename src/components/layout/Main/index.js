@@ -1,7 +1,7 @@
 import Test from "../../test/Test";
 import Nav from "../Nav";
 import Popup from "../Popup";
-import { Outlet, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import TeamA from "../../teams/TeamA";
 import Page1 from "../../../pages/Assessments/Page1";
 import Page6 from "../../../pages/Assessments/Page6";
@@ -27,7 +27,6 @@ function Main() {
           <Route path="page5" element={<Page5 />} />
           <Route path="page6" element={<Page6 />} />
           <Route index element={<TeamA />} />
-          <Route path="/page4" element={<Page4 />} />
           {/* <Route path="/page5" element={<Page5 />} /> */}
         </Route>
 
@@ -56,10 +55,10 @@ function Main() {
         </Route>
 
         {/* Team F */}
-        <Route path="/teamf">
+        {/* <Route path="/teamf">
           <Route index element={<TeamF />} />
           <Route path="components-path" element={<TeamF />} />
-        </Route>
+        </Route> */}
 
         {/* Team G */}
         <Route path="teams-path">
