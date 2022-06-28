@@ -16,8 +16,8 @@ function Page6() {
       <div className={styles.ratingAndScore}>
         <RatingAndScore wpm={120} std={5} compScore={8} />
       </div>
-      <SubmitBtn />
-      {/* Go to Dashboard */}
+      <SubmitBtn name="Go to Dashboard" />
+
     </div>
   );
 }

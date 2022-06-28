@@ -17,8 +17,8 @@ function Page4() {
 
     function onclick() {
         console.log("clicked");
-        UmooveApi.API_stopReading(exams.lines.length);//לבדוק
-        UmooveApi.API_stopUmoove();
+        // UmooveApi.API_stopReading();//לבדוק
+        // UmooveApi.API_stopUmoove();
         navigate('/teama/page5', { state: { exam: exams } })
     }
 

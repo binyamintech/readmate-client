@@ -11,24 +11,23 @@ import UmooveApi from '../../../components/api/UmooveApi';
 // Creator : Team A -efrat & Yehoantan
 function Page3() {
   const l = useLocation()
-
-
   const navigate = useNavigate()
   let videoRef = useRef()
   const [stream, setStream] = useState()
-  let count = 0;
+  const [count, setCount] = useState(0)
+
+
+  // let count = 0;
   let sucsses
   useEffect(() => {
-    UmooveApi.API_loadUmooveLibrary()
-    setTimeout(() => {
-      setStream(UmooveApi.API_getUmooveStream());
-    }, 2000)
+    UmooveApi.API_loadUmooveLibrary().then(st => setStream(st)).catch(e => alert("error"))
   }, [])
   useEffect(() => {
     console.log(stream);
     console.log(videoRef.current);
     if (stream) {
       videoRef.current.src = stream
+      videoRef.current.play()
     }
   }, [stream, videoRef])
   const start = () => {
@@ -39,11 +38,12 @@ function Page3() {
         clearInterval(interval)
       }
       sucsses = UmooveApi.API_getUmooveTracking()
+      console.log(sucsses);
       if (sucsses === true) {
         clearInterval(interval)
         navigate("/teama/page4", { state: { data: l.state.data } })
       }
-      count++
+      setCount(count + 1)
     }, 1000);
   }
   // start()
@@ -54,40 +54,9 @@ function Page3() {
         <div className={styles.camera}>
           <video ref={videoRef} srcObject={stream} />
         </div>
-        <Link to="/teama/page4"> <button> start now! </button></Link>
-        <FooterStart route="/teama/page4" startFunction={() => { console.log(":()"); }} title="Start now" explanation="hdnvdjnjrtnvjsdsdjkdfnjsnjknsdfjknsdfjsdkf" img={group} />
-        <img src={group} alt='' />
-  }, [stream, videoRef]);
-  const start = () => {
-          UmooveApi.API_getUmooveTracking();
-    const interval = setInterval(() => {
-          console.log(count);
-        if (count < 100) {
-          clearInterval(interval);
-      }
-        sucsses = UmooveApi.API_getUmooveTracking();
-        if (sucsses === true) {
-          clearInterval(interval);
-        navigate('/page4');
-      }
-        count++;
-    }, 1000);
-  };
-        start()
-        // const [pageName, setPageName] = useContext(pageNameContext) //adduming contect is in use
-        return (
-        <div>
-          <div>
-            <div className={styles.camera}>
-              {/* <video ref={videoRef} srcObject={stream} /> */}
-            </div>
-            <Link to="/page4">
-
-              <button> start now! </button>
-            </Link>
-            <img src={group} alt="" />
-          </div>
-        </div>
+        {/* <Link to="/teama/page4"> <button> start now! </button></Link> */}
+        <FooterStart route="" startFunction={() => { start() }} title="Start now" explanation="hdnvdjnjrtnvjsdsdjkdfnjsnjknsdfjknsdfjsdkf" img={group} />
+        {/* <img src={group} alt='' /> */}
       </div>
     </div>
   );
