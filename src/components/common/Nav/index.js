@@ -8,6 +8,7 @@ import { NavButton } from "../NavButton/NavButton";
 
 import { NavHead } from "../NavHead";
 
+// creator: shmuel asherov team-f
 export const NavBar = (props) => {
   return (
     <div className={`${styles.opacity}`}>
