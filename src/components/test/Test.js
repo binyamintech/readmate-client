@@ -1,3 +1,7 @@
+// import { NavBar } from "../Common/Nav/index";
+
+import Box1 from "../../pages/Dashboard/options/index";
+
 import Dashboard from "../../pages/Dashboard";
 import TeamF from "../teams/TeamF";
 import { dataContext } from "../../context/context";
@@ -10,11 +14,13 @@ function Test() {
   });
   return (
     <>
-      <TeamF />
+      <Box1 />
+      {/* <TeamF /> */}
       {/* <Options /> */}
       {/* <Nav /> */}
       {/* <Dashboard /> */}
     </>
   );
 }
+
 export default Test;
