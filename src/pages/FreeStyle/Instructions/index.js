@@ -12,7 +12,7 @@ function Instructions() {
     return <>
         {/* TODO: ask Text creators to make it nicer. */}
         <div><Text text={text} title={"instructions"}></Text></div>
-        <div><Link to={"/teams/TeamH/Training"}><SubmitBtn /></Link></div>
+        <div><SubmitBtn name ={"Go Training"} path = {"/team-h/training"}  /></div>
     </>
 }
 

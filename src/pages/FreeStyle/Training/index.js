@@ -1,5 +1,6 @@
 import styles from "./style.module.css";
 import Clock from "../../../components/common/Clock";
+import SoundFooter from "../../../components/common/SoundFooter"
 
 
 // shaulFuncs = {
@@ -10,13 +11,13 @@ import Clock from "../../../components/common/Clock";
 // }
 
 // Creator : Team H - Nurit & Milka
-function Temp() {
+function Training() {
   return (
     <>
       <Clock freeStyle={true} time={180} ></Clock>
-      <span>add footer here</span>
+      <SoundFooter></SoundFooter>
     </>
   );
 }
 
-export default Temp;
+export default Training;
