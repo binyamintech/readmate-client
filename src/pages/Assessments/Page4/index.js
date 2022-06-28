@@ -1,7 +1,7 @@
 import styles from './style.module.css'
 import TitleRead from '../../../components/common/TitleRead'
 import SubmitBtn from '../../../components/common/SubmitBtn'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import '../../../components/api/UmooveApi'
 // import { Link } from 'react-router-dom'
 import UmooveApi from '../../../components/api/UmooveApi'
@@ -9,6 +9,7 @@ import examImg from './image/exam.jpg'
 import { useNavigate, useLocation } from 'react-router-dom';
 
 // Creator : Team A - Amos
+// const [pageName, setPageName] = useContext(pageNameContext)
 
 function Page4() {
     let navigate = useNavigate()

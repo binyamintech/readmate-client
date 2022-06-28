@@ -1,7 +1,7 @@
-import SubmitBtn from "../../../components/Common/SubmitBtn";
+import SubmitBtn from "../../../components/common/SubmitBtn";
 import styles from "./style.module.css";
 import Result from "./Result.svg";
-import RatingAndScore from "../../../components/Common/ReatingAndScore";
+import RatingAndScore from "../../../components/common/ReatingAndScore";
 // import { useContext } from "react";
 // import pageNameContext from "../../../components/layout/Layout";
 // Creator : Team A - Efart
