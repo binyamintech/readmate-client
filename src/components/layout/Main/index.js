@@ -81,7 +81,7 @@ function Main() {
         {/* </Route> */}
 
         {/* Test */}
-        <Route path="/test" element={<Page1 />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
 
       <Nav />
