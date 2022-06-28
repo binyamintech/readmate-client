@@ -25,7 +25,7 @@ function Clock(props) {
   const [isFinish, setIsFinish] = useState(false);
 
   isplay&&props.funcs.onPlay()
-  
+
   function complete() {
     setIsFinish(true);
     props.funcs.onComplete();
@@ -36,7 +36,8 @@ function Clock(props) {
     const seconds = remainingTime - minutes * 60;
 
     return (
-      <div className="timer">
+      <div className={styles.wrapping}>
+      <div className= {styles.timer}>
         {freeStyle ? (
           <div className={styles.squarebutton}>
             <SquareButton>{rapid} LPM</SquareButton>
@@ -58,18 +59,18 @@ function Clock(props) {
               isplay && props.funcs.onPause();
             }}
           >
-            <RoundedButton
-              isplay={isplay}
-              setIsPlay={setIsPlay}
-            ></RoundedButton>
+        <div className={styles.roundButton}><RoundedButton isPlay={!freeStyle}></RoundedButton></div>
           </div>
         )}
+      </div>
       </div>
     );
   };
 
   return (
-    <>
+  
+    <div className={styles.wrapClock}>
+      {/*  this clock refers to freeStyle */}
       {freeStyle && (
         <button
           className={styles.plusMinus}
@@ -105,7 +106,7 @@ function Clock(props) {
           <div className={styles.plusMinusSign}>-</div>
         </button>
       )}
-    </>
+      </div>
   );
 
   // return <CountdownCircleTimer></CountdownCircleTimer>;

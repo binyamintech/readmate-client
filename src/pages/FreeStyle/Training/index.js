@@ -4,6 +4,7 @@ import Clock from "../../../components/common/Clock";
 import React from "react";
 import {useEffect, useState, useRef} from "react"
 import audioSrc from "./wush_mp3/wush_10_1min.mp3"
+import SoundFooter from "../../../components/common/SoundFooter"
 
 
 // TODO: implement the rapid function that will implement the audio changes
