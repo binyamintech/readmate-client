@@ -54,7 +54,7 @@ function Page3() {
                     <video ref={videoRef} srcObject={stream} />
                 </div>
                 <Link to="/teama/page4"> <button> start now! </button></Link>
-                <FooterStart />
+                <FooterStart route ="/teama/page4" startFunction={() => {console.log(":()");}} title="Start now" explanation="hdnvdjnjrtnvjsdsdjkdfnjsnjknsdfjknsdfjsdkf" img={group} />
                 <img src={group} alt='' />
             </div>
         </div>
