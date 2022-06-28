@@ -9,19 +9,11 @@ import RatingAndScore from '../common/ReatingAndScore'
 // import SubmitBtn from '../common/SubmitBtn'
 import React from "react";
 import Page5 from '../../pages/Assessments/page5';
-// function Test() {
+
 function Test() {
-    // function Test() {
+
     return (<>
-      <Page5 />
-        {/* <Page4 />
-        <RatingAndScore wpm={120} std={5} compScore={8} />
-        {/* <Page6 /> */}
-        {/* <Calc /> */}
-        {/* </>) */} 
-
-
-      
+        <Page5 />
     </>)
 }
 {/* } */ }

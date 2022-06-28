@@ -7,7 +7,9 @@ import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 // import Calc from '../Calc';
 export default function Page5() {
-    // let location = useLocation();
+    let location = useLocation();
+    const data=location.state.exam;
+    console.log(data)
     function Calc() {
         // server
         const numberOfLettersPerLine = [40, 50, 44, 80, 54, 75, 42, 14];
