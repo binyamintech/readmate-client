@@ -23,8 +23,10 @@ export const SignUp = () => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const body = {
-      username: data.get("email"),
+      email: data.get("email"),
       password: data.get("pass"),
+      firstName: data.get("firstName"),
+      lastName: data.get("lastName"),
     };
     const newBody = { ...body, password: undefined };
     console.log({ newBody });

@@ -2,16 +2,16 @@ import Test from "../../test/Test";
 import Header from "../header";
 import Nav from "../Nav";
 import Popup from "../Popup";
-import { Outlet, Route, Routes } from "react-router-dom"
+import { Outlet, Route, Routes } from "react-router-dom";
 // import TextArea from "../common/TextArea/Index";
 import TeamH from "../../teams/TeamH";
-import Training from "../../../pages/FreeStyle/Training"
+import Training from "../../../pages/FreeStyle/Training";
 
-import Exercise from "../../../pages/TrainReading/Level/Exercise"
-import ExerciseClock from "../../../pages/TrainReading/Level/ExerciseClock"
-import ExerciseQuestion from "../../../pages/TrainReading/Level/ExerciseQuestion"
-import ExerciseRate from "../../../pages/TrainReading/Level/ExerciseRate"
-import ExerciseResult from "../../../pages/TrainReading/Level/ExerciseResult"
+import Exercise from "../../../pages/TrainReading/Level/Exercise";
+import ExerciseClock from "../../../pages/TrainReading/Level/ExerciseClock";
+import ExerciseQuestion from "../../../pages/TrainReading/Level/ExerciseQuestion";
+import ExerciseRate from "../../../pages/TrainReading/Level/ExerciseRate";
+import ExerciseResult from "../../../pages/TrainReading/Level/ExerciseResult";
 // import TeamC from '../../teams/TeamC'
 
 // import Popup from "../Popup/Popup"
@@ -22,6 +22,8 @@ import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 
 import Results from "../../../pages/TrainFocus/TrainFocusResults";
 import StartFocus from "../../../pages/TrainFocus/StartFocus/StartFocus";
+import SignUp from "../../../pages/SignUp/SignUp/SignUp";
+import { SignIn } from "../../../pages/SignIn/Sign-in/SignIn";
 // import Exercise from "../../../pages/TrainFocus/Exercise";
 //  import Popup from "./popup/Popup";
 // import { Outlet, Route, Routes } from "react-router-dom";
@@ -32,7 +34,6 @@ function Main() {
   return (
     <>
       <Header />
-
       content
       <Routes>
         {/* Team A */}
@@ -93,9 +94,9 @@ function Main() {
         </Route>
 
         {/* Test */}
-        <Route path="/test" element={<Test />} />
+        <Route path="/test" element={<SignUp />} />
+        <Route path="/test" element={<SignIn />} />
       </Routes>
-
       <Nav />
       {/* <Popup /> */}
     </>
