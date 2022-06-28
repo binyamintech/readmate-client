@@ -1,8 +1,13 @@
+import React from 'react'
+import TextArea from '../../common/TextArea'
 
-function TeamB() {
+
+const index = () => {
     return (
-        <div>TeamA</div>
+        <div>
+            <TextArea />
+        </div>
     )
 }
 
-export default TeamB
+export default index
