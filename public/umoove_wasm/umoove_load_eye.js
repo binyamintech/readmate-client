@@ -262,13 +262,15 @@ var loadUmooveLibrary = () => {
           },
         })
         .then(function (stream) {
-          resolve(stream);
+
           window.UMStream = stream;
           video.srcObject = stream;
           // videoPreview.srcObject = stream;
           //video.width = videoWidth;
           //video.height = videoHeight;
           video.play();
+
+          resolve(stream);
           // videoPreview.play();
           // video.addEventListener('play', function (e) {
           // if (e.type == 'play') {
