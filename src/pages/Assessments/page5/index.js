@@ -3,6 +3,8 @@ import styles from "./style.module.css";
 import QuestionBoard from '../../../components/common/QuestionBoard'
 import SubmitBtn from '../../../components/common/SubmitBtn'
 import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+
 
 export default function Page5() {
     const [result, setResult] = useState([])
@@ -34,28 +36,29 @@ export default function Page5() {
             ans: false
 
         }]
+    let navigate = useNavigate()
     const checkResults = () => {
+        console.log("aaa");
+        // let count = 0;
+        // ans.map((v, i) => {
+        //     if (v.ans == arr1[(i + 1)].answer) {
+        //         //    setarrOfAnswers({orderNum:v.orderNum,answer:true})
+        //         arrOfAnswers.push({ orderNum: arr1.orderNum, answer: true })
+        //         count++;
+        //     }
+        //     else {
+        //         // setarrOfAnswers({orderNum:v.orderNum,answer:false})
+        //         arrOfAnswers.push({ orderNum: arr1.orderNum, answer: false })
 
-        let count = 0;
-        ans.map((v, i) => {
-            if (v.ans == arr1[(i + 1)].answer) {
-                //    setarrOfAnswers({orderNum:v.orderNum,answer:true})
-                arrOfAnswers.push({ orderNum: arr1.orderNum, answer: true })
-                count++;
-            }
-            else {
-                // setarrOfAnswers({orderNum:v.orderNum,answer:false})
-                arrOfAnswers.push({ orderNum: arr1.orderNum, answer: false })
+        //     }
 
-            }
-
-        })
+        // })
+        // // console.log(arrOfAnswers)
+        // // console.log(count)
+        // console.log(arr1)
+        // console.log(count);
         // console.log(arrOfAnswers)
-        // console.log(count)
-        console.log(arr1)
-        console.log(count);
-        console.log(arrOfAnswers)
-        return count;
+        navigate('/teama/page6', { state: { exam: "" } })
     }
 
     const arr = [1, 2, 3, 4]
@@ -72,43 +75,41 @@ export default function Page5() {
                 })}
             </ul>
             <div>
-                <SubmitBtn checkResults={checkResults} />
+                <SubmitBtn onclick={checkResults} name="Done" />
 
             </div>
-            {
 
-            }
 
         </>
     )
 }
-function Calc() {
-    // server
-    const numberOfLettersPerLine = [40, 50, 44, 80, 54, 75, 42, 14];
-    //from api
-    const timePerLine = [5000, 8000, 7000, 1000, 2000, 3000];
-    numberOfLettersPerLine.pop();
-    numberOfLettersPerLine.shift();
-    let wpm = [];
-    let sum = 0;
-    for (let i = 0; i < timePerLine.length; i++) {
-        wpm.push(numberOfLettersPerLine[i] / 5 / ((timePerLine[i] / 1000) * 60));
-        sum += timePerLine[i];
-    }
-    console.log(wpm);
-    let avg = sum / timePerLine.length;
-    let std = 0;
-    for (let i = 0; i < wpm.length; i++) {
-        std += (wpm[i] - avg) ** 2;
-    }
-    std = std ** 0.5;
-    console.log("avg:" + avg);
-    console.log("std:" + std);
+// function Calc() {
+//     // server
+//     const numberOfLettersPerLine = [40, 50, 44, 80, 54, 75, 42, 14];
+//     //from api
+//     const timePerLine = [5000, 8000, 7000, 1000, 2000, 3000];
+//     numberOfLettersPerLine.pop();
+//     numberOfLettersPerLine.shift();
+//     let wpm = [];
+//     let sum = 0;
+//     for (let i = 0; i < timePerLine.length; i++) {
+//         wpm.push(numberOfLettersPerLine[i] / 5 / ((timePerLine[i] / 1000) * 60));
+//         sum += timePerLine[i];
+//     }
+//     console.log(wpm);
+//     let avg = sum / timePerLine.length;
+//     let std = 0;
+//     for (let i = 0; i < wpm.length; i++) {
+//         std += (wpm[i] - avg) ** 2;
+//     }
+//     std = std ** 0.5;
+//     console.log("avg:" + avg);
+//     console.log("std:" + std);
 
-    return (
-        <div>
-            <div>Avg {avg}</div>
-            <div>Std {std}</div>
-        </div>
-    );
-}
+//     return (
+//         <div>
+//             <div>Avg {avg}</div>
+//             <div>Std {std}</div>
+//         </div>
+//     );
+// }

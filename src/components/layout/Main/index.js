@@ -5,10 +5,11 @@ import { Route, Routes } from "react-router-dom";
 import TeamA from "../../teams/TeamA";
 import Page1 from "../../../pages/Assessments/Page1";
 import Page6 from "../../../pages/Assessments/Page6";
-import Page5 from "../../../pages/Assessments/Page5";
+import Page5 from "../../../pages/Assessments/page5";
 import Page4 from "../../../pages/Assessments/Page4";
 import Page3 from "../../../pages/Assessments/Page3";
-import Header from "../Header";
+import Header from "../header";
+import RatingAndScore from "../../common/ReatingAndScore";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
 
@@ -16,8 +17,6 @@ function Main() {
   return (
     <>
       <Header />
-
-      content
       <Routes>
         {/* Team A */}
         <Route path="teama">
@@ -81,7 +80,7 @@ function Main() {
         {/* </Route> */}
 
         {/* Test */}
-        <Route path="/test" element={<Page1 />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
 
       <Nav />
