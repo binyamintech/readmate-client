@@ -4,6 +4,11 @@ import Nav from "../Nav";
 // import Popup from "../popup/Popup";
 import { Outlet, Route, Routes } from "react-router-dom";
 import TeamA from "../../teams/TeamA";
+import Page1 from "../../../pages/Assessments/Page1";
+import Page3 from "../../../pages/Assessments/Page3";
+import Page4 from "../../../pages/Assessments/Page4";
+import Page5 from "../../../pages/Assessments/page5";
+import Page6 from "../../../pages/Assessments/Page6";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
 
@@ -63,7 +68,7 @@ function Main() {
         </Route>
 
         {/* Test */}
-        <Route path="/test" element={<Test />} />
+        <Route path="/test" element={<Page1/>} />
       </Routes>
 
       <Nav />

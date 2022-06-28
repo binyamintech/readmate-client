@@ -19,13 +19,14 @@ function Page3() {
         UmooveApi.API_loadUmooveLibrary()
         setTimeout(()=>{
             setStream( UmooveApi.API_getUmooveStream());
-        },2000)
+        },10000)
     }, [])
     useEffect(()=>{ 
         console.log(stream);
         console.log(videoRef.current);
         if(stream){
             videoRef.current.src = stream
+            debugger
         }
     },[stream,videoRef])
     const start=()=>{

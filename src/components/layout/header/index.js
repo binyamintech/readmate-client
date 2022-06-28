@@ -11,8 +11,8 @@ export default function Header(props) {
       </div>
 
       <div>
-        {"Page Name"}
-        {/* {props.pageName} - alternative  */}
+        {pageName}
+       
       </div>
 
       <div></div>
