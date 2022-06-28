@@ -6,7 +6,7 @@ export default function SubmitBtn({ path, name, onclick }) {
     <div className="submit">
       //
       {/* <Link to={path}> */}
-      <div type="button" onClick={(event) => onclick(event)}>
+      <div type="button" onClick={onclick}>
         <div className="word">{name}</div>
       </div>
       {/* </Link> */}

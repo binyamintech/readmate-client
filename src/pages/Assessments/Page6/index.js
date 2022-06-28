@@ -6,8 +6,8 @@ import { useContext } from "react";
 import pageNameContext from "../../../components/layout/Layout";
 // Creator : Team A - Efart
 function Page6() {
-  const [pageName, setPageName] = useContext(pageNameContext);
-  setPageName("Result Summary");
+  // const [pageName, setPageName] = useContext(pageNameContext);
+  // setPageName("Result Summary");
   return (
     <div className={styles.page6}>
       <div>
