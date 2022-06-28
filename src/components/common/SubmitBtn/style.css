@@ -6,7 +6,7 @@
   align-items: center;
   padding: 16px 33px;
   gap: 8px;
-  position: absolute;
+  position: relative;
   width: 90%;
   height: 6%;
   left: 5%;

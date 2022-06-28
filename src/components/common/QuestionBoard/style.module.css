@@ -157,6 +157,7 @@
   width: 382px;
   height: 125px;
   left: 16px;
+  left: 0;
   top: 111.37px;
   background: #7d56a5;
   border: 1.5px solid #252525;
@@ -170,6 +171,7 @@
   width: 382px;
   height: 125px;
   left: 16.36px;
+  left: 0.36px;
   top: 110.63px;
   background: #feefec;
   border: 1.5px solid #252525;
@@ -254,6 +256,9 @@
 .Falsebtn:hover {
   background: #f39c12;
     color: #FFFFFF;
+}
+.color{
+
 }
 /* .Truefalsetext {
   width: 38px;
