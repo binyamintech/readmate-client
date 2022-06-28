@@ -15,7 +15,6 @@ import ExerciseResult from "../../../pages/TrainReading/Level/ExerciseResult";
 // import TeamC from '../../teams/TeamC'
 
 // import Popup from "../Popup/Popup"
-
 import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
