@@ -1,4 +1,4 @@
-import { NavBackButt } from "../../common/NavBackButt";
+import { NavBackButt } from "../../common/navBackButt";
 import CancelBtn from "../../common/cancelBtn";
 import DashboardBtn from "../../common/DashboardBtn";
 import TrueBtn from "../../common/trueBtn";
@@ -11,7 +11,6 @@ function TeamF() {
       <CancelBtn />
       <DashboardBtn />
       <TrueBtn />
-
       <NavBackButt />
       <NavBar />
     </>
