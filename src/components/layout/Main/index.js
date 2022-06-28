@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import TeamA from "../../teams/TeamA";
 import Page1 from "../../../pages/Assessments/Page1";
 import Page6 from "../../../pages/Assessments/Page6";
-import Page5 from "../../../pages/Assessments/page5";
+import Page5 from "../../../pages/Assessments/Page5";
 import Page4 from "../../../pages/Assessments/Page4";
 import Page3 from "../../../pages/Assessments/Page3";
 import Header from "../header";
@@ -73,15 +73,15 @@ function Main() {
         {/* <Route path="/result" element={<Results />} /> */}
         {/* </Route> */}
 
-        {/* Team H */}
+        {/* Team H
         <Route path="/teams/TeamH">
           {/* <Route index element={<TeamH />} /> */}
-          {/* <Route path="/teams/TeamH/Training" element={<Training />} /> */}
-          {/* <Route path="components-path" element={<>team's components</>} /> */}
-        </Route>
+        {/* <Route path="/teams/TeamH/Training" element={<Training />} /> */}
+        {/* <Route path="components-path" element={<>team's components</>} /> */}
+        {/* </Route> */}
 
         {/* Test */}
-        <Route path="/test" element={<Test />} />
+        <Route path="/test" element={<Page1 />} />
       </Routes>
 
       <Nav />
