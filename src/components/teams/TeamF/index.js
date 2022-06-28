@@ -11,7 +11,6 @@ function TeamF() {
       <CancelBtn />
       <DashboardBtn />
       <TrueBtn />
-
       <NavBackButt />
       <NavBar />
     </>

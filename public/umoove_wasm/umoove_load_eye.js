@@ -187,178 +187,175 @@ wasmWorker.onmessage = function (e) {
 };
 
 //this listener waits for the wasm files and ambient be fully loaded
-function loadUmooveLibrary() {
-  const canvas = document.createElement("canvas");
-  canvas.width = videoWidth;
-  canvas.height = videoHeight;
-  const ctx = canvas.getContext("2d");
+var loadUmooveLibrary = () => {
+  return new Promise((resolve, reject) => {
+    const canvas = document.createElement("canvas");
+    canvas.width = videoWidth;
+    canvas.height = videoHeight;
+    const ctx = canvas.getContext("2d");
 
-  //const videoSelect = document.querySelector('select#videoSource');
-  //const selectors = [videoSelect];
+    //const videoSelect = document.querySelector('select#videoSource');
+    //const selectors = [videoSelect];
 
-  var video = document.getElementById("video"); // video is the id of video tag
-  // var videoPreview = document.getElementById("videoStream"); // video is the id of video tag
+    var video = document.getElementById("video"); // video is the id of video tag
+    // var videoPreview = document.getElementById("videoStream"); // video is the id of video tag
 
-  function handleError(error) {
-    console.log(
-      "navigator.MediaDevices.getUserMedia error: ",
-      error.message,
-      error.name
-    );
-  }
-
-  // function gotDevices(deviceInfos) {
-  // // Handles being called several times to update labels. Preserve values.
-  // const values = selectors.map(select => select.value);
-
-  // selectors.forEach(select => {
-  // while (select.firstChild) {
-  // select.removeChild(select.firstChild);
-  // }
-  // });
-
-  // for (let i = 0; i !== deviceInfos.length; ++i) {
-  // const deviceInfo = deviceInfos[i];
-  // const option = document.createElement('option');
-  // option.value = deviceInfo.deviceId;
-  // if (deviceInfo.kind === 'videoinput') {
-  // option.text = deviceInfo.label || `camera ${videoSelect.length + 1}`;
-  // videoSelect.appendChild(option);
-  // } else {
-  // console.log('Some other kind of source/device: ', deviceInfo);
-  // }
-  // }
-  // selectors.forEach((select, selectorIndex) => {
-  // if (Array.prototype.slice.call(select.childNodes).some(n => n.value === values[selectorIndex])) {
-  // select.value = values[selectorIndex];
-  // }
-  // });
-  // start();
-  // }
-
-  // navigator.mediaDevices.getUserMedia( { audio:false, video: true})
-  // .then(navigator.mediaDevices.enumerateDevices().then(gotDevices).catch(handleError));
-
-  // videoSelect.onchange =
-  start();
-
-  function start() {
-    if (window.stream) {
-      window.stream.getTracks().forEach(function (track) {
-        track.stop();
-      });
+    function handleError(error) {
+      console.log(
+        "navigator.MediaDevices.getUserMedia error: ",
+        error.message,
+        error.name
+      );
     }
 
-    //navigator.mediaDevices.getUserMedia( { video: {deviceId: videoSource ? {exact: videoSource.value} : undefined, frameRate: { min: 20, ideal: 29, max: 29 } }, audio: false } )
-    navigator.mediaDevices
-      .getUserMedia({
-        audio: false,
-        video: {
-          height: { min: 720, max: 720 },
-          width: { min: 960, max: 960 },
-          frameRate: { min: 15, ideal: 28, max: 30 },
-          facingMode: "user",
-        },
-      })
-      .then(function (stream) {
-        window.UMStream = stream;
-        video.srcObject = stream;
-        // videoPreview.srcObject = stream;
-        //video.width = videoWidth;
-        //video.height = videoHeight;
-        video.play();
-        // videoPreview.play();
-        // video.addEventListener('play', function (e) {
-        // if (e.type == 'play') {
-        // // Video has played, perform an action
-        // const rec = window.recorder;
-        // rec.init(stream, "button#record", "button#download");
-        // }
-        // }, false);
+    // function gotDevices(deviceInfos) {
+    // // Handles being called several times to update labels. Preserve values.
+    // const values = selectors.map(select => select.value);
 
-        //whe the user accepts the camera acess starts main loop
+    // selectors.forEach(select => {
+    // while (select.firstChild) {
+    // select.removeChild(select.firstChild);
+    // }
+    // });
+
+    // for (let i = 0; i !== deviceInfos.length; ++i) {
+    // const deviceInfo = deviceInfos[i];
+    // const option = document.createElement('option');
+    // option.value = deviceInfo.deviceId;
+    // if (deviceInfo.kind === 'videoinput') {
+    // option.text = deviceInfo.label || `camera ${videoSelect.length + 1}`;
+    // videoSelect.appendChild(option);
+    // } else {
+    // console.log('Some other kind of source/device: ', deviceInfo);
+    // }
+    // }
+    // selectors.forEach((select, selectorIndex) => {
+    // if (Array.prototype.slice.call(select.childNodes).some(n => n.value === values[selectorIndex])) {
+    // select.value = values[selectorIndex];
+    // }
+    // });
+    // start();
+    // }
+
+    // navigator.mediaDevices.getUserMedia( { audio:false, video: true})
+    // .then(navigator.mediaDevices.enumerateDevices().then(gotDevices).catch(handleError));
+
+    // videoSelect.onchange =
+    start();
+
+    function start() {
+      if (window.stream) {
+        window.stream.getTracks().forEach(function (track) {
+          track.stop();
+        });
+      }
+
+      //navigator.mediaDevices.getUserMedia( { video: {deviceId: videoSource ? {exact: videoSource.value} : undefined, frameRate: { min: 20, ideal: 29, max: 29 } }, audio: false } )
+      navigator.mediaDevices
+        .getUserMedia({
+          audio: false,
+          video: {
+            height: { min: 720, max: 720 },
+            width: { min: 960, max: 960 },
+            frameRate: { min: 15, ideal: 28, max: 30 },
+            facingMode: "user",
+          },
+        })
+        .then(function (stream) {
+          resolve(stream);
+          window.UMStream = stream;
+          video.srcObject = stream;
+          // videoPreview.srcObject = stream;
+          //video.width = videoWidth;
+          //video.height = videoHeight;
+          video.play();
+          // videoPreview.play();
+          // video.addEventListener('play', function (e) {
+          // if (e.type == 'play') {
+          // // Video has played, perform an action
+          // const rec = window.recorder;
+          // rec.init(stream, "button#record", "button#download");
+          // }
+          // }, false);
+
+          //whe the user accepts the camera acess starts main loop
+          if ("requestVideoFrameCallback" in HTMLVideoElement.prototype) {
+            video.requestVideoFrameCallback(() => update(video));
+          } else {
+            window.requestAnimationFrame(() => update(video));
+          }
+        })
+        .catch(function (err) {
+          reject(false);
+          console.log(err);
+          console.log("An error occurred! " + err);
+        });
+
+      var frameGap = 33;
+      var frameCounter = 0;
+      var videoFrameCounter = 0;
+      var previousTimestamp = 0;
+      function update(video) {
+        videoFrameCounter++;
+        if (!workerBusy) {
+          workerBusy = true;
+
+          frameCounter++;
+          ///Calculate frame rate
+          currentTimestamp = Date.now();
+          let currentGap;
+          if (previousTimestamp > 0) {
+            currentGap = currentTimestamp - previousTimestamp;
+
+            frameGap =
+              frameGap + (1.0 / frameCounter) * (currentGap - frameGap);
+          }
+          previousTimestamp = currentTimestamp;
+          /////////////////////////////
+
+          var t0 = performance.now();
+          ctx.drawImage(video, 0, 0, videoWidth, videoHeight);
+          var t1 = performance.now();
+          //console.log("+++++++++++++++ Draw image on context" + (t1 - t0) + " milliseconds.")
+
+          t0 = performance.now();
+          //capture the data as UIntClampedArray and instantiate something that cpp can understand
+          let pixelArray = ctx.getImageData(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+          ).data;
+          t1 = performance.now();
+          //console.log("+++++++++++++++ Get image data and " + (t1 - t0) + " milliseconds.")
+
+          //execute the identification function
+          //let returned = _processUmoove(pixels.byteOffset, umooveHeapBytes.byteOffset);
+
+          t0 = performance.now();
+
+          //console.log("pixelArray [0] = "+ pixelArray[0]);
+          wasmWorker.postMessage(["process", [0], pixelArray]);
+
+          t1 = performance.now();
+          //console.log("+++++++++++++++ time ", t0, " counter:", frameCounter);
+
+          //console.log("Returned:"+ returned);//   UMirisPos: Left("+UMirisPos.left.x+","+UMirisPos.left.y+") "+" Right("+UMirisPos.right.x+","+UMirisPos.right.y+") ");
+          //console.log("UMDiam:"+ UMDiam + "   UMirisPix: Left("+UMirisPix.left.x+","+UMirisPix.left.y+") "+" Right("+UMirisPix.right.x+","+UMirisPix.right.y+") ");
+          //console.log("Filtered   UMirisPix: Left("+UMirisPixFiltered.left.x+","+UMirisPixFiltered.left.y+") "+" Right("+UMirisPixFiltered.right.x+","+UMirisPixFiltered.right.y+") ");
+        }
+        // else {
+        //   console.log("+++++ Skipped frame:" + (videoFrameCounter - frameCounter) + " Processed frames: " + frameCounter + "/"+ videoFrameCounter);
+        // }
+
+        //updateCircles();
+        //request the browser a new loop, it will do when it's ready
         if ("requestVideoFrameCallback" in HTMLVideoElement.prototype) {
           video.requestVideoFrameCallback(() => update(video));
         } else {
           window.requestAnimationFrame(() => update(video));
         }
-      })
-      .catch(function (err) {
-        alert("err");
-        console.log("An error occurred! " + err);
-      });
-
-    var frameGap = 33;
-    var frameCounter = 0;
-    var videoFrameCounter = 0;
-    var previousTimestamp = 0;
-    function update(video) {
-      videoFrameCounter++;
-      if (!workerBusy) {
-        workerBusy = true;
-
-        frameCounter++;
-        ///Calculate frame rate
-        currentTimestamp = Date.now();
-        let currentGap;
-        if (previousTimestamp > 0) {
-          currentGap = currentTimestamp - previousTimestamp;
-
-          frameGap = frameGap + (1.0 / frameCounter) * (currentGap - frameGap);
-        }
-        previousTimestamp = currentTimestamp;
-        /////////////////////////////
-
-        var t0 = performance.now();
-        ctx.drawImage(video, 0, 0, videoWidth, videoHeight);
-        var t1 = performance.now();
-        //console.log("+++++++++++++++ Draw image on context" + (t1 - t0) + " milliseconds.")
-
-        t0 = performance.now();
-        //capture the data as UIntClampedArray and instantiate something that cpp can understand
-        let pixelArray = ctx.getImageData(
-          0,
-          0,
-          canvas.width,
-          canvas.height
-        ).data;
-        t1 = performance.now();
-        //console.log("+++++++++++++++ Get image data and " + (t1 - t0) + " milliseconds.")
-
-        //execute the identification function
-        //let returned = _processUmoove(pixels.byteOffset, umooveHeapBytes.byteOffset);
-
-        t0 = performance.now();
-
-        //console.log("pixelArray [0] = "+ pixelArray[0]);
-        wasmWorker.postMessage(["process", [0], pixelArray]);
-
-        t1 = performance.now();
-        //console.log("+++++++++++++++ time ", t0, " counter:", frameCounter);
-
-        //console.log("Returned:"+ returned);//   UMirisPos: Left("+UMirisPos.left.x+","+UMirisPos.left.y+") "+" Right("+UMirisPos.right.x+","+UMirisPos.right.y+") ");
-        //console.log("UMDiam:"+ UMDiam + "   UMirisPix: Left("+UMirisPix.left.x+","+UMirisPix.left.y+") "+" Right("+UMirisPix.right.x+","+UMirisPix.right.y+") ");
-        //console.log("Filtered   UMirisPix: Left("+UMirisPixFiltered.left.x+","+UMirisPixFiltered.left.y+") "+" Right("+UMirisPixFiltered.right.x+","+UMirisPixFiltered.right.y+") ");
-      }
-      // else {
-      //   console.log("+++++ Skipped frame:" + (videoFrameCounter - frameCounter) + " Processed frames: " + frameCounter + "/"+ videoFrameCounter);
-      // }
-
-      //updateCircles();
-      //request the browser a new loop, it will do when it's ready
-      if ("requestVideoFrameCallback" in HTMLVideoElement.prototype) {
-        video.requestVideoFrameCallback(() => update(video));
-      } else {
-        window.requestAnimationFrame(() => update(video));
       }
     }
-
-    function _arrayToHeapF32(typedArray) {
-      let numBytes = typedArray.length * typedArray.BYTES_PER_ELEMENT;
-      let ptr = Module._malloc(numBytes);
-      let heapBytes = new Float32Array(Module.HEAPF32.buffer, ptr, numBytes);
-      heapBytes.set(new Float32Array(typedArray.buffer));
-      return heapBytes;
-    }
-  }
-}
+  });
+};

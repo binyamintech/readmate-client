@@ -8,7 +8,7 @@ import React from "react";
 function RatingAndScore({ wpm, std, compScore }) {
   return (
     <>
-      <div className={styles.back}></div>
+      {/* <div className={styles.back}></div> */}
       <div className={styles.front}>
         <div className={styles.left}>
           <img src={Time} alt="" className={styles.time} />

@@ -1,6 +1,9 @@
 // import { NavBar } from "../Common/Nav/index";
+
 import Box1 from "../../pages/Dashboard/options/index";
 
+
+import Dashboard from "../../pages/Dashboard";
 import TeamF from "../teams/TeamF";
 function Test() {
   return (
@@ -9,6 +12,7 @@ function Test() {
       {/* <TeamF /> */}
       {/* <Options /> */}
       {/* <Nav /> */}
+      {/* <Dashboard /> */}
     </>
   );
 }
