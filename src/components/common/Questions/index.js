@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom'
-// import SubmitBtn from "../SubmitBtn";
+import SubmitBtn from "../SubmitBtn";
 import TextArea from "../TextArea/Index";
 import img from "../../../assets/img/logo/vector.png"
 //group c- yehoshua
@@ -51,15 +51,14 @@ export default function Questions() {
         [name]: value,
       };
     });
-    onSubmit()
   };
 
-  // const joshClick = (e) => {
-  //   onChange(e)
-  //   onSubmit(e)
-  //   // if (isFormValid && sendToDb) {
-  //   // }
-  // }
+  const joshClick = (e) => {
+    onChange(e)
+    onSubmit(e)
+    // if (isFormValid && sendToDb) {
+    // }
+  }
 
   return (
     <div>
@@ -100,7 +99,7 @@ export default function Questions() {
           </TextArea>
         </label>
         <span>
-          {/* <SubmitBtn  name={"done"} onClick={(e)=>joshClick(e)}>done</SubmitBtn>{/* yehoshua  did it */}
+          <SubmitBtn path={""}  name={"done"} onClick1={(e)=>joshClick(e)}>done</SubmitBtn>{/* yehoshua  did it
 
           <button type="submit" >done</button>
           {/* disabled={!isFormValid()} onSubmit={onSubmit} */}
