@@ -7,8 +7,10 @@ function Test() {
     console.log('dsadasasd');
     console.log(localDataContext);
   })
-  return (<>
 
+
+  return (<>
+    <Page5 />
   </>)
 }
 export default Test;
