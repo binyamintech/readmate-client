@@ -18,8 +18,8 @@ function Page4() {
     function handleClick() {
         console.log("clicked");
         // UmooveApi.API_stopReading();//לבדוק
-        UmooveApi.API_stopUmoove();
-        navigate('/page5', { state: { exam: exams } })
+        // UmooveApi.API_stopUmoove();
+        navigate('/teama/page5', { state: { exam: exams } })
     }
 
     useEffect(() => { UmooveApi.API_startReading() }, [])

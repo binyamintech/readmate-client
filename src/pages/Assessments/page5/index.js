@@ -9,44 +9,11 @@ import { useLocation } from 'react-router-dom';
 
 // import Calc from '../Calc';
 export default function Page5() {
-    const ans = [
-        {
-            num: 1,
-            ans: true
-        },
-        {
-            num: 2,
-            ans: false
 
-        }, {
-            num: 3,
-            ans: true
-
-        },
-        {
-            num: 4,
-            ans: false
-
-        },
-        {
-            num: 5,
-            ans: false
-
-        },
-        {
-            num: 6,
-            ans: false
-
-        },
-        {
-            num: 7,
-            ans: false
-
-        }
-    ]
-    // let location = useLocation();
-    // const data=location.state.exam;
-    // console.log(data)
+    let location = useLocation();
+    const data = location.state;
+    console.log(data)
+    console.log(data.exam[0].questions)
     function Calc() {
         // server
         const numberOfLettersPerLine = [40, 50, 44, 80, 54, 75, 42, 14];
@@ -77,16 +44,19 @@ export default function Page5() {
     // const [arrOfAnswers,setarrOfAnswers]=useState([{orderNum:'',answer:''}])
     const arrOfAnswers = []
     let arr1 = [];
-    arr1.length = 5;
+    arr1.length = 10;
     result.map((v, i) => {
+
         arr1[v.orderNum] = v;
         // console.log(arr1)
     })
+
+
     const checkResults = () => {
-        debugger;
+
         let count = 0;
-        ans.map((v, i) => {
-            if (v.ans == arr1[(i + 1)].answer) {
+        (data.exam[0].questions).map((v, i) => {
+            if (data.exam[0].questions[0].answer == arr1[(i + 1)].answer) {
                 //    setarrOfAnswers({orderNum:v.orderNum,answer:true})
                 arrOfAnswers.push({ orderNum: arr1.orderNum, answer: true })
                 count++;
@@ -100,24 +70,22 @@ export default function Page5() {
         console.log(count);
         console.log(arrOfAnswers)
         let a = Calc()
-        n('/page6', { state: { count: count, WPM: a[0], STD: a[1], AVG: a[2] } })
+        n('/teama/page6', { state: { count: count, WPM: a[0], STD: a[1], AVG: a[2] } })
     }
 
-    const arr = [1, 2, 3, 4, 5, 6, 7]
+    // const arr = data.exam[0].questions
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     return (
         <>
-            <ul className={styles.questions}>
+            <div className={styles.questions}>
                 {arr.map((v, i) => {
                     return (
-                        <div style={{ position: 'relative', gap: '50px' }}>
-                            <li><QuestionBoard key={i} result={result} setResult={setResult} i={i} /></li>
-                            {/* <br/> */}
-                        </div>
+                        <QuestionBoard title={data.exam[0].questions[i].title} key={i} result={result} setResult={setResult} i={i} />
                     )
                 })}
-            </ul>
+            </div>
             <div>
-                <SubmitBtn onclick={checkResults} />
+                <SubmitBtn name={'next'} onclick={checkResults} />
             </div>
 
         </>
