@@ -16,11 +16,20 @@ export default function Questions(){
     console.log(formData);
   };
 
+
   const isFormValid = () => {
     const { questionOne, questionTwo, questionThree, questionFour} = formData;
+    // return questionOne && questionTwo && questionThree && questionFour;
+    if (questionOne==="" ||!questionTwo ||!questionThree||!questionFour){
+      console.log(formData);
+    }
     
-    return questionOne && questionTwo && questionThree && questionFour;
   };
+  const sendToDb=()=>{
+    if (isFormValid===true){
+
+    }
+  }
 
   const onChange = (e) => {
     const name = e.target.name;
@@ -40,20 +49,15 @@ export default function Questions(){
 <div><h4>Instructions</h4>
 <img src={img} alt=""/>
       <p> 
-Consectetur fames feugiat interdum morbi placerat in. Leo commodo maecenas donec cursus aenean scelerisque eu. Ridiculus amet habitant gravida lobortis suscipit enim, consectetur quisque. </p>
+Consectetur fames feugiat interdum morbi placerat in.
+ Leo commodo maecenas donec cursus aenean scelerisque eu.
+  Ridiculus amet habitant gravida lobortis suscipit enim, 
+  consectetur quisque. </p>
 </div>
-      {/* <label>
-        <span>Who is the main character?</span>
-        <input
-          name="questionOne"
-          value={formData.questionOne || ''}
-          onChange={onChange}
-        />
-      </label> */}
       <div>
       </div>
       <label>
-        <TextArea    name="questionOne"
+        <TextArea name="questionOne"
           value={formData.questionOne || ''}
           onChange={onChange}>Who is the main character"</TextArea>
       </label>
@@ -70,33 +74,10 @@ Consectetur fames feugiat interdum morbi placerat in. Leo commodo maecenas donec
         <TextArea   name="questionFour"
           value={formData.questionFour || ''}
           onChange={onChange} >"What do you think is going to happen?"</TextArea>
-      </label>
-      {/* <label>
-        <span>What can you say about the theme of the story?</span>
-        <input
-          name="questionTwo"
-          value={formData.questionTwo || ''}
-          onChange={onChange}
-        />
-      </label> */}
-      {/* <label>
-        <span>Why do you think the author wrote this book?</span>
-        <input
-          name="questionThree"
-          value={formData.questionThree || ''}
-          onChange={onChange}
-        />
-      </label>
-      <label>
-        <span>What do you think is going to happen?</span>
-        <input
-          name="questionFour"
-          value={formData.questionFour || ''}
-          onChange={onChange}
-        />
-      </label> */}
+     </label>
       <span>
-      <SubmitBtn/>{/* yehoshua  did it*/}
+      <SubmitBtn disabled={isFormValid()} sendOffInfo={()=>sendToDb()}>done</SubmitBtn>{/* yehoshua  did it
+      {/* {console.log(formData)}  */}
         {/* <button  disabled={!isFormValid()}>Submit</button> */}
       </span>
       {/* {JSON.stringify(formData)} */}
