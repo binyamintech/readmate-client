@@ -5,9 +5,9 @@ export default function Input(props) {
   return (
     <>
       <fieldset>
-        <legend>{props.txt}</legend>
+        <legend>{props.content}</legend>
 
-        <input type={props.type} placeholder={""} name={props.name} />
+        <input className='allInputs' type={props.type} placeholder={props.content} name={props.name} />
       </fieldset>
     </>
   );

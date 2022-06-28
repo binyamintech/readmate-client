@@ -1,13 +1,31 @@
-// import styles from './style.module.css'
+
 import "./style.css";
 
 // Creator : Team A - Shahar
-function SubTitleLogin() {
+function SubTitleLogin(props) {
   return (
-    <>
-      <div className="sub-title">Already have an account?</div>
-    </>
+    <div className="sub-title-box">
+      <div className="sub-title">
+      <span>{props.content}   </span>
+      <a href="www.google.com">Sign up</a>
+      </div>
+    </div>
   );
 }
 
+
+export function SubTitleGeneral(props) {
+  return (
+    <div className="sub-title-box">
+      <div className="sub-title">{props.content}</div>
+    </div>
+  );
+}
+
+
+
+
+
 export default SubTitleLogin;
+
+

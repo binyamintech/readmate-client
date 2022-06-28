@@ -2,7 +2,7 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  
+  margin: 0.9rem;
 }
 
 .sign-button {
@@ -14,8 +14,8 @@
 
   font-size: 0.9rem;
   
-  position: absolute;
-  width: 81%;
+  /* position: absolute; */
+  width: 99%;
   height: 3rem;
 
   background-color: var(--primary-color);

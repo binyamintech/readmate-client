@@ -1,32 +1,32 @@
 import "./style.css";
-import FormTitle from "../../../components/common/FormTitle";
-import FooterGoogle from "../../../components/common/FooterGoogle";
-import PasswordInput from "../../../components/common/PasswordInput/PasswordInput";
-import SignButton from "../common.js/SignButton";
+import FormTitle from "../../../components/Common/FormTitle";
+import FooterGoogle from "../../../components/Common/FooterGoogle";
+import PasswordInput from "../../../components/Common/PasswordInput/PasswordInput";
+import SignButton from "../../../components/Common/SignButton/SignButton";
 import React from "react";
-import Input from "../common.js/Input";
-import SubTitleLogin from "../../../components/common/SubTitleLogin";
-import SubmitForm from "../../../components/common/forms/SubmitForm/SubmitForm";
+import Input from "../../../components/Common/Input/Input";
+import SubTitleLogin from "../../../components/Common/SubTitleLogin";
+import SubmitForm from "../../../components/Common/forms/SubmitForm/SubmitForm";
 import { useState } from "react";
 export const SignUp = () => {
   const [formData, setFormData] = useState({});
   return (
     <div className="sign-up">
+          <FormTitle content="Create an Acount"/>
+          <SubTitleLogin content="Already have an account?"/>
       <SubmitForm
         onSubmit={() => {
           setFormData();
         }}
       >
-        <FormTitle />
-        <SubTitleLogin />
-        <Input txt="first name" type="text" name="firstName" />
-        <Input txt="last name" type="text" name="lastName" />
-        <Input txt="email" type="email" name="email" />
-        <Input type="password" name="password" />
-        <Input name="confirm-password" type="password" />
-        <SignButton title="Sign In" type="submit" />
-        <FooterGoogle />
+        <Input content="First Name" type="text" name="firstName" />
+        <Input content="Last Name" type="text" name="lastName" />
+        <Input content="Email" type="email" name="email" />
+        <Input content="Password"  type="password" name="password" />
+        <Input content="Confirm Password" name="confirm-password" type="password" />
+        <SignButton content="Sign Up" type="submit" />
       </SubmitForm>
+        <FooterGoogle />
     </div>
   );
 };
