@@ -76,7 +76,7 @@ Consectetur fames feugiat interdum morbi placerat in.
           onChange={onChange} >"What do you think is going to happen?"</TextArea>
      </label>
       <span>
-      <SubmitBtn disabled={isFormValid()} sendOffInfo={()=>sendToDb()}>done</SubmitBtn>{/* yehoshua  did it
+      <SubmitBtn path={"/result"} onclick={{isFormValid,sendToDb}}>done</SubmitBtn>{/* yehoshua  did it
       {/* {console.log(formData)}  */}
         {/* <button  disabled={!isFormValid()}>Submit</button> */}
       </span>
