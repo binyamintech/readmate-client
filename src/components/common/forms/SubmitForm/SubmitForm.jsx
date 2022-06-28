@@ -1,9 +1,10 @@
 import React from "react";
+import "./style.css";
 
 function SubmitForm(props) {
   return (
     <form
-      className={props.className}
+      className="form-box"
       id={props.id}
       action={props.action}
       onSubmit={props.onSubmit}

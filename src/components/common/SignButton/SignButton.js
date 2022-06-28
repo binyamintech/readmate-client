@@ -1,9 +1,12 @@
-import './style.css'
+import "./style.css";
 // Creator : Team d - oriya
-export default function SignButton() {
-  
-  return <div className='btn-box'>
-     <button className='sign-button'> Sign In</button>
-     </div>
-
+export default function SignButton(props) {
+  return (
+    <div className="btn-box">
+      <button onClick={props.onClick} className="sign-button" type={props.type}>
+        {" "}
+        {props.content}
+      </button>
+    </div>
+  );
 }

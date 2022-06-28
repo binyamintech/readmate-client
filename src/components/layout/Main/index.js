@@ -33,8 +33,8 @@ import { SignIn } from "../../../pages/SignIn/Sign-in/SignIn";
 function Main() {
   return (
     <>
-      <Header />
-      content
+      {/* <Header /> */}
+      {/* content */}
       <Routes>
         {/* Team A */}
         <Route path="teama">
@@ -95,7 +95,7 @@ function Main() {
 
         {/* Test */}
         <Route path="/test" element={<SignUp />} />
-        <Route path="/test" element={<SignIn />} />
+        <Route path="/test1" element={<SignIn />} />
       </Routes>
       <Nav />
       {/* <Popup /> */}

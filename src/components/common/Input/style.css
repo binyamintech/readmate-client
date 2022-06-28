@@ -2,27 +2,27 @@ fieldset {
   border: 1px solid var(--main-title-color);
   border-radius: 0.8rem;
   height: 11vh;
-  margin: 1rem;
+  /* width: 90%; */
+  margin: 0.3rem;
+  margin-top: 1rem;
 }
 
-input[type="text"] {
+.allInputs {
   box-sizing: border-box;
 
-  position: relative;
+  /* position: relative; */
   width: 85%;
-  height: 6vh;
+  height: 4vh;
   padding: 1rem;
 
   font-weight: 600;
   font-size: 100%;
   line-height: 2rem;
- 
+
   background: #ffff;
   border: none;
   outline: 0;
-  
 }
-
 
 legend {
   padding: 0.2em 0.5em;
@@ -30,4 +30,5 @@ legend {
   font-size: 90%;
   position: relative;
   margin-left: 1rem;
+  width: fit-content;
 }

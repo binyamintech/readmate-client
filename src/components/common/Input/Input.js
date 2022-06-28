@@ -5,13 +5,13 @@ export default function Input(props) {
   return (
     <>
       <fieldset>
-        <legend>{props.txt}</legend>
+        <legend>{props.content}</legend>
 
         <input
+          className="allInputs"
           type={props.type}
-          placeholder={props.txt}
+          placeholder={props.content}
           name={props.name}
-          required
         />
       </fieldset>
     </>
