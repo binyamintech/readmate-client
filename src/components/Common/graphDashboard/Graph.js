@@ -23,24 +23,28 @@ ChartJS.register(
   Legend
 );
 export default function Graph(props){
+    const dataArr = props.d.data;
     const options = {
       responsive: true,
       plugins: {
         legend: {
           position: 'top',
+          display: false,
         }
       },
     };
-    
-    const labels = props.labs; // get the data as props - props.xAxis
+
+    const labels = dataArr.map((v, i)=>i+1)
+    // const labels = props.labs; // get the data as props - props.xAxis
     const data = {
       labels,
       datasets: [
         {
-            label: "",
-            data: props.d.data,
-            borderColor: 'blue',
+            data: dataArr,
+            borderColor: '#F39C12',
+            
             backgroundColor: 'yellow'
+            
           },
           
         ],

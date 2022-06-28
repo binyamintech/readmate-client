@@ -1,52 +1,87 @@
 .DashGraph {
-    background-color: rgb(255, 229, 195);
     position: absolute;
     justify-content: center;
     align-items: center;
     margin: 5%;
     left: 20%;
-    width: 50%;
+    background: #FEEFEC;
+    border: 1.5px solid #252525;
+    border-radius: 20px;
+    width: 382px;
+    height: 338px;
+    box-sizing: border-box;
+}
+
+.Border {
+    box-sizing: border-box;
+    position: absolute;
+    width: 382px;
+    height: 338px;
+    top: 21%;
+    left: 25%;
+    background: #7D56A5;
+    border: 1.5px solid #252525;
+    border-radius: 20px;
+    transform: rotate(2.15deg);
 }
 
 .Tabs {
     display: flex;
     align-items: center;
     justify-items: center;
-    gap: 100px;
     justify-content: center;
+    gap: 12px;
+    margin: 15px;
 }
 
 .Tab {
-    background-color: rgb(255, 241, 215);
-    height: 100px;
-    width: 200px;
     text-align: center;
     justify-content: center;
-    margin: 10px;
     border-style: outset;
     border-radius: 10px;
     border-color: rgb(205, 205, 226);
-    box-shadow: 5px 5px rgb(11, 50, 63);
+    width: 110px;
+    height: 64px;
+    background: #FFFFFF;
+    border: 1.5px solid #252525;
+    box-shadow: 2px 2px 0px #D35400;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18;
+    line-height: 20px;
+    color: #7D56A5;
 }
 
 .TabOn {
-    background-color: rgb(255, 176, 29);
-    height: 100px;
-    width: 200px;
+    background: #F39C12;
+    border: 1.5px solid #252525;
+    color: white;
+    width: 110px;
+    height: 64px;
     text-align: center;
     justify-content: center;
-    margin: 10px;
     border-style: outset;
     border-radius: 10px;
     border-color: rgb(205, 205, 226);
-    box-shadow: 5px 5px rgb(11, 50, 63);
+    box-shadow: 2px 2px 0px #D35400;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18;
+    line-height: 20px;
 
 }
 
-.SelectBtn {
+.InText{
+    margin-top: 10%;
+}
+
+.Graph { 
     position: absolute;
-    right: 5px;
-
-    
-
+    width: 80%;
+    height: 137px;
+    left: 10%;
+    bottom: 10%;
+    background: linear-gradient(128.87deg, #F39C12 -0.48%, rgba(243, 156, 18, 0) 81.7%);
 }
