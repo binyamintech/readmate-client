@@ -23,7 +23,6 @@ import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 
 import Results from "../../../pages/TrainFocus/TrainFocusResults";
 import StartFocus from "../../../pages/TrainFocus/StartFocus/StartFocus";
-
 //  import Popup from "./popup/Popup";
 // import { Outlet, Route, Routes } from "react-router-dom";
 // import TextArea from "../common/TextArea/Index";
@@ -71,8 +70,8 @@ function Main() {
 
         {/* Team F */}
         <Route path="/teamf">
-          <Route index element={<TeamF />} />
-          <Route path="components-path" element={<TeamF />} />
+          {/* <Route index element={<TeamF />} /> */}
+          {/* <Route path="components-path" element={<TeamF />} /> */}
         </Route>
 
         {/* Team G */}
@@ -87,8 +86,8 @@ function Main() {
 
         {/* Team H */}
         <Route path="/teams/TeamH">
-          <Route index element={<TeamH/>} />
-          <Route path="/teams/TeamH/Training" element={<Training/>} />
+          <Route index element={<TeamH />} />
+          <Route path="/teams/TeamH/Training" element={<Training />} />
           {/* <Route path="components-path" element={<>team's components</>} /> */}
         </Route>
 

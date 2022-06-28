@@ -1,5 +1,5 @@
 import styles from "./style.module.css";
-import Clock from "../../../components/Common/Clock";
+import Clock from "../../../components/common/Clock";
 
 // Creator : Team H - Nurit & Milka
 function Temp() {
