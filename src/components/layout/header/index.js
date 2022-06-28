@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { pageNameContext, navBarContext } from "../Layout";
 import nav from "./img/nav-icon.png";
-import { NavBar } from "../../Common/Nav/index";
+import { NavBar } from "../../common/Nav";
 
 export default function Header(props) {
   const [pageName, setPageName] = useContext(pageNameContext); //adduming contect is in use

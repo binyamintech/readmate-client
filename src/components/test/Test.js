@@ -1,10 +1,10 @@
 // import { NavBar } from "../Common/Nav/index";
-import { Contact } from "../../pages/Contact";
 
+import TeamF from "../teams/TeamF";
 function Test() {
   return (
     <>
-      <Contact />
+      <TeamF />
       {/* <Options /> */}
       {/* <Nav /> */}
     </>
