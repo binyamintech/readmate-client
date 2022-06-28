@@ -8,7 +8,7 @@ import Page6 from "../../../pages/Assessments/Page6";
 import Page5 from "../../../pages/Assessments/page5";
 import Page4 from "../../../pages/Assessments/Page4";
 import Page3 from "../../../pages/Assessments/Page3";
-import Header from "../Header";
+import Header from "../header";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
 
@@ -27,8 +27,6 @@ function Main() {
           <Route path="page5" element={<Page5 />} />
           <Route path="page6" element={<Page6 />} />
           <Route index element={<TeamA />} />
-          <Route path="/page4" element={<Page4 />} />
-          {/* <Route path="/page5" element={<Page5 />} /> */}
         </Route>
 
         {/* Team B */}
@@ -57,8 +55,8 @@ function Main() {
 
         {/* Team F */}
         <Route path="/teamf">
-          <Route index element={<TeamF />} />
-          <Route path="components-path" element={<TeamF />} />
+          {/* <Route index element={<TeamF />} />
+          <Route path="components-path" element={<TeamF />} /> */}
         </Route>
 
         {/* Team G */}
