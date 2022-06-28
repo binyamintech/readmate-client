@@ -17,8 +17,8 @@ import RoundedButton from "../RoundedButton";
 //for example: for 3 minutes, enter 180
 
 function Clock(props) {
-  const [play, setPlay] = useState(false);
-  let freeStyle = false; //Todo: change to props.freeStyle
+  const [play, setPlay] = useState(true);
+  let freeStyle = true; //Todo: change to props.freeStyle
   let timeInSeconds = 10; //Todo: change to props.time;
   const [rapid, setRapid] = useState(0);
   const [isFinish, setIsFinish] = useState(false);
@@ -39,7 +39,9 @@ function Clock(props) {
             {seconds}
           </div>
         )}
-        {!isFinish && (
+        {remainingTime == 0 && setIsFinish(true)}
+
+        {
           <div
             // className={styles.playPause}
             onClick={() => {
@@ -48,7 +50,7 @@ function Clock(props) {
           >
             <RoundedButton></RoundedButton>
           </div>
-        )}
+        }
       </div>
     );
   };
@@ -68,11 +70,10 @@ function Clock(props) {
           rotation={"counterclockwise"}
           isPlaying={play}
           duration={timeInSeconds}
-          colors={["#7D56A5"]}
+          colors={["#FEEFEC"]}
           onComplete={() => ({ shouldRepeat: false, delay: 1 })}
-          trailColor={"#FEEFEC"}
+          trailColor={"#7D56A5"}
           strokeLinecap={"square"}
-          //Todo: disappear platPause button when complete
         >
           {renderTime}
         </CountdownCircleTimer>
