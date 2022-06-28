@@ -5,10 +5,25 @@ function Test() {
     rapid: (rapid) => {
       console.log(rapid);
     },
+    onPlay: () => {
+      console.log("play");
+    },
+    onPause: () => {
+      console.log("pause");
+    },
+    onComplete: () => {
+      console.log("complete");
+    },
   };
+
   return (
     <>
-      <Clock funcs={testFuncs}></Clock>
+      <Clock
+        freeStyle={true}
+        time={180}
+        funcs={testFuncs}
+        rapidValue={10}
+      ></Clock>
     </>
   );
 }
