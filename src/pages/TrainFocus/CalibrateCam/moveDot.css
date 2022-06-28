@@ -14,16 +14,16 @@
     }
 
 
-    button{
-        width: 90%;
-        height: 48px;
+    /* button{ */
+        /* width: 90%;
+        height: 48px; */
         /* left:50%; */
-        position:fixed;
-        bottom: 50px;
+        /* position:fixed;
+        bottom: 50px; */
         /* border: 10px solid black; */
-        display: block;
-        margin: auto;
-    }
+        /* display: block;
+        margin: auto; */
+    /* } */
 
     .place {
         position: fixed;

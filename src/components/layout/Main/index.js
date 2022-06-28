@@ -22,6 +22,7 @@ import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 
 import Results from "../../../pages/TrainFocus/TrainFocusResults";
 import StartFocus from "../../../pages/TrainFocus/StartFocus/StartFocus";
+import Instructions from "../../../pages/FreeStyle/Instructions";
 // import Exercise from "../../../pages/TrainFocus/Exercise";
 //  import Popup from "./popup/Popup";
 // import { Outlet, Route, Routes } from "react-router-dom";
@@ -86,10 +87,10 @@ function Main() {
         </Route>
 
         {/* Team H */}
-        <Route path="/teams/TeamH">
-          <Route index element={<TeamH />} />
-          <Route path="/teams/TeamH/Training" element={<Training />} />
-          {/* <Route path="components-path" element={<>team's components</>} /> */}
+        <Route path="teamH">
+          <Route index element={< >jvuy</>} />
+          <Route path="/teamH/instructions" element={<Instructions/>} />
+          <Route path="/teamH/training" element={<Training/>} />
         </Route>
 
         {/* Test */}
