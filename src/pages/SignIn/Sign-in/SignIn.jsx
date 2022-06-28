@@ -1,6 +1,6 @@
 import "./style.css";
-import SignButton from "../../../components/Common/SignButton/SignButton";
-import Input from "../../../components/Common/Input/Input";
+import SignButton from "../../../components/common/SignButton/SignButton";
+import Input from "../../../components/common/Input/Input";
 import FooterGoogle from "../../../components/common/FooterGoogle";
 import PasswordInput from "../../../components/common/PasswordInput/PasswordInput";
 import FormTitle from "../../../components/common/FormTitle";

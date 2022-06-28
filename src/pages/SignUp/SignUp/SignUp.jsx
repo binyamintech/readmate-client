@@ -4,7 +4,7 @@ import FooterGoogle from "../../../components/common/FooterGoogle";
 import PasswordInput from "../../../components/common/PasswordInput/PasswordInput";
 import SignButton1 from "../common.js/SignButton1";
 import React from "react";
-import Input from "../../../components/Common/Input/Input";
+import Input from "../../../components/common/Input/Input";
 import SubTitleLogin from "../../../components/common/SubTitleLogin";
 import SubmitForm from "../../../components/common/forms/SubmitForm/SubmitForm";
 import { useState } from "react";
