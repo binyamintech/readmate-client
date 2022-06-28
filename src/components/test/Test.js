@@ -1,12 +1,12 @@
-import Page4 from "../../pages/Assessments/Page4";
-
-import Calc from "../../pages/Assessment/Calc";
-// import Page6 from "../../pages/Assessments/Page6";
-
-import RatingAndScore from '../common/ReatingAndScore'
-// import Questions from '../common/Questions'
-// import QuestionBoard from '../common/QuestionBoard'
-// import SubmitBtn from '../common/SubmitBtn'
+import Page4 from '../../pages/Assessments/Page4'
+// ./src/components/test/Test
+// import Calc from "../../pages/Assessment/Calc";
+// // import Page6 from "../../pages/Assessments/Page6";
+// import RatingAndScore from "../Common/ReatingAndScore";
+// import RatingAndScore from '../Common/ReatingAndScore'
+// import Questions from '../Common/Questions'
+// import QuestionBoard from '../Common/QuestionBoard'
+// import SubmitBtn from '../Common/SubmitBtn'
 import React from "react";
 import Page5 from '../../pages/Assessments/page5';
 
@@ -16,6 +16,16 @@ function Test() {
         <Page5 />
     </>)
 }
+// (
+{/* <RatingAndScore wpm={120} std={5} compScore={8} /> */ }
+{/* <Page6 /> */ }
+{/* <Calc /> */ }
+{/* </>) */ }
+
+{/* lkdjclkdsmLKSNML */ }
+{/* <Page4 /> */ }
+//  )
+// }
 {/* } */ }
 
 export default Test;
