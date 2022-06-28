@@ -55,10 +55,10 @@ function Main() {
         </Route>
 
         {/* Team F */}
-        <Route path="/teamf">
+        {/* <Route path="/teamf">
           <Route index element={<TeamF />} />
           <Route path="components-path" element={<TeamF />} />
-        </Route>
+        </Route> */}
 
         {/* Team G */}
         <Route path="teams-path">
