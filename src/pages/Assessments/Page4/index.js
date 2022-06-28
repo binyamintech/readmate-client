@@ -15,11 +15,11 @@ function Page4() {
     let navigate = useNavigate()
     const l = useLocation()
 
-    function handleClick() {
+    function onclick() {
         console.log("clicked");
-        // UmooveApi.API_stopReading();//לבדוק
+        UmooveApi.API_stopReading(exams.lines.length);//לבדוק
         UmooveApi.API_stopUmoove();
-        navigate('/page5', { state: { exam: exams } })
+        navigate('/teama/page5', { state: { exam: exams } })
     }
 
     useEffect(() => { UmooveApi.API_startReading() }, [])
@@ -149,139 +149,7 @@ function Page4() {
                         orderNum: 16,
                         chars: 32,
                     }
-                ],
-        },
-
-        {
-
-            img: "text-10-87.png",
-            level: 10,
-            words: 120,
-            questions:
-                [
-                    {
-                        title: "Amundsen was an explorer from Sweden",
-                        orderNum: 1,
-                        answer: false
-                    },
-                    {
-                        title: "He was noted for his thoroughness",
-                        orderNum: 2,
-                        answer: true
-                    },
-                    {
-                        title: "He found the Northwest Passage",
-                        orderNum: 3,
-                        answer: true
-                    },
-                    {
-                        title: "On his second expedition, he was planning to go to the South Pole",
-                        orderNum: 4,
-                        answer: false
-                    },
-                    {
-                        title: "Amundsen established a base station on the ice cap",
-                        orderNum: 5,
-                        answer: true
-                    },
-                    {
-                        title: "He set up five supply stations",
-                        orderNum: 6,
-                        answer: false
-                    },
-                    {
-                        title: "Dog teams and sledges were used to carry supplies",
-                        orderNum: 7,
-                        answer: true
-                    },
-                    {
-                        title: "It took eleven months to reach the pole",
-                        orderNum: 8,
-                        answer: true
-                    },
-                    {
-                        title: "Amundsen flew the Swedish flag over the South Pole",
-                        orderNum: 9,
-                        answer: false
-                    },
-                    {
-                        title: "The South Pole was discovered in the year 1911",
-                        orderNum: 10,
-                        answer: true
-                    }
-
-                ],
-            lines:
-                [
-                    {
-                        orderNum: 1,
-                        chars: 32,
-                    },
-                    {
-                        orderNum: 2,
-                        chars: 26,
-                    },
-                    {
-                        orderNum: 3,
-                        chars: 38,
-                    },
-                    {
-                        orderNum: 4,
-                        chars: 36,
-                    },
-                    {
-                        orderNum: 5,
-                        chars: 34,
-                    },
-                    {
-                        orderNum: 6,
-                        chars: 33,
-                    },
-                    {
-                        orderNum: 7,
-                        chars: 37,
-                    },
-                    {
-                        orderNum: 8,
-                        chars: 39,
-                    },
-                    {
-                        orderNum: 9,
-                        chars: 37,
-                    },
-                    {
-                        orderNum: 10,
-                        chars: 35,
-                    },
-                    {
-                        orderNum: 11,
-                        chars: 32,
-                    },
-                    {
-                        orderNum: 12,
-                        chars: 37,
-                    },
-                    {
-                        orderNum: 13,
-                        chars: 36,
-                    },
-                    {
-                        orderNum: 14,
-                        chars: 35,
-                    },
-                    {
-                        orderNum: 15,
-                        chars: 33,
-                    },
-                    {
-                        orderNum: 16,
-                        chars: 37,
-                    },
-                    {
-                        orderNum: 17,
-                        chars: 21,
-                    }
-                ],
+                ]
         }
     ]
 
@@ -297,9 +165,7 @@ function Page4() {
             {/* //scrollbar
         //bottom button "done" - import whith props */}
 
-            <div onClick={handleClick}>
-                <SubmitBtn />
-            </div>
+            <SubmitBtn onclick={onclick} name={"Done"} />
         </div>
     </>
 }
