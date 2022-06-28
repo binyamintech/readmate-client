@@ -36,14 +36,14 @@ function Main() {
         </Route>
 
         {/* Team C */}
-        <Route path="train_reading_level">
-          {/* <Route index element={<>team's components</>} /> */}
-          <Route path="exercise" element={<Exercise />} />
+        {/* <Route path="train_reading_level"> */}
+        {/* <Route index element={<>team's components</>} /> */}
+        {/* <Route path="exercise" element={<Exercise />} />
           <Route path="exercise_clock" element={<ExerciseClock />} />
           <Route path="rate" element={<ExerciseRate />} />
           <Route path="question" element={<ExerciseQuestion />} />
-          <Route path="result" element={<ExerciseResult />} />
-        </Route>
+          <Route path="result" element={<ExerciseResult />} /> */}
+        {/* </Route> */}
 
         {/* Team D */}
         <Route path="teams-path">
@@ -64,19 +64,19 @@ function Main() {
         </Route>
 
         {/* Team G */}
-        <Route path="/train-focus">
-          <Route index element={<>team's components</>} />
+        {/* <Route path="/train-focus"> */}
+        {/* <Route index element={<>team's components</>} />
           <Route path="exercise" element={<Exercise />} />
           <Route path="StartFocus" element={<StartFocus />} />
           <Route path="result" element={<Results />} />
-          <Route path="calibration" element={<CalibrateCam />} />
-          {/* <Route path="/result" element={<Results />} /> */}
-        </Route>
+          <Route path="calibration" element={<CalibrateCam />} /> */}
+        {/* <Route path="/result" element={<Results />} /> */}
+        {/* </Route> */}
 
         {/* Team H */}
         <Route path="/teams/TeamH">
-          <Route index element={<TeamH />} />
-          <Route path="/teams/TeamH/Training" element={<Training />} />
+          {/* <Route index element={<TeamH />} /> */}
+          {/* <Route path="/teams/TeamH/Training" element={<Training />} /> */}
           {/* <Route path="components-path" element={<>team's components</>} /> */}
         </Route>
 

@@ -39,12 +39,12 @@ function Page3() {
       sucsses = UmooveApi.API_getUmooveTracking();
       if (sucsses === true) {
         clearInterval(interval);
-        navigate = "/page4";
+        navigate('/page4');
       }
       count++;
     }, 1000);
   };
-  // start()
+  start()
   // const [pageName, setPageName] = useContext(pageNameContext) //adduming contect is in use
   return (
     <div>
@@ -56,7 +56,7 @@ function Page3() {
           {" "}
           <button> start now! </button>
         </Link>
-        <FooterStart />
+        {/* <FooterStart /> */}
         <img src={group} alt="" />
       </div>
     </div>
