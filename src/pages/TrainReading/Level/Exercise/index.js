@@ -1,11 +1,17 @@
+import { useContext } from 'react';
+import { pageNameContext } from '../../../../components/layout/Layout';
+
 import React from 'react'
 import './style.css';
 import Headphone from './Level_Headphone.png'
 import FooterStart from '../../../../components/common/FooterStart'
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
+export default function Exercise() {
+  // setHeader
+  const pageNameHeader = useContext(pageNameContext);
+  pageNameHeader.setPageName("Level Exercise");
 
-const index = () => {
   const BookName = "Harry Potter" // i need to receive this info fromm shachar
   const title = 'Start Now'
   const textTitle = "With your headphones on,"
@@ -16,6 +22,7 @@ const index = () => {
     // window.location.href = rout
     console.log('button')
   }
+
   return (
     <div className='level_page'>
       {/* <h1>Level Exercise</h1> */}
@@ -28,5 +35,3 @@ const index = () => {
     </div>
   )
 }
-
-export default index
