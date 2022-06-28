@@ -1,31 +1,23 @@
-.form-group {
-    padding: 10px;
-    /* border: 1px solid #7D839D; */
-    margin: 10px;
-
-}
-
 .form-group>label {
     position: absolute;
-    top: 5px;
-    margin-left: 20px;
+    margin-left: 1.5rem;
     background-color: white;
     z-index: 3;
+    margin-top: -0.8rem;
 }
 
-/* .form-group>input {
-    border: none;
-} */
-
 .form-control {
-
-    /* box-sizing: border-box; */
-
     position: relative;
-    width: 382px;
-    height: 60px;
+    width: 24rem;
+    height: 3.75rem;
 
     background: #FFFFFF;
     border: 1px solid #7D839D;
     border-radius: 12px;
+}
+
+.ta_box{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
 }

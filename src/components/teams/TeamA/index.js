@@ -7,10 +7,7 @@ function TeamA() {
     return (
         <div>
             <Page1 />
-            <Page3 />
-            <Page4 />
-            <Page5 />
-            <Page6 />
+
         </div>
     )
 }

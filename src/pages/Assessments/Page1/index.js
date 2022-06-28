@@ -19,7 +19,7 @@ function Page1() {
       <img className="img-page1" src={student} alt="" />
       <br />
       <Link to="/teama/page3">
-      <button>START</button>
+        <button>START</button>
       </Link>
       <img src={Frame} alt="" />
       {/* <FooterStart
