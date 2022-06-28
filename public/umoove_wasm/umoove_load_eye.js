@@ -78,7 +78,7 @@ function setTrackingModeUmoove(mode) {
 }
 //spawn a dedicated worker for WASM
 var wasmWorker;
-wasmWorker = new Worker("umoove_wasm/wasm_worker.js");
+wasmWorker = new Worker("../umoove_wasm/wasm_worker.js");
 
 var workerBusy = false;
 wasmWorker.onmessage = function (e) {
@@ -146,7 +146,7 @@ wasmWorker.onmessage = function (e) {
 
   // console.log(
   //   "State = " +
-  //     UMFaceState +
+  //   UMFaceState);
   //     " Combined iris: reliability= " +
   //     UMCombinedReliability +
   //     " position = " +
@@ -269,6 +269,8 @@ var loadUmooveLibrary = () => {
           //video.width = videoWidth;
           //video.height = videoHeight;
           video.play();
+
+
           // videoPreview.play();
           // video.addEventListener('play', function (e) {
           // if (e.type == 'play') {
