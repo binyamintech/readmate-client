@@ -1,4 +1,5 @@
 // import { NavBar } from "../Common/Nav/index";
+
 import TeamF from "../teams/TeamF";
 function Test() {
   return (
@@ -9,7 +10,5 @@ function Test() {
     </>
   );
 }
-// function bbb() {
-//   alert("nrjnfrj");
-// }
+
 export default Test;
