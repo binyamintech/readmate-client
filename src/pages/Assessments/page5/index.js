@@ -12,8 +12,8 @@ export default function Page5() {
 
     let location = useLocation();
     const data = location.state;
-    console.log(data)
-    console.log(data.exam[0].questions)
+    // console.log(data)
+    // console.log(data.exam[0].questions)
     function Calc() {
         // server
         const numberOfLettersPerLine = [40, 50, 44, 80, 54, 75, 42, 14];
@@ -46,9 +46,8 @@ export default function Page5() {
     let arr1 = [];
     arr1.length = 10;
     result.map((v, i) => {
-
         arr1[v.orderNum] = v;
-        // console.log(arr1)
+        console.log(arr1)
     })
 
 
@@ -67,8 +66,8 @@ export default function Page5() {
             }
         })
         // console.log(arr1)
-        console.log(count);
-        console.log(arrOfAnswers)
+        // console.log(count);
+        // console.log(arrOfAnswers)
         let a = Calc()
         n('/teama/page6', { state: { count: count, WPM: a[0], STD: a[1], AVG: a[2] } })
     }
@@ -80,7 +79,7 @@ export default function Page5() {
             <div className={styles.questions}>
                 {arr.map((v, i) => {
                     return (
-                        <QuestionBoard title={data.exam[0].questions[i].title} key={i} result={result} setResult={setResult} i={i} />
+                        <QuestionBoard title={data.exam[0].questions[i].title} key={i} result={result} setResult={setResult} i={i} arr={arr1}/>
                     )
                 })}
             </div>
