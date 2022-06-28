@@ -34,7 +34,6 @@ return (
          
       </div>
 
-<<<<<<< HEAD
       <div className='mid'>
          {pageNameContextLocal.pageName}
       </div>
@@ -45,8 +44,3 @@ return (
    </div>
 )
 }
-=======
-    
-  );
-}
->>>>>>> 22afa95beeb073e04cc9c25407baeefe5aeb79c5
