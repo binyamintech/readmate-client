@@ -57,7 +57,7 @@ function Page3() {
         <Link to="/teama/page4"> <button> start now! </button></Link>
         <FooterStart route="/teama/page4" startFunction={() => { console.log(":()"); }} title="Start now" explanation="hdnvdjnjrtnvjsdsdjkdfnjsnjknsdfjknsdfjsdkf" img={group} />
         <img src={group} alt='' />
-  }, [stream, videoRef]);
+        {/* }, [stream, videoRef]);
   const start = () => {
           UmooveApi.API_getUmooveTracking();
     const interval = setInterval(() => {
@@ -72,7 +72,7 @@ function Page3() {
       }
         count++;
     }, 1000);
-  };
+  }; */}
         start()
         // const [pageName, setPageName] = useContext(pageNameContext) //adduming contect is in use
         return (
