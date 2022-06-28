@@ -16,64 +16,26 @@ import ExerciseResult from "../../../pages/TrainReading/Level/ExerciseResult"
 function Main() {
   return (
     <>
-      <Header/>
+      <Header />
 
       {/* content */}
       <Routes>
-        {/* Team A */}
-        <Route path="teams-path">
-          <Route index element={<>team's components</>} />
-          <Route path="components-path" element={<>team's components</>} />
-        </Route>
-
-        {/* Team B */}
-        <Route path="teams-path">
-          <Route index element={<>team's components</>} />
-          <Route path="components-path" element={<>team's components</>} />
-        </Route>
 
         {/* Team C */}
         <Route path="train_reading_level">
           {/* <Route index element={<>team's components</>} /> */}
-          <Route path="exercise" element={<Exercise/>} />
-          <Route path="exercise_clock" element={<ExerciseClock/>} />
-          <Route path="rate" element={<ExerciseRate/>} />
-          <Route path="question" element={<ExerciseQuestion/>} />
-          <Route path="result" element={<ExerciseResult/>} />
+          <Route path="exercise" element={<Exercise />} />
+          <Route path="exercise_clock" element={<ExerciseClock />} />
+          <Route path="rate" element={<ExerciseRate />} />
+          <Route path="question" element={<ExerciseQuestion />} />
+          <Route path="result" element={<ExerciseResult />} />
         </Route>
 
-        {/* Team D */}
-        <Route path="teams-path">
-          <Route index element={<>team's components</>} />
-          <Route path="components-path" element={<>team's components</>} />
-        </Route>
-
-        {/* Team E */}
-        <Route path="teams-path">
-          <Route index element={<>team's components</>} />
-          <Route path="components-path" element={<>team's components</>} />
-        </Route>
-
-        {/* Team F */}
-        <Route path="/teamf">
-          <Route index element={<TeamF />} />
-          <Route path="components-path" element={<TeamF />} />
-        </Route>
-
-        {/* Team G */}
-        <Route path="teams-path">
-          <Route index element={<>team's components</>} />
-          <Route path="components-path" element={<>team's components</>} />
-        </Route>
-
-        {/* Team H */}
-        <Route path="teams-path">
-          <Route index element={<>team's components</>} />
-          <Route path="components-path" element={<>team's components</>} />
-        </Route>
 
         {/* Test */}
-        <Route path="/test" element={<Test />} />
+        <Route path='/test' element={<Test />} />
+
+
       </Routes>
 
       <Nav />

@@ -21,10 +21,10 @@ const index = () => {
       {/* <h1>Level Exercise</h1> */}
       <img src={Headphone} alt="Headphone" />
       <FooterStart title={title} textTitle={textTitle} text={text} rout={rout} />
-        <Link to={rout}>
-          <button onClick={onclickHandler}>next</button> 
-          {/* // this onclick dont exist, the path will be send throw props.rout to the component */}
-        </Link>
+      <Link to={rout}>
+        <button onClick={onclickHandler}>next</button>
+        {/* // this onclick dont exist, the path will be send throw props.rout to the component */}
+      </Link>
     </div>
   )
 }
