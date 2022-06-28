@@ -56,7 +56,7 @@ function Page3() {
           {" "}
           <button> start now! </button>
         </Link>
-        <FooterStart />
+        {/* <FooterStart /> */}
         <img src={group} alt="" />
       </div>
     </div>
