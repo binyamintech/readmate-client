@@ -1,18 +1,21 @@
 import "./style.css";
 import SignButton from "../../../components/Common/SignButton/SignButton";
 import Input from "../../../components/Common/Input/Input";
-import FooterGoogle from "../../../components/Common/FooterGoogle";
-import PasswordInput from "../../../components/Common/PasswordInput/PasswordInput";
-import FormTitle from "../../../components/Common/FormTitle";
+import FooterGoogle from "../../../components/common/FooterGoogle";
+import PasswordInput from "../../../components/common/PasswordInput/PasswordInput";
+import FormTitle from "../../../components/common/FormTitle";
+import SubTitleLogin from "../../../components/common/SubTitleLogin";
+
 export function SignIn() {
   return (
     <div className="sign-in">
+      <LoginHeader content="Wellcome Back! " />
+      <SubTitleLogin content="Don't have an account?" />
       <form>
-       <LoginHeader/>
         <LoginContent />
-        <LoginFooter/>
-        
+        <LoginFooter />
       </form>
+      <FooterGoogle />
     </div>
   );
 }
@@ -20,9 +23,7 @@ export function SignIn() {
 function LoginHeader() {
   return (
     <header>
-       
-        <FormTitle content='Welcome Back!'/>
-        
+      <FormTitle content="Welcome Back!" />
     </header>
   );
 }
@@ -30,15 +31,16 @@ function LoginHeader() {
 function LoginContent() {
   return (
     <main>
-      <Input txt="Email" />
-      <PasswordInput />
+      <Input type="text" txt="Email" />
+      <Input type="password" txt="password" />
     </main>
   );
 }
 
-function LoginFooter(){
- return <footer className="signIn-footer">
-    <SignButton />
-    <FooterGoogle />
-  </footer>
+function LoginFooter() {
+  return (
+    <footer className="signInFooter">
+      <SignButton />
+    </footer>
+  );
 }

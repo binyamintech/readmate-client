@@ -1,8 +1,7 @@
-.btn-box{
+.btn-box {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  
 }
 
 .sign-button {
@@ -13,8 +12,8 @@
   padding: 1rem 2rem;
 
   font-size: 0.9rem;
-  
-  position: absolute;
+
+  /* position: absolute; */
   width: 81%;
   height: 3rem;
 
@@ -24,6 +23,3 @@
   box-shadow: 2px 2px 0px #d35400;
   border-radius: 80px;
 }
-
-
-

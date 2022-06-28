@@ -1,20 +1,25 @@
-.sign-in{
+.sign-in {
   display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  /* display: flex;
   flex-direction: column;
   position: relative;
-width: 100%;
-height: 100%;
-background: #ffff;
-align-items: center;
-justify-content: center;
-gap: 2rem;
+  width: 100%;
+  height: 100%;
+  background: #ffff;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; */
 }
 
-
-.signIn-footer{
-  box-sizing: border-box;
+.signInFooter {
+  /* box-sizing: border-box; */
   /* display: flex; */
-  height: 200px;
-  position: relative;
-  margin-top: 44vh;
+  /* position: relative; */
+  margin-top: 200px;
+  gap: 2rem;
+  margin-bottom: 10px;
 }

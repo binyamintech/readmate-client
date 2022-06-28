@@ -2,11 +2,11 @@ import Test from "../../test/Test";
 import Header from "../header";
 import Nav from "../Nav";
 // import Popup from "../popup/Popup";
-import { Outlet, Route, Routes } from "react-router-dom"
+import { Outlet, Route, Routes } from "react-router-dom";
 import { SignIn } from "../../../pages/SignIn/Sign-in/SignIn";
+import SignUp from "../../../pages/SignUp/SignUp/SignUp";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
-
 
 function Main() {
   return (
@@ -64,9 +64,8 @@ function Main() {
         </Route>
 
         {/* Test */}
-        <Route path='/test' element={<SignIn />} />
-
-
+        <Route path="/test1" element={<SignIn />} />
+        <Route path="/test" element={<SignUp />} />
       </Routes>
 
       <Nav />
