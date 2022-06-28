@@ -33,7 +33,6 @@ function Main() {
     <>
       <Header />
 
-      content
       <Routes>
         {/* Team A */}
         <Route path="teama">
@@ -89,7 +88,7 @@ function Main() {
         {/* <Route path="/teams/TeamH">
           <Route index element={<TeamH />} />
           <Route path="/teams/TeamH/Training" element={<Training />} /> */}
-          {/* <Route path="components-path" element={<>team's components</>} /> */}
+        {/* <Route path="components-path" element={<>team's components</>} /> */}
         {/* </Route> */}
 
         {/* Test */}

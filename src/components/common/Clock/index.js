@@ -14,9 +14,9 @@ import RoundedButton from "../RoundedButton";
 //instructions: when you use this component you should
 //  send a props named "freeStyle" with a value:false.
 
-function Clock() {
+function Clock(props) {
   const [play, setPlay] = useState(false);
-  let freeStyle = true; //Todo: change to props.freeStyle
+  let freeStyle = props.freeStyle; //Todo: change to props.freeStyle
   const [rapid, setRapid] = useState(0);
 
   const renderTime = ({ remainingTime }) => {
@@ -61,9 +61,9 @@ function Clock() {
         <CountdownCircleTimer
           rotation={"counterclockwise"}
           isPlaying={play}
-          duration={180}
+          duration={5}
           colors={["#7D56A5"]}
-          onComplete={() => ({ shouldRepeat: true, delay: 1 })}
+          onComplete={props.funcs.onComplete}
           trailColor={"#FEEFEC"}
           strokeLinecap={"square"}
         >
