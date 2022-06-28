@@ -1,14 +1,14 @@
 // import { NavBar } from "../Common/Nav/index";
+import { Contact } from "../../pages/Contact";
 
 function Test() {
   return (
     <>
+      <Contact />
       {/* <Options /> */}
       {/* <Nav /> */}
     </>
   );
 }
-// function bbb() {
-//   alert("nrjnfrj");
-// }
+
 export default Test;
