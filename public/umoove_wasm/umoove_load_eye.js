@@ -78,7 +78,7 @@ function setTrackingModeUmoove(mode) {
 }
 //spawn a dedicated worker for WASM
 var wasmWorker;
-wasmWorker = new Worker("umoove_wasm/wasm_worker.js");
+wasmWorker = new Worker("../umoove_wasm/wasm_worker.js");
 
 var workerBusy = false;
 wasmWorker.onmessage = function (e) {
