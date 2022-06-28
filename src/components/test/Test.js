@@ -1,10 +1,14 @@
 import Clock from "../../components/Common/Clock";
 
 function Test() {
+  const testFuncs = {
+    rapid: (rapid) => {
+      console.log(rapid);
+    },
+  };
   return (
     <>
-      <Clock></Clock>
-      {/* <>{Clock.cou}</> */}
+      <Clock funcs={testFuncs}></Clock>
     </>
   );
 }
