@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css';
 import SoundBar from "./SoundBar.png"
-import Clock from "../../../../components/common/Clock"
+// import Clock from "../../../../components/common/Clock"
 import SquareButton from '../../../../components/common/SquareButton';
 import { useNavigate } from "react-router-dom";
 
@@ -28,7 +28,7 @@ const ExerciseClock = () => {
 
   return (
     <div className="level_page">
-      <Clock freeStyle={false} time={5} funcs={shaulFuncs}></Clock>
+      {/* <Clock freeStyle={false} time={5} funcs={shaulFuncs}></Clock> */}
       <SquareButton>{LPM}</SquareButton>
       <img src={SoundBar} />
     </div>
