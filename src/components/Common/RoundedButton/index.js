@@ -3,7 +3,7 @@ import styles from "./style.module.css";
 
 // Creator : Team H - batya
 export default function RoundedButton(props) {
-  const [isplay, setIsPlay] = useState(0);
+  const [isplay, setIsPlay] = useState(1);
   return (
     <>
       {isplay ? (
