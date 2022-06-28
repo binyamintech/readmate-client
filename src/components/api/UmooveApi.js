@@ -1,7 +1,15 @@
 const API_loadUmooveLibrary = () => {
-  window.loadUmooveLibrary();
-  window.initUmoove();
+  return new Promise((resolve, reject) => {
+    window
+      .loadUmooveLibrary()
+      .then((stream) => {
+        window.initUmoove();
+        resolve(stream);
+      })
+      .catch((e) => reject(e));
+  });
 };
+
 const API_getUmooveStream = () => {
   if (window.UMStream) {
     return window.UMStream;
@@ -35,6 +43,11 @@ const API_startUmoove = () => {
 };
 const API_stopUmoove = () => {
   window.stopUmoove();
+  if (this.window.stream) {
+    this.window.stream.getTracks().forEach(function (track) {
+      track.stop();
+    });
+  }
 };
 const API_getDistance = () => {
   let diam = window.UMDiam;
@@ -119,6 +132,7 @@ const API_stopReading = (num_of_lines) => {
 
   //reset the array and vars
   window.readingData = [];
+  API_stopUmoove();
   return timePerLine;
 };
 
