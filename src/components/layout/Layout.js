@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 import Main from "./Main";
-import Login from "./login";
+import Login from "./Login";
 import { dataContext } from "../../context/context";
 import fakeData from "../../context/fakeData";
 
