@@ -3,6 +3,7 @@ import Header from "../header";
 import Nav from "../Nav";
 // import Popup from "../popup/Popup";
 import { Outlet, Route, Routes } from "react-router-dom";
+import TeamA from "../../teams/TeamA";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
 
@@ -14,8 +15,8 @@ function Main() {
       {/* content */}
       <Routes>
         {/* Team A */}
-        <Route path="teams-path">
-          <Route index element={<>team's components</>} />
+        <Route path="teama">
+          <Route index element={<TeamA />} />
           <Route path="components-path" element={<>team's components</>} />
         </Route>
 
