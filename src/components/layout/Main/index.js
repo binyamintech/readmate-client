@@ -8,7 +8,7 @@ import Page6 from "../../../pages/Assessments/Page6";
 import Page5 from "../../../pages/Assessments/page5";
 import Page4 from "../../../pages/Assessments/Page4";
 import Page3 from "../../../pages/Assessments/Page3";
-import Header from "../header";
+import Header from "../Header";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
 
