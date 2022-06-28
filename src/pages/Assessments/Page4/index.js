@@ -15,9 +15,9 @@ function Page4() {
     let navigate = useNavigate()
     const l = useLocation()
 
-    function handleClick() {
+    function onclick() {
         console.log("clicked");
-        // UmooveApi.API_stopReading();//לבדוק
+        UmooveApi.API_stopReading();//לבדוק
         UmooveApi.API_stopUmoove();
         navigate('/page5', { state: { exam: exams } })
     }
@@ -297,9 +297,9 @@ function Page4() {
             {/* //scrollbar
         //bottom button "done" - import whith props */}
 
-            <div onClick={handleClick}>
-                <SubmitBtn />
-            </div>
+            {/* <div onClick={handleClick}> */}
+            <SubmitBtn onclick={onclick} name={"Done"} />
+            {/* </div> */}
         </div>
     </>
 }

@@ -10,7 +10,7 @@ import UmooveApi from "../../../components/api/UmooveApi";
 // Creator : Team A - Daniel
 function Page1() {
   useEffect(() => {
-    // UmooveApi.API_loadUmooveLibrary()
+    UmooveApi.API_loadUmooveLibrary()
   }, []);
 
   return (
