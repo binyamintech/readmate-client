@@ -1,0 +1,16 @@
+.userPic {
+  position: relative;
+  /* width: 84px; */
+  /* height: 84px; */
+  /* left: 16px; */
+  /* top: 94px; */
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)),
+    url(.png); */
+}
+.btnContaine {
+  position: absolute;
+  display: block;
+  bottom: 41px;
+  width: 94%;
+  left: 3%;
+}
