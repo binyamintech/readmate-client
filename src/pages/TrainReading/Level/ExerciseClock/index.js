@@ -1,7 +1,6 @@
 import React from 'react'
 import './style.css';
 import SoundBar from "./SoundBar.png"
-import { Link } from 'react-router-dom';
 import Clock from "../../../../components/common/Clock"
 import SquareButton from '../../../../components/common/SquareButton';
 import { useNavigate } from "react-router-dom";
