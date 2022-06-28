@@ -56,9 +56,15 @@ function Page3() {
                 <Link to="/teama/page4"> <button> start now! </button></Link>
                 <FooterStart route ="/teama/page4" startFunction={() => {console.log(":()");}} title="Start now" explanation="hdnvdjnjrtnvjsdsdjkdfnjsnjknsdfjknsdfjsdkf" img={group} />
                 <img src={group} alt='' />
-            </div>
-        </div>
-    )
+        <Link to="/page4">
+          
+          <button> start now! </button>
+        </Link>
+        <FooterStart />
+        <img src={group} alt="" />
+      </div>
+    </div>
+  );
 }
 
 
