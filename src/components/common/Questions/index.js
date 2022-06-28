@@ -1,8 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom'
 import SubmitBtn from "../SubmitBtn";
+<<<<<<< HEAD
 import TextArea from "../TextArea/Index";
 import img from "../../../assets/img/logo/vector.png"
+=======
+import TextArea from "../TextArea";
+import  img  from "../../../assets/img/logo/vector.png"
+>>>>>>> 22afa95beeb073e04cc9c25407baeefe5aeb79c5
 //group c- yehoshua
 export default function Questions() {
 

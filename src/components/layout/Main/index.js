@@ -1,5 +1,5 @@
 import Test from "../../test/Test";
-import Header from "../header";
+import Header from "../Header";
 import Nav from "../Nav";
 import Popup from "../Popup";
 import { Outlet, Route, Routes } from "react-router-dom"
@@ -10,6 +10,7 @@ import ExerciseClock from "../../../pages/TrainReading/Level/ExerciseClock"
 import ExerciseQuestion from "../../../pages/TrainReading/Level/ExerciseQuestion"
 import ExerciseRate from "../../../pages/TrainReading/Level/ExerciseRate"
 import ExerciseResult from "../../../pages/TrainReading/Level/ExerciseResult"
+// import TeamC from '../../teams/TeamC'
 
 
 function Main() {
@@ -54,9 +55,9 @@ function Main() {
         </Route>
 
         {/* Team F */}
-        <Route path="teams-path">
-          <Route index element={<>team's components</>} />
-          <Route path="components-path" element={<>team's components</>} />
+        <Route path="/teamf">
+          <Route index element={<TeamF />} />
+          <Route path="components-path" element={<TeamF />} />
         </Route>
 
         {/* Team G */}
@@ -71,11 +72,8 @@ function Main() {
           <Route path="components-path" element={<>team's components</>} />
         </Route>
 
-
         {/* Test */}
-        <Route path='/test' element={<Test />} />
-
-
+        <Route path="/test" element={<Test />} />
       </Routes>
 
       <Nav />
