@@ -31,7 +31,7 @@ function Clock(props) {
     const minutes = Math.floor(remainingTime / 60);
     const seconds = remainingTime - minutes * 60;
     return (
-      <div className="timer">
+      <div className= {styles.timer}>
         {freeStyle ? (
           <div className={styles.squarebutton}>
             <SquareButton>{rapid} LPM</SquareButton>
@@ -52,7 +52,7 @@ function Clock(props) {
               !freeStyle && setPlay(!play);
             }}
           >
-            <RoundedButton isPlay={!freeStyle}></RoundedButton>
+            <div className={styles.roundButton}><RoundedButton isPlay={!freeStyle}></RoundedButton></div>
           </div>
         )}
       </div>
@@ -60,7 +60,7 @@ function Clock(props) {
   };
 
   return (
-    <>
+    <div className={styles.wrapClock}>
       {/*  this clock refers to freeStyle */}
       {freeStyle && (
         <button
@@ -90,11 +90,12 @@ function Clock(props) {
         <button
           className={styles.plusMinus}
           onClick={() => setRapid(rapid - 2)}
-        >
-          <div className={styles.plusMinusSign}>-</div>
+        >-
+         
         </button>
       )}
-    </>
+      </div>
+    
   );
 }
 
