@@ -17,11 +17,13 @@ import RoundedButton from "../RoundedButton";
 //  2. "time" with the value 180 for 3 minutes clock.
 //  3. object named "funcs" with the keys: "onPlay","onPause" and "onComplete"
 //     and values which are your functions for those situations.
+//  4. "rapid" with a value: current user LPM
 
 function Clock(props) {
-  const [play, setPlay] = useState(!props.freeStyle);
-  let freeStyle = props.freeStyle; //Todo: change to props.freeStyle
-  let timeInSeconds = 180; //Todo: change to props.time;
+  let freeStyle = true; //Todo: change to props.freeStyle
+  const [play, setPlay] = useState(!freeStyle);
+
+  let timeInSeconds = 10; //Todo: change to props.time;
   const [rapid, setRapid] = useState(0);
   const [isFinish, setIsFinish] = useState(false);
 
@@ -43,16 +45,16 @@ function Clock(props) {
         )}
         {remainingTime == 0 && setIsFinish(true)}
 
-        {
+        {!isFinish && (
           <div
-            // className={styles.playPause}
+            className={styles.playPause}
             onClick={() => {
               !freeStyle && setPlay(!play);
             }}
           >
-            <RoundedButton isPlay={props.freeStyle}></RoundedButton>
+            <RoundedButton isPlay={!freeStyle}></RoundedButton>
           </div>
-        }
+        )}
       </div>
     );
   };
@@ -63,7 +65,10 @@ function Clock(props) {
       {freeStyle && (
         <button
           className={styles.plusMinus}
-          onClick={() => setRapid(rapid + 2)}
+          onClick={() => {
+            setRapid(rapid + 1);
+            props.funcs.rapid(rapid);
+          }}
         >
           +
         </button>
@@ -73,9 +78,9 @@ function Clock(props) {
           rotation={"counterclockwise"}
           isPlaying={play}
           duration={timeInSeconds}
-          colors={["#FEEFEC"]}
+          colors={["#7D56A5"]}
           onComplete={() => ({ shouldRepeat: false, delay: 1 })}
-          trailColor={"#7D56A5"}
+          trailColor={"#FEEFEC"}
           strokeLinecap={"square"}
         >
           {renderTime}

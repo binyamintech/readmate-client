@@ -3,14 +3,13 @@ import styles from "./style.module.css";
 
 // Creator : Team H - batya
 export default function RoundedButton(props) {
-  const [isplay, setIsPlay] = useState(!props.isPlay);
+  const [isplay, setIsPlay] = useState(props.isPlay);
   return (
     <>
       {isplay ? (
         <button
           className={styles.RoundedButton}
           onClick={() => {
-            console.log("isplay");
             setIsPlay(!isplay);
           }}
         >
