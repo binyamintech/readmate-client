@@ -1,32 +1,38 @@
 import React from 'react'
 import './style.css';
 import SoundBar from "./SoundBar.png"
-import { Link } from 'react-router-dom';
+// import Clock from "../../../../components/common/Clock"
+import SquareButton from '../../../../components/common/SquareButton';
+import { useNavigate } from "react-router-dom";
 
-// import Clock from '../../../../components/common/Clock'
 
+const ExerciseClock = () => {
+  const navigate = useNavigate();
 
-const index = () => {
   const rout = '/train_reading_level/rate'
 
+  const LPM = '12 LPM'
   function onclickHandler() {
-    // window.location.href = rout
     console.log('button')
+  }
+
+  const shaulFuncs = {
+    // onPlay: shaulOnPlay,
+    // onPause: shaulOnPause,
+    onComplete: shaulOnComplete
+  }
+
+  function shaulOnComplete(){
+    navigate(rout, { replace: true })
   }
 
   return (
     <div className="level_page">
-      <h1>Exercise Clock</h1>
-      {/* <Clock/> */}
-      <h1>Clock</h1>
-      <h1>12 LPM</h1>
-      <Link to={rout}>
-        <button onClick={onclickHandler}>next</button>
-        {/* // this onclick dont exist, the path will be send throw props.rout to the component */}
-      </Link>
+      {/* <Clock freeStyle={false} time={5} funcs={shaulFuncs}></Clock> */}
+      <SquareButton>{LPM}</SquareButton>
       <img src={SoundBar} />
     </div>
   )
 }
 
-export default index
+export default ExerciseClock
