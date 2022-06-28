@@ -16,16 +16,4 @@ function Test() {
         <Page5 />
     </>)
 }
-// (
-{/* <RatingAndScore wpm={120} std={5} compScore={8} /> */ }
-{/* <Page6 /> */ }
-{/* <Calc /> */ }
-{/* </>) */ }
-
-{/* lkdjclkdsmLKSNML */ }
-{/* <Page4 /> */ }
-//  )
-// }
-{/* } */ }
-
 export default Test;
