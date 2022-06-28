@@ -2,6 +2,10 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+<<<<<<< HEAD
+=======
+  margin: 0.9rem;
+>>>>>>> 949881f37a7f68edf03be1305f99e17e5fa41f33
 }
 
 .sign-button {
@@ -12,9 +16,15 @@
   padding: 1rem 2rem;
 
   font-size: 0.9rem;
+<<<<<<< HEAD
 
   /* position: absolute; */
   width: 81%;
+=======
+  
+  /* position: absolute; */
+  width: 99%;
+>>>>>>> 949881f37a7f68edf03be1305f99e17e5fa41f33
   height: 3rem;
 
   background-color: var(--primary-color);

@@ -4,10 +4,8 @@ export default function SelectInput(props) {
   return <>
       <fieldset className='border'>
         <select className='option'>
-          <option value="0">Select The Reading Level</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
+          <option value="00">{props.title}</option>
+          {props.options.map((item,index)=> <option value={index}>{item}</option>)}
         </select>
       </fieldset>
         </>

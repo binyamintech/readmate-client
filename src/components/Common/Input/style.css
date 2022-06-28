@@ -2,13 +2,14 @@ fieldset {
   border: 1px solid var(--main-title-color);
   border-radius: 0.8rem;
   height: 11vh;
+  /* width: 90%; */
   margin: 1rem;
 }
 
-input[type="text"] {
-  box-sizing: border-box;
+.allInputs {
+  /* box-sizing: border-box; */
 
-  position: relative;
+  /* position: relative; */
   width: 85%;
   height: 6vh;
   padding: 1rem;
