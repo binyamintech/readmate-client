@@ -1,7 +1,7 @@
 import Test from "../../test/Test";
 import Nav from "../Nav";
 import Popup from "../Popup";
-import { Outlet, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import TeamA from "../../teams/TeamA";
 import Page1 from "../../../pages/Assessments/Page1";
 import Page6 from "../../../pages/Assessments/Page6";

@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import Main from "./Main";
+import Main from "../layout/Main";
 export const pageNameContext = createContext();
 
 export default function Layout() {
