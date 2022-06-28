@@ -24,5 +24,7 @@ export default function Header() {
             <img src={photoPic} alt="User Name" />
          </div>
       </div>
-   )
+
+    
+  );
 }

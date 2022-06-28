@@ -55,9 +55,9 @@ function Main() {
         </Route>
 
         {/* Team F */}
-        <Route path="teams-path">
-          <Route index element={<>team's components</>} />
-          <Route path="components-path" element={<>team's components</>} />
+        <Route path="/teamf">
+          <Route index element={<TeamF />} />
+          <Route path="components-path" element={<TeamF />} />
         </Route>
 
         {/* Team G */}
@@ -72,11 +72,8 @@ function Main() {
           <Route path="components-path" element={<>team's components</>} />
         </Route>
 
-
         {/* Test */}
-        <Route path='/test' element={<Test />} />
-
-
+        <Route path="/test" element={<Test />} />
       </Routes>
 
       <Nav />

@@ -9,6 +9,7 @@ export default function Popup() {
     const yes = () => {
         setPopup(false)
         navigate('/instruction')
+        
     }
     const no = () => {
         setPopup(false)
