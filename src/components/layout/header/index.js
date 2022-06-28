@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { pageNameContext, navBarContext } from "../Layout";
 import nav from './img/nav-icon.png';
-import { NavBar } from "../../common/NavBar/index";
+import { NavBar } from "../../common/Nav/index";
 import photoPic from './img/userPhoto.png';
 import "./header.css"
 

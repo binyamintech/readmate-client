@@ -1,5 +1,5 @@
 import Test from "../../test/Test";
-import Header from "../Header";
+import Header from "../header/index";
 import Nav from "../Nav";
 import Popup from "../Popup";
 import { Outlet, Route, Routes } from "react-router-dom"
@@ -54,11 +54,11 @@ function Main() {
           <Route path="components-path" element={<>team's components</>} />
         </Route>
 
-        {/* Team F */}
+        {/* Team F
         <Route path="/teamf">
           <Route index element={<TeamF />} />
           <Route path="components-path" element={<TeamF />} />
-        </Route>
+        </Route> */}
 
         {/* Team G */}
         <Route path="teams-path">
