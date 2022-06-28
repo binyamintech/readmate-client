@@ -1,0 +1,16 @@
+.icon{
+ 
+    display: inline-block;
+    margin-right: 10px;
+}
+.txt{
+    margin-left: 78px;
+    color: black;
+    
+    
+}
+.outerdiv{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+}

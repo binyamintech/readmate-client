@@ -1,0 +1,17 @@
+.logoImg{
+width: 27%;
+flex: none;
+margin-left: 18%;
+}
+.logoImg2{
+    width: 38%;
+    margin-bottom:7%;
+    order: 1;
+    flex-grow: 0;
+    }
+.head{
+    margin-top: 27%;
+    position: relative;
+
+}
+

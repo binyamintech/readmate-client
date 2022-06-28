@@ -1,7 +1,8 @@
-function Test() {
-    return <>
-       
-    </>
-}
 
+
+function Test() {
+    return (<>
+
+    </>)
+}
 export default Test;

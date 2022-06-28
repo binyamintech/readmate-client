@@ -1,11 +1,11 @@
-.classroom-page{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+.classroom-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-footer{
-    /* position: relative; */
-    margin-top: 100%;
+footer {
+  /* position: relative; */
+  margin-top: 85%;
 }

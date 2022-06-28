@@ -5,10 +5,7 @@ import Nav from "../Nav";
 import { Outlet, Route, Routes } from "react-router-dom";
 import { SignIn } from "../../../pages/SignIn/Sign-in/SignIn";
 import SignUp from "../../../pages/SignUp/SignUp/SignUp";
-<<<<<<< HEAD
-=======
 import ClassroomIdPage from "../../../pages/SignUp/ClassroomId";
->>>>>>> 949881f37a7f68edf03be1305f99e17e5fa41f33
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
 
@@ -68,16 +65,9 @@ function Main() {
         </Route>
 
         {/* Test */}
-<<<<<<< HEAD
-        <Route path="/test1" element={<SignIn />} />
-        <Route path="/test" element={<SignUp />} />
-=======
-        <Route path='/test' element={<SignIn/>} />
-        <Route path='/test1' element={<SignUp/>} />
-        <Route path='/test2' element={<ClassroomIdPage/>} />
-
-
->>>>>>> 949881f37a7f68edf03be1305f99e17e5fa41f33
+        <Route path="/test" element={<SignIn />} />
+        <Route path="/test1" element={<SignUp />} />
+        <Route path="/test2" element={<ClassroomIdPage />} />
       </Routes>
 
       <Nav />

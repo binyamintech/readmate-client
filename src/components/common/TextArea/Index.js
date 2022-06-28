@@ -2,12 +2,12 @@ import React from 'react'
 import "./style.css"
 
 
-// Team C - Missing form
+// Team C
 const TextArea = (props) => {
     return (
-        <div>
+        <div className='ta_box'>
             <div className="form-group">
-                <label>First name{props.children}</label>
+                <label>{props.children}</label>
                 <input type="text" className="form-control" />
             </div>
         </div>

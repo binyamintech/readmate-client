@@ -17,13 +17,11 @@ fieldset {
   font-weight: 600;
   font-size: 100%;
   line-height: 2rem;
- 
+
   background: #ffff;
   border: none;
   outline: 0;
-  
 }
-
 
 legend {
   padding: 0.2em 0.5em;
