@@ -11,6 +11,7 @@ import UmooveApi from '../../../components/api/UmooveApi';
 // Creator : Team A -efrat & Yehoantan
 function Page3() {
     const l=useLocation()
+
     
     const navigate = useNavigate()
     let videoRef = useRef()
@@ -40,7 +41,7 @@ function Page3() {
              sucsses=  UmooveApi.API_getUmooveTracking()
            if(sucsses===true){
             clearInterval(interval)
-            navigate("/teama/page4",l.state.data)
+            navigate("/teama/page4",{ state: { data:l.state.data } })
            }
            count ++
         }, 1000);
@@ -60,7 +61,6 @@ function Page3() {
           
           <button> start now! </button>
         </Link>
-        <FooterStart />
         <img src={group} alt="" />
       </div>
     </div>
