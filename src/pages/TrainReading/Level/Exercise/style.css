@@ -1,6 +1,7 @@
-.level_page {
+.level_exercise {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin-top: 15%;
 }

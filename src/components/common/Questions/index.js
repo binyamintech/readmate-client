@@ -10,28 +10,64 @@ export default function Questions() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const formData = Object.fromEntries(new FormData(e.target));
-    navigate("intructions");
-    console.log(formData);
-  };
-
-  const isFormValid = () => {
-    const { questionOne, questionTwo, questionThree, questionFour } = formData;
-
-    return questionOne && questionTwo && questionThree && questionFour;
-  };
-
-  const onChange = (e) => {
+    const formData = new FormData(e.currentTarget);
+    const body = {
+      questionOne: formData.get("questionOne"),
+      questionTwo: formData.get("questionTwo"),
+      questionThree: formData.get("questionThree"),
+      questionFour: formData.get("questionFour")
+    };
     const name = e.target.name;
     const value = e.target.value;
-
     setFormData((currentFormData) => {
+      console.log(formData)
       return {
         ...currentFormData,
         [name]: value,
       };
     });
+    const sendToDb = (body) => {
+    //i need the create function to send it to db
+  // body to db 
+      
+    }
+    // console.log(e.currentTarget)
+    console.log(body) 
+    console.log(e.currentTarget)
+    // isFormValid(body)
+    navigate("/train_reading_level/result");
   };
+
+
+  // const isFormValid = (props) => {
+  //   if (!props) {
+  //       console.log("bonanza");
+  //     }
+  //     // else{
+  //     //   return !isFormValid;
+  //     // }
+  // };
+
+
+  const onChange = (e) => {
+    // const name = e.target.name;
+    // const value = e.target.value;
+    // setFormData((currentFormData) => {
+    //   console.log(formData)
+    //   return {
+    //     ...currentFormData,
+    //     [name]: value,
+    //   };
+    // });
+    console.log("nope");
+  };
+
+  // const joshClick = (e) => {
+  //   onSubmit(e)
+  //   onChange(e)
+  //   // if (isFormValid && sendToDb) {
+  //   // }
+  // }
 
   return (
     <div>
@@ -90,30 +126,6 @@ export default function Questions() {
             "What do you think is going to happen?"
           </TextArea>
         </label>
-        {/* <label>
-        <span>What can you say about the theme of the story?</span>
-        <input
-          name="questionTwo"
-          value={formData.questionTwo || ''}
-          onChange={onChange}
-        />
-      </label> */}
-        {/* <label>
-        <span>Why do you think the author wrote this book?</span>
-        <input
-          name="questionThree"
-          value={formData.questionThree || ''}
-          onChange={onChange}
-        />
-      </label>
-      <label>
-        <span>What do you think is going to happen?</span>
-        <input
-          name="questionFour"
-          value={formData.questionFour || ''}
-          onChange={onChange}
-        />
-      </label> */}
         <span>
           <SubmitBtn />
           {/* yehoshua  did it*/}
