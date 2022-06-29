@@ -17,4 +17,4 @@ function TeamF() {
   );
 }
 
-// export default TeamF;
+export default TeamF;

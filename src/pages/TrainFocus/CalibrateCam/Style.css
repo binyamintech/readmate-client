@@ -14,24 +14,15 @@
     }
 
 
-<<<<<<< HEAD:src/pages/TrainFocus/CalibrateCam/moveDot.css
-    /* button{
-        width: 90%;
-        height: 48px; */
-        /* left:50%; */
-        /* position:fixed;
-        bottom: 50px; */
-=======
     .continueBtn{
         width: 90%;
         height: 48px;
         position:fixed;
         bottom: 50px;
->>>>>>> binyamin/team-g:src/pages/TrainFocus/CalibrateCam/Style.css
         /* border: 10px solid black; */
         /* display: block;
-        margin: auto;
-    } */
+        margin: auto;*/
+    }
 
     .place {
         position: fixed;
