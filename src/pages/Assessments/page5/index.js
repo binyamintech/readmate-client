@@ -4,8 +4,8 @@ import styles from "./style.module.css";
 import QuestionBoard from '../../../components/common/QuestionBoard'
 import SubmitBtn from '../../../components/common/SubmitBtn'
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+
 
 // import Calc from '../Calc';
 export default function Page5() {
@@ -51,7 +51,25 @@ export default function Page5() {
     })
 
 
+    // },
+    // {
+    //     num: 4,
+    //     ans: false
+
+    // }]
+    // let navigate = useNavigate()
     const checkResults = () => {
+        
+        // let count = 0;
+        // ans.map((v, i) => {
+        //     if (v.ans == arr1[(i + 1)].answer) {
+        //         //    setarrOfAnswers({orderNum:v.orderNum,answer:true})
+        //         arrOfAnswers.push({ orderNum: arr1.orderNum, answer: true })
+        //         count++;
+        //     }
+        //     else {
+        //         // setarrOfAnswers({orderNum:v.orderNum,answer:false})
+        //         arrOfAnswers.push({ orderNum: arr1.orderNum, answer: false })
 
         let count = 0;
         (data.exam[0].questions).map((v, i) => {
@@ -65,11 +83,14 @@ export default function Page5() {
                 arrOfAnswers.push({ orderNum: arr1.orderNum, answer: false })
             }
         })
-        // console.log(arr1)
+        console.log(arr1)
         // console.log(count);
-        // console.log(arrOfAnswers)
+        console.log(arrOfAnswers)
         let a = Calc()
         n('/teama/page6', { state: { count: count, WPM: a[0], STD: a[1], AVG: a[2] } })
+        console.log('answers'+count);
+        console.log("student choice"+arr1)
+       
     }
 
     // const arr = data.exam[0].questions
@@ -79,13 +100,20 @@ export default function Page5() {
             <div className={styles.questions}>
                 {arr.map((v, i) => {
                     return (
-                        <QuestionBoard title={data.exam[0].questions[i].title} key={i} result={result} setResult={setResult} i={i} arr={arr1}/>
+                        <QuestionBoard title={data.exam[0].questions[i].title} key={i} result={result} setResult={setResult} i={i} arr={arr1} />
                     )
                 })}
             </div>
             <div>
-                <SubmitBtn name={'next'} onclick={checkResults} />
+                <SubmitBtn startFunction={() => { checkResults() }} name={'next'} />
             </div>
+            {
+                console.log("student choice"+arr1)
+               
+            }
+            {
+                //  console.log("resulte"+arrOfAnswers)
+            }
 
         </>
     )

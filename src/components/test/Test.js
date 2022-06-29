@@ -1,19 +1,16 @@
-import Page4 from '../../pages/Assessments/Page4'
-// ./src/components/test/Test
-// import Calc from "../../pages/Assessment/Calc";
-// // import Page6 from "../../pages/Assessments/Page6";
-// import RatingAndScore from "../Common/ReatingAndScore";
-// import RatingAndScore from '../Common/ReatingAndScore'
-// import Questions from '../Common/Questions'
-// import QuestionBoard from '../Common/QuestionBoard'
-// import SubmitBtn from '../Common/SubmitBtn'
-import React from "react";
-import Page5 from '../../pages/Assessments/page5';
 
+import { useContext, useEffect } from 'react';
+import { dataContext } from '../../context/context'
 function Test() {
+  const localDataContext = useContext(dataContext)
+  useEffect(() => {
+    console.log('dsadasasd');
+    console.log(localDataContext);
+  })
 
-    return (<>
-        <Page5 />
-    </>)
+
+  return (<>
+    {/* <Page5 /> */}
+  </>)
 }
 export default Test;

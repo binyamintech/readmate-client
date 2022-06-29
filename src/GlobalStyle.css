@@ -12,10 +12,10 @@
     background-color: #7D56A5;;
     border-radius: 20px;
     z-index: -1;
-  }
-  .right.back-purple::before{
+}
+.right.back-purple::before {
     transform: rotate(2.3deg);
-  }
-  .left.back-purple::before{
+}
+.left.back-purple::before {
     transform: rotate(-2.3deg);
-  }
+}

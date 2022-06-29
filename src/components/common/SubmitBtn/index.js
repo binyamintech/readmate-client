@@ -1,15 +1,16 @@
 import "./style.css";
 import { Link } from "react-router-dom";
-export default function SubmitBtn({ path, name, onclick }) {
+// export default function SubmitBtn({ path = "", name, type, click = () => { } }) {
+export default function SubmitBtn(props) {
   return (
-    //creator : nehorai, team f , enter the path with / and enter the function without ()
-    <div className="submit">
-      
-      {/* <Link to={path}> */}
-      <div type="button" onClick={onclick}>
-        <div className="word">{name}</div>
-      </div>
-      {/* </Link> */}
-    </div>
+    // creator : nehorai
+    // team f
+    // enter the path with /
+    // you must have function!! not a code
+    // <Link to={path}>
+    <button className="submit" type={props.type} onClick={props.startFunction}>
+      <div className="word">{props.name}</div>
+    </button>
+    // </Link>
   );
 }
