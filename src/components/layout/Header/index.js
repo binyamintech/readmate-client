@@ -9,11 +9,14 @@ import "./header.css"
 
 export default function Header() {
    const pageNameContextLocal = useContext(pageNameContext) //assuming context is in use
+
+
    // console.log(pageNameContextLocal.pageName);
    const [navState, setNavState] = useState(false);
 
 
 return (
+   pageNameContextLocal.showHeader?
    <div className='header'>
       <div className='left'>
          {!navState ? (
@@ -41,6 +44,6 @@ return (
       <div className='right'>
          <img src={photoPic} alt="User Name" />
       </div>
-   </div>
+   </div>:console.log("no header")
 )
 }

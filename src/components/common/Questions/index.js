@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom'
-import SubmitBtn from "../SubmitBtn";
-import TextArea from "../TextArea/index";
+// import SubmitBtn from "../SubmitBtn";
+import TextArea from "../TextArea/Index";
 import  img  from "../../../assets/img/logo/vector.png"
 //group c- yehoshua
 export default function Questions() {
@@ -18,11 +18,25 @@ export default function Questions() {
       questionThree: formData.get("questionThree"),
       questionFour: formData.get("questionFour")
     };
+    const name = e.target.name;
+    const value = e.target.value;
+    setFormData((currentFormData) => {
+      console.log(formData)
+      return {
+        ...currentFormData,
+        [name]: value,
+      };
+    });
+    const sendToDb = (body) => {
+    //i need the create function to send it to db
+  // body to db 
+      
+    }
     // console.log(e.currentTarget)
     console.log(body) 
     console.log(e.currentTarget)
     // isFormValid(body)
-    navigate("/result");
+    navigate("/train_reading_level/result");
   };
 
 
@@ -35,30 +49,26 @@ export default function Questions() {
   //     // }
   // };
 
-  // const sendToDb = (e) => {
-  //   setFormData()
-  //   // if (isFormValid === true) {
-  //   // }
-  // }
 
   const onChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setFormData((currentFormData) => {
-      console.log(formData)
-      return {
-        ...currentFormData,
-        [name]: value,
-      };
-    });
+    // const name = e.target.name;
+    // const value = e.target.value;
+    // setFormData((currentFormData) => {
+    //   console.log(formData)
+    //   return {
+    //     ...currentFormData,
+    //     [name]: value,
+    //   };
+    // });
+    console.log("nope");
   };
 
-  const joshClick = (e) => {
-    onChange(e)
-    onSubmit(e)
-    // if (isFormValid && sendToDb) {
-    // }
-  }
+  // const joshClick = (e) => {
+  //   onSubmit(e)
+  //   onChange(e)
+  //   // if (isFormValid && sendToDb) {
+  //   // }
+  // }
 
   return (
     <div>
@@ -66,10 +76,7 @@ export default function Questions() {
         <div><h4>Instructions</h4>
           <img src={img} alt="" />
           <p>
-            Consectetur fames feugiat interdum morbi placerat in.
-            Leo commodo maecenas donec cursus aenean scelerisque eu.
-            Ridiculus amet habitant gravida lobortis suscipit enim,
-            consectetur quisque.
+          “Hello. My name is Inigo Montoya. You killed my father. Prepare to die”
           </p>
         </div>
         <div>
@@ -99,11 +106,11 @@ export default function Questions() {
           </TextArea>
         </label>
         <span>
-          <SubmitBtn path={""}  name={"done"} onClick1={(e)=>joshClick(e)}>done</SubmitBtn>{/* yehoshua  did it
-
+          {/* <SubmitBtn path={"/train_reading_level/result"} type="submit" name={"done"} onclick={onSubmit}>done</SubmitBtn> */}
+          yehoshua  did it
           <button type="submit" >done</button>
-          {/* disabled={!isFormValid()} onSubmit={onSubmit} */}
-        </span>
+          </span>
+          {/* disabled={!isFormValid()} onSubmit={onSubmit} 
         {/* {JSON.stringify(formData)} */}
       </form>
     </div>
