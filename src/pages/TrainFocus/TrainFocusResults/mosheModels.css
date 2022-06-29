@@ -17,14 +17,7 @@
     text-align: center;
     color: #252525;
   }
-  /* .btn {
-    height: 30px;
-    width: 50%;
-    position: fixed !important;
-    margin-top: 20%;
-    top: 85% !important;
-    left: 35% !important;
-  } */
+
   .train-focus-rectangle1 {
     box-sizing: border-box;
     margin-top: 20%;
@@ -40,6 +33,7 @@
     align-items: center;
     /* transform: rotate(2.46deg); */
   }
+
   .train-focus-avg {
     color: purple;
   }

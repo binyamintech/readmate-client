@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 // import FooterStart from "../../../components/common/FooterStart/"
-=======
->>>>>>> binyamin/team-g
 import "./style.css";
 import FooterStart from "../../../components/common/FooterStart";
 import Frame from "../../../assets/img/logo/Frame.png";
@@ -72,17 +69,9 @@ function StartFocus() {
       {/* <FooterStart
         startFunction={startFunction}
         title={title}
-<<<<<<< HEAD
-        explanation={explanation}
-        route = {route}
-        img = {Frame}
-        // img = "https://d3m9l0v76dty0.cloudfront.net/system/photos/8904572/original/79dae6ad3800cd1d9209e6ff1a4d6de3.jpg"
+        explanation={RoundNumber === 1 ? explanation1 : explanation2}
+      img={Frame}
       /> */}
-=======
-        explanation={RoundNumber===1 ? explanation1 : explanation2}
-        img={Frame}
-      />
->>>>>>> binyamin/team-g
     </div>
   );
 }

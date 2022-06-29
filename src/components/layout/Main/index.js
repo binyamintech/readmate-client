@@ -5,12 +5,11 @@ import { Route, Routes } from "react-router-dom";
 import TeamA from "../../teams/TeamA";
 import Page1 from "../../../pages/Assessments/Page1";
 import Page6 from "../../../pages/Assessments/Page6";
-import Page5 from "../../../pages/Assessments/Page5";
+import Page5 from "../../../pages/Assessments/page5";
 import Page4 from "../../../pages/Assessments/Page4";
 import Page3 from "../../../pages/Assessments/Page3";
 import Header from "../header";
 import RatingAndScore from "../../common/ReatingAndScore";
-import { Outlet, Route, Routes } from "react-router-dom"
 import TeamH from "../../teams/TeamH";
 import Training from "../../../pages/FreeStyle/Training"
 import Exercise from "../../../pages/TrainReading/Level/Exercise"
@@ -28,7 +27,6 @@ import PushUpTimer from "../../../pages/TrainReading/PushUpTimer";
 import PushUpInstructions from "../../../pages/TrainReading/PushUpInstructions";
 //----
 // import Popup from "../Popup/Popup"
-import { Route, Routes } from "react-router-dom";
 import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
@@ -37,20 +35,20 @@ import Results from "../../../pages/TrainFocus/TrainFocusResults";
 import StartFocus from "../../../pages/TrainFocus/StartFocus/StartFocus";
 import Instructions from "../../../pages/FreeStyle/Instructions";
 // import Exercise from "../../../pages/TrainFocus/Exercise";
-import Exercise from "../../../pages/TrainFocus/Exercise";
 //  import Popup from "./popup/Popup";
 // import { Outlet, Route, Routes } from "react-router-dom";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
-import Popup from "../Popup";
-import Header from "../header"
 import TeamF from "../../teams/TeamF";
+import { pageNameContext } from "../Layout";
 
 function Main() {
+  const pageNameContextLocal = useContext(pageNameContext)
+
   const { popup } = useContext(popupContext);
   return (
     <>
-      <Header />
+      {pageNameContextLocal.showHeader && <Header />}
       <Routes>
         {/* Team A */}
         <Route path="teama">
@@ -71,14 +69,14 @@ function Main() {
         </Route>
 
         {/* Team C */}
-        {/* <Route path="train_reading_level"> */}
-        {/* <Route index element={<>team's components</>} /> */}
-        {/* <Route path="exercise" element={<Exercise />} />
+        <Route path="train_reading_level">
+          {/* <Route index element={<>team's components</>} /> */}
+          <Route path="exercise" element={<Exercise />} />
           <Route path="exercise_clock" element={<ExerciseClock />} />
           <Route path="rate" element={<ExerciseRate />} />
           <Route path="question" element={<ExerciseQuestion />} />
-          <Route path="result" element={<ExerciseResult />} /> */}
-        {/* </Route> */}
+          <Route path="result" element={<ExerciseResult />} />
+        </Route>
 
         {/* Team D */}
         {/* <Route path="teams-path">
