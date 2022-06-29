@@ -1,29 +1,39 @@
-.wrapping{
-  flex-direction: column;
+.wrapClock {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding-top: 55px;
+  padding: 10px;
+  gap: 5%;
 }
 
-.wrapClock{
-display: flex;
-justify-content: center;
-padding-top: 40%;
-padding-left: 10%;
-padding-right: 10%;
-gap: 5%;
-
+.intimer {
+  text-align: center;
+  position: relative;
+}
+.rapid {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 18px;
+}
+.timer_wrapper {
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  width: 262px;
+  height: 262px;
+  left: 76px;
+  top: 256.62px;
+  background: #feefec;
+  border: 1.5px solid #000000;
 }
 
 .timer {
   font-family: "Montserrat";
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .text {
@@ -36,40 +46,83 @@ gap: 5%;
   justify-content: center;
   align-items: center;
 
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  color: #252525;
-}
+  /* position: absolute; */
+  /* width: 63px; */
+  /* height: 19px; */
+  /* left: 176px;
+    top: 378px; */
 
-.rapid {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 18px;
+  /* identical to box height, or 77% */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #252525;
 }
+
+.info {
+  max-width: 360px;
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 16px;
+}
+
 .plusMinus {
   box-sizing: border-box;
-  /* align-content:center ; */
-  /* justify-content: center; */
+  /* align-items:center ; */
   align-self: center;
-  /* text-align: center; */
   /* position: relative; */
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  /* height: 40%; */
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
 
   background: #feefec;
-  border: 2px solid #252525;
+  border: 1.5px solid #252525;
 
   box-shadow: 2px 2px 0px #d35400;
-  font-size: large;
+  font-size: x-large;
   font-family: "Poppins";
   font-style: normal;
   font-weight: bold;
   color: #000000;
 }
+
+.roundButton {
+  /* padding: 100px; */
+  position: absolute;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  /* padding: 10%; */
+  bottom: 0%;
+}
+
+/* .squarebutton { */
+/* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 7px;
+  gap: 8px; */
+
+/* flex: none;
+  order: 0;
+  flex-grow: 0; */
+/* } */
+
+/* .circle {
+  position: absolute;
+  width: 262px;
+  height: 262px;
+  left: 342px;
+  top: 322.62px;
+} */
+
+/* .square {
+  display: flex;
+} */

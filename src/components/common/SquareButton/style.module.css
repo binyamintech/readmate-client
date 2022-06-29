@@ -23,7 +23,8 @@ font-size: small;
 
   /* Inside auto layout */
 
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
+  transform: translateX(-50%);
+  justify-content: center;
+  align-items: center;
+  }
+

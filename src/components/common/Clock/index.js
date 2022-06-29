@@ -33,6 +33,7 @@ function Clock(props) {
   const renderTime = ({ remainingTime }) => {
     const minutes = Math.floor(remainingTime / 60);
     const seconds = remainingTime - minutes * 60;
+
     return (
       <div className={styles.wrapping}>
         <div className={styles.timer}>
@@ -53,7 +54,7 @@ function Clock(props) {
         {remainingTime === 0 && complete()}
         {!isFinish && (
           <div
-            className={styles.playPause}
+            // className={styles.roundButton}
             onClick={() => {
               !freeStyle && setPlay(!play);
               !isplay && props.funcs.onPlay();
@@ -68,6 +69,8 @@ function Clock(props) {
           </div>
     );
   };
+  ////////////////////////////////////////////////////////////////////
+  isplay && props.funcs.onPlay();
 
   return (
     

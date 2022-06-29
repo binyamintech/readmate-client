@@ -2,7 +2,7 @@
 //// Umoove 2019
 
 //Insert HTML
-document.getElementById("wasm_load_div").innerHTML =
+document.getElementById("d_div").innerHTML =
   "" +
   '<div class="spinner" id="spinner"></div>' +
   '<div class="emscripten" id="status">Downloading...</div>' +
