@@ -14,7 +14,7 @@
     }
 
 
-    button{
+    /* button{ */
         /* width: 90%; */
         /* height: 48px; */
         /* left:50%; */
@@ -23,7 +23,7 @@
         /* border: 10px solid black; */
         /* display: block; */
         /* margin: auto; */
-    }
+    /* } */
 
     .place {
         position: fixed;
@@ -63,7 +63,7 @@
        
     }
 
-    #btnContinue{
+    /* #btnContinue{
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -78,5 +78,5 @@
         border: 2px solid #252525;
         box-shadow: 2px 2px 0px #D35400;
         border-radius: 80px;
-    }
+    } */
 /* } */

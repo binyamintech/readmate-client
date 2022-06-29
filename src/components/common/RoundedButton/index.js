@@ -13,8 +13,7 @@ export default function RoundedButton(props) {
             setIsPlay(!isplay);
           }}
         >
-          {" "}
-          ||{" "}
+          ||
         </button>
       ) : (
         <button
@@ -23,8 +22,7 @@ export default function RoundedButton(props) {
             setIsPlay(!isplay);
           }}
         >
-          {" "}
-          ▶{" "}
+          ▶
         </button>
       )}
     </>

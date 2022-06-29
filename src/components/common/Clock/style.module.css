@@ -1,38 +1,30 @@
 .wrapping{
   flex-direction: column;
-}
-.squarebutton{
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 55px;
 }
 
 .wrapClock{
 display: flex;
 justify-content: center;
+align-items: center;
 padding: 10%;
 gap: 5%;
+padding-top: 40%;
+
 
 }
-
-/* .timer_wrapper {
-  display: flex;
-  box-sizing: border-box;
-  position: absolute;
-  width: 262%;
-  height: 262%;
-  left: 76%;
-  top: 256.62%;
-  background: #feefec;
-  border: 1.5px solid #000000;
-
-} */
 
 .timer {
   font-family: "Montserrat";
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
-  /* gap: 20px; */
+  gap: 20px;
 }
 
 .text {
@@ -77,26 +69,17 @@ gap: 5%;
   align-self: center;
   /* position: relative; */
   border-radius: 50%;
-  width: 13%;
+  width: 30px;
+  height: 30px;
   /* height: 40%; */
-
+/* justify-content: center; */
   background: #feefec;
-  border: 1.5px solid #252525;
-
+  /* border: 2px solid #252525; */
+text-align: center;
   box-shadow: 2px 2px 0px #d35400;
-  font-size: x-large;
+  font-size: large;
   font-family: "Poppins";
   font-style: normal;
   font-weight: bold;
   color: #000000;
-}
-
-.roundButton{
-  /* padding: 100px; */
-  /* background-color: #000000; */
-  /* display: flex; */
-  /* justify-content: flex-end; */
-  /* align-items: flex-end; */
-  /* align-self: flex-end; */
-  position: relative;
 }
