@@ -11,13 +11,19 @@ import UmooveApi from '../../../components/api/UmooveApi';
 // Creator : Team A -efrat & Yehoantan
 function Page3() {
   const l = useLocation()
-  console.log(l);
+
   const navigate = useNavigate()
   let videoRef = useRef()
   const [stream, setStream] = useState()
   const [count, setCount] = useState(0)
 
+  useEffect(() => {
+    console.log("effect data page 3:", l.state);
+    setTimeout(() => {
+      setStream('')
 
+    },2000)
+  })
   // let count = 0;
   let sucsses
   useEffect(() => {
@@ -42,7 +48,7 @@ function Page3() {
       console.log(sucsses);
       if (sucsses === true) {
         clearInterval(interval)
-        navigate("/teama/page4", { state: { data: " l.state.data" } })
+        navigate("/teama/page4", { state: { data: l.state } })
       }
       setCount(count + 1)
     }, 1000);
