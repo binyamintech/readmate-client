@@ -40,7 +40,7 @@ function Box1() {
   const button = [
     { name: "Train Reading", icon: icon1, path: "/" },
     { name: "Train Focus", icon: icon2, path: "Start-focus/StartFocus" },
-    { name: "Weekly Assessment", icon: FiFileText, path: "/" },
+    { name: "Weekly Assessment", icon: FiFileText, path: "Assessment" },
     { name: "Freestyle", icon: icon4, path: "/" },
   ];
   useEffect(() => {

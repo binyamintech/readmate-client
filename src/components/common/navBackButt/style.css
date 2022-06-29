@@ -4,11 +4,15 @@
     width: 35px;
     border-radius: 50%;
     display: inline-block;
-    /* line-height: 42.5px; */
+    line-height: 30px;
     color: white;
     font-size: 25px;
     background: #7d56a5;
-    position: absolute;
-    margin-left: 9%;
+    margin-left: 92%;
+    
+  }
+  .arrow{
+    text-align: center;
+    
   }
   

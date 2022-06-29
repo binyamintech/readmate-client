@@ -146,7 +146,7 @@ wasmWorker.onmessage = function (e) {
 
   // console.log(
   //   "State = " +
-  //     UMFaceState +
+  //   UMFaceState);
   //     " Combined iris: reliability= " +
   //     UMCombinedReliability +
   //     " position = " +
@@ -271,6 +271,8 @@ var loadUmooveLibrary = (vidWidth = 960, vidHeight = 720) => {
           //video.width = videoWidth;
           //video.height = videoHeight;
           video.play();
+
+
           // videoPreview.play();
           // video.addEventListener('play', function (e) {
           // if (e.type == 'play') {
