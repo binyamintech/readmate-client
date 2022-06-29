@@ -41,3 +41,9 @@
   /* flex-direction: column; */
   justify-content: flex-start;
 }
+.settingsContainer{
+  border: black 1px solid;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}

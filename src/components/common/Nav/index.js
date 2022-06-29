@@ -7,6 +7,7 @@ import { FaRegAddressBook } from "react-icons/fa";
 import { NavButton } from "../NavButton/NavButton";
 
 import { NavHead } from "../NavHead";
+import { NavBackButt } from "../NavBackButt";
 
 // creator: shmuel asherov team-f
 export const NavBar = (props) => {
@@ -14,13 +15,14 @@ export const NavBar = (props) => {
     <div className={`${styles.opacity}`}>
       <div className={`${styles.box}`}>
         <NavHead setClose={props.setClose} />
+        <NavBackButt />
         <ul>
           <li className={`${styles.btn}`}>
             <NavButton
               onClick={props.setClose}
               icon={<BsColumnsGap className={`${styles.icon}`} size="30px" />}
               text="Dashboard"
-              link="Dashboard"
+              link="dashboard"
             />
           </li>
           <li className={`${styles.btn}`}>
@@ -28,7 +30,7 @@ export const NavBar = (props) => {
               onClick={props.setClose}
               icon={<FiSettings className={`${styles.icon}`} size="30px" />}
               text="Settings"
-              link="Settings"
+              link="settings"
             />
           </li>
           <li className={`${styles.btn}`}>
@@ -38,7 +40,7 @@ export const NavBar = (props) => {
                 <FaRegAddressBook className={`${styles.icon}`} size="30px" />
               }
               text="Contact Us"
-              link="Contact Us"
+              link="contact"
             />
           </li>
           <li className={`${styles.btn}`}>
@@ -46,7 +48,7 @@ export const NavBar = (props) => {
               onClick={props.setClose}
               icon={<MdLogout className={`${styles.icon}`} size="30px" />}
               text="Sign Out"
-              link="Sign Out"
+              link="sign-out"
             />
           </li>
         </ul>

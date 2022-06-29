@@ -30,7 +30,7 @@ export default function Settings() {
   }
 
   return (
-    <>
+    <div className="settingsContainer">
       <div className="img_camera">
         <img src={userImg} className="settingUserImage" />
         <BiCamera className="cameraIcon" />
@@ -84,6 +84,6 @@ export default function Settings() {
           </div>
         </SubmitForm>
       </div>
-    </>
+    </div>
   );
 }
