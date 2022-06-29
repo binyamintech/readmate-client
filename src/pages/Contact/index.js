@@ -7,13 +7,13 @@ import ContactDetail from "./Components/ContactDetail"
 
 // Creator : TeamF - asael 
 function phoneCall(){
-
+    window.location.href = "Tel:0525666820" 
 }
 function sentMail(){
-
-}
+        window.location.href = "mailto:asael@cod.org.il"  
+    }
 function goToWebsit(){
-
+    window.location.href = "https://ksp.co.il/web/"  
 }
 
 function Contact(){
