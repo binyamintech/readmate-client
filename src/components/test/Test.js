@@ -1,6 +1,14 @@
 function Test() {
-  return (<>
-  </>)
+
+  return (
+    <>
+      {/* <Box1 /> */}
+      {/* <TeamF /> */}
+      {/* <Options /> */}
+      {/* <Nav /> */}
+      <Dashboard />
+    </>
+  );
 }
 
 export default Test;
