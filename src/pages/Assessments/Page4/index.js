@@ -39,7 +39,7 @@ function Page4() {
             <div>
                 <img className={styles.img} src={image} alt="" />
             </div>
-            <SubmitBtn startFunction={() => { nextPage() }} name={"Done"} />
+            <SubmitBtn name={"done"} click={() => { nextPage() }} />
         </div>
     </>
 }

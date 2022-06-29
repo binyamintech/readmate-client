@@ -26,7 +26,7 @@ export default function SubmitBtn({ path = "", name, type, click }) {
 
 // creator : nehorai
 // team f
-// Available types: button, link, submit  
+// Available types: button, link, submit
 // on type submit you can't have a name
 
 
