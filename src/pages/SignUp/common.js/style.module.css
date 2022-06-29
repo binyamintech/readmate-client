@@ -20,8 +20,8 @@
   color: var(--back-box-color);
   border: 2px solid var(--main-title-color);
   box-shadow: 2px 2px 0px #d35400;
-  border-radius: 80px; */
-/* } */
+  border-radius: 80px;
+} */
 
 /* fieldset {
   border: 1px solid var(--main-title-color);
@@ -70,7 +70,7 @@ select{
   font-size: 100%;
   line-height: 2rem;
 }
-
+/* 
 select-selected :after {
   position: absolute;
   content: "";
@@ -80,4 +80,4 @@ select-selected :after {
   height: 0;
   border: 6px solid transparent;
   border-color: #fff transparent transparent transparent;
-}
+} */

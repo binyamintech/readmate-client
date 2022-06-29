@@ -68,9 +68,42 @@ font-size: 14px;
 line-height: 20px
 
 }
-.buttons button:hover{
-  color: white;
+.Truebtn:hover {
+  /* background: #f39c12; */
+  color: #FFFFFF;
+}
+.Falsebtn {
+    box-sizing: border-box;
 
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 33px;
+    gap: 8px;
+    
+    position: absolute;
+    width: 140px;
+    height: 48px;
+    left: 186.36px;
+    top: 174.63px;
+    
+    background: #FFFFFF;    border: 2px solid #252525;
+    box-shadow: 2px 2px 0px #D35400;
+    border-radius: 80px;
+    text-align: center;
+    color: #252525;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+}
+.Falsebtn:hover {
+  /* background: #f39c12; */
+    color: #FFFFFF;
 }
 /* .Truefalsetext {
   width: 38px;

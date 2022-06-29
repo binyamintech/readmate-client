@@ -54,23 +54,22 @@ function Clock(props) {
         {remainingTime === 0 && complete()}
         {!isFinish && (
           <div
-            // className={styles.roundButton}
+            className={styles.playPause}
             onClick={() => {
               !freeStyle && setPlay(!play);
               !isplay && props.funcs.onPlay();
               isplay && props.funcs.onPause();
-            console.log(isplay);
             }}
             >
               <RoundedButton setIsPlay={setIsPlay} isPlay={isplay}></RoundedButton>
             </div>
           )}
-          </div>
-          </div>
+        </div>
+      </div>
     );
   };
   ////////////////////////////////////////////////////////////////////
-  isplay && props.funcs.onPlay();
+  //isplay && props.funcs.onPlay();
 
   return (
     
@@ -114,6 +113,10 @@ function Clock(props) {
       )}
       </div>   
   );
+  
+
+  // return <CountdownCircleTimer></CountdownCircleTimer>;
+  // console.log("stop");
 }
 
 

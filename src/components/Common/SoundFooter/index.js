@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from './style.module.css'
 import React from 'react';
 import { SpectrumVisualizer, SpectrumVisualizerTheme } from 'react-audio-visualizers';
 // import { AudioVisualizer, AudioVisualizerCommonProps, AudioVisualizerEvents } from 'react-audio-visualizers-core';
@@ -25,12 +25,13 @@ export default function SoundFooter(props) {
               iconsColor="orange"
               backgroundColor="white"
               // showMainActionIcon
-              
               showLoaderIcon
               // numBars={10}
               // barWidth={"20px"}
               highFrequency={8000}
-          ></SpectrumVisualizer>
+              //onEvent={onEvent}
+></SpectrumVisualizer>
+              
       </div>
       </div>
   );
