@@ -1,5 +1,5 @@
 import styles from './style.module.css'
-import TitleRead from '../../../components/common/TitleRead'
+// import TitleRead from '../../../components/common/TitleRead'
 import SubmitBtn from '../../../components/common/SubmitBtn'
 import { useContext, useEffect, useState } from 'react'
 import '../../../components/api/UmooveApi'
@@ -159,7 +159,7 @@ function Page4() {
         <div className="Page4" >
             {/* //Header - import whith props - "comprehensions" */}
             <div className="TitleRead">
-                <TitleRead />
+                {/* <TitleRead /> */}
             </div>
             <div>
                 <img className={styles.img} src={examImg} alt="" />
