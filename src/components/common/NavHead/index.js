@@ -1,7 +1,7 @@
 import styles from "./style.module.css";
 import logo1 from "../../../assets/img/logo/image 1.png";
 import logo2 from "../../../assets/img/logo/image 2.png";
-import { NavBackButt } from "../navBackButt";
+import { NavBackButt } from "../NavBackButt";
 
 export const NavHead = (props) => {
   return (

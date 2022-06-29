@@ -46,6 +46,7 @@ export default function Settings() {
             legend="First name"
             content="First name"
             name="firstName"
+            valid={false}
             />
           <Input
             value={updatedUser.lastName}
@@ -56,6 +57,7 @@ export default function Settings() {
             legend="Last name"
             content="Last name"
             name="lastName"
+            valid={true}
             />
           <Input
             value={updatedUser.email}
