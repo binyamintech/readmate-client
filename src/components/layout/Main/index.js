@@ -29,10 +29,10 @@ function Main() {
         </Route>
 
         {/* Team B */}
-        <Route path="teams-path">
+        {/* <Route path="teams-path">
           <Route index element={<>team's components</>} />
           <Route path="components-path" element={<>team's components</>} />
-        </Route>
+        </Route> */}
 
         {/* Team C */}
         {/* <Route path="train_reading_level"> */}
@@ -45,16 +45,16 @@ function Main() {
         {/* </Route> */}
 
         {/* Team D */}
-        <Route path="teams-path">
+        {/* <Route path="teams-path">
           <Route index element={<>team's components</>} />
           <Route path="components-path" element={<>team's components</>} />
-        </Route>
+        </Route> */}
 
         {/* Team E */}
-        <Route path="teams-path">
+        {/* <Route path="teams-path">
           <Route index element={<>team's components</>} />
           <Route path="components-path" element={<>team's components</>} />
-        </Route>
+        </Route> */}
 
         {/* Team F */}
         <Route path="/teamf">
@@ -81,8 +81,8 @@ function Main() {
 
         {/* Test */}
         <Route path="/test" element={<Test />} />
+        {/* <Route path="test/Dashboard" element={} /> */}
       </Routes>
-
       <Nav />
       {/* <Popup /> */}
     </>
