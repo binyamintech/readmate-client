@@ -1,8 +1,8 @@
 importScripts("umoove_eye.js");
 linkForFetchLocal = " http://localhost:3000";
 linkForFetchOnline = " https://peripherex-patient-test.wl.r.appspot.com/";
-const videoWidth = 960;
-const videoHeight = 720;
+const videoWidth = 640;
+const videoHeight = 480;
 
 var started = false;
 var initialized = false;

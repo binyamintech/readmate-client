@@ -55,7 +55,7 @@ const API_getDistance = () => {
   let videoWidth = 960;
   let degreesToRadians = 0.0174533;
   let detectedDistance =
-    ``((1.18 / diam) * (videoWidth / 2.0)) /
+    ((1.18 / diam) * (videoWidth / 2.0)) /
     Math.tan((FOV_H / 2.0) * degreesToRadians);
   if (diam !== 0 && window.UMFaceState === 2) {
     return detectedDistance;
