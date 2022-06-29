@@ -4,11 +4,11 @@ import styles from "./style.module.css";
 export default function RoundedButton(props) {
   return (
     <>
-      {props.isplay ? (
+      {props.isPlay ? (
         <button
           className={styles.RoundedButton}
           onClick={() => {
-            props.setIsPlay(!props.isplay);
+            props.setIsPlay(!props.isPlay);
           }}
         >
           {" "}
@@ -18,7 +18,7 @@ export default function RoundedButton(props) {
         <button
           className={styles.RoundedButtonPlay}
           onClick={() => {
-            props.setIsPlay(!props.isplay);
+            props.setIsPlay(!props.isPlay);
           }}
         >
           {" "}

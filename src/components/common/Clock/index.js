@@ -24,7 +24,6 @@ function Clock(props) {
   const [rapid, setRapid] = useState(props.rapidValue);
   const [isFinish, setIsFinish] = useState(false);
 
-  isplay&&props.funcs.onPlay()
 
   function complete() {
     setIsFinish(true);
@@ -58,17 +57,18 @@ function Clock(props) {
               !isplay && props.funcs.onPlay();
               isplay && props.funcs.onPause();
             }}
-          >
-        <div className={styles.roundButton}><RoundedButton isPlay={!freeStyle}></RoundedButton></div>
+            >
+            </div>
+          )}
           </div>
-        )}
-      </div>
+          <RoundedButton setIsPlay={setIsPlay} isPlay={isplay}></RoundedButton>
       </div>
     );
   };
+  isplay&&props.funcs.onPlay()
 
   return (
-  
+    
     <div className={styles.wrapClock}>
       {/*  this clock refers to freeStyle */}
       {freeStyle && (
@@ -91,6 +91,7 @@ function Clock(props) {
           onComplete={() => ({ shouldRepeat: false, delay: 1 })}
           trailColor={"#FEEFEC"}
           strokeLinecap={"square"}
+          size={200}
         >
           {renderTime}
         </CountdownCircleTimer>
@@ -103,14 +104,17 @@ function Clock(props) {
             props.funcs.rapid(rapid - 1);
           }}
         >
-          <div className={styles.plusMinusSign}>-</div>
+          -
         </button>
       )}
       </div>
+      
   );
+  
 
   // return <CountdownCircleTimer></CountdownCircleTimer>;
   // console.log("stop");
 }
+
 
 export default Clock;
