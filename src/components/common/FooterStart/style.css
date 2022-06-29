@@ -1,11 +1,11 @@
-@media screen and (max-width:600px){
-    
+@media screen and (max-width:600px) {
 
 
-    .myAreaBtnStart{
-       display: flex;
-       justify-content: center;
-       
+
+    .myAreaBtnStart {
+        display: flex;
+        justify-content: center;
+
     }
     .footer-start-box{
         position: absolute;
@@ -62,9 +62,9 @@
     align-items: center;
     top: 15%;
     }
-    
-    
-    .playTriangle{
+
+
+    .playTriangle {
         z-index: 11;
         box-sizing: border-box;
         position: absolute;
@@ -86,7 +86,7 @@
         color: #FFFFFF;
         top: 25%;
     }
-    
+
     .explanation {
         margin-bottom: 0rem;
         text-align: center;
@@ -105,17 +105,17 @@
         flex-direction: column;
         align-content: space-around;
     }
-    
-    .myEmojiDiv{
+
+    .myEmojiDiv {
         position: absolute;
         height: 15%;
         width: 11%;
         bottom: 7%;
         right: 3%;
     }
-    
-    .leftEmoji{
+
+    .leftEmoji {
         width: 90%;
     }
-    
-    }
+
+}

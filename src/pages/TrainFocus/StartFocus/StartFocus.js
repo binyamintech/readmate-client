@@ -1,4 +1,4 @@
-import FooterStart from "../../../components/common/FooterStart";
+// import FooterStart from "../../../components/common/FooterStart/"
 import "./style.css";
 import Frame from "../../../assets/img/logo/Frame.png"
 
@@ -23,14 +23,14 @@ function StartFocus() {
         </div>
       </div>
 
-      <FooterStart
+      {/* <FooterStart
         startFunction={startFunction}
         title={title}
         explanation={explanation}
         route = {route}
         img = {Frame}
         // img = "https://d3m9l0v76dty0.cloudfront.net/system/photos/8904572/original/79dae6ad3800cd1d9209e6ff1a4d6de3.jpg"
-      />
+      /> */}
     </div>
   );
 }

@@ -86,9 +86,9 @@ function Clock(props) {
         <CountdownCircleTimer
           rotation={"counterclockwise"}
           isPlaying={play}
-          duration={timeInSeconds}
+          duration={5}
           colors={["#7D56A5"]}
-          onComplete={() => ({ shouldRepeat: false, delay: 1 })}
+          onComplete={props.funcs.onComplete}
           trailColor={"#FEEFEC"}
           strokeLinecap={"square"}
         >
