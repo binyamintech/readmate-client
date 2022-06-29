@@ -1,5 +1,5 @@
 import Test from "../../test/Test";
-import Header from "../Header";
+import Header from "../header";
 import Nav from "../Nav";
 import Popup from "../Popup";
 import { Outlet, Route, Routes } from "react-router-dom"
@@ -33,7 +33,7 @@ function Main() {
     <>
       <Header />
 
-      content
+      
       <Routes>
         {/* Team A */}
         <Route path="teama">
