@@ -23,14 +23,14 @@
   border-radius: 80px; */
 /* } */
 
-fieldset {
+/* fieldset {
   border: 1px solid var(--main-title-color);
   border-radius: 0.8rem;
   height: 11vh;
   margin: 1rem;
-}
+} */
 
-input[type="text"] {
+/* input[type="text"] {
   box-sizing: border-box;
 
   position: relative;
@@ -46,7 +46,7 @@ input[type="text"] {
   border: none;
   outline: 0;
   
-}
+} */
 
 
 legend {

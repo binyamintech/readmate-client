@@ -1,12 +1,11 @@
 import Test from "../../test/Test";
 import Nav from "../Nav";
 import Popup from "../Popup";
-import { Route, Routes } from "react-router-dom";
 import TeamA from "../../teams/TeamA";
 import Page1 from "../../../pages/Assessments/Page1";
 import Page6 from "../../../pages/Assessments/Page6";
-import Page5 from "../../../pages/Assessments/Page5";
-import Page4 from "../../../pages/Assessments/Page4";
+// import Page5 from "../../../pages/Assessments/Page5";
+// import Page4 from "../../../pages/Assessments/page4";
 import Page3 from "../../../pages/Assessments/Page3";
 import Header from "../header";
 import RatingAndScore from "../../common/ReatingAndScore";
@@ -28,7 +27,6 @@ import PushUpTimer from "../../../pages/TrainReading/PushUpTimer";
 import PushUpInstructions from "../../../pages/TrainReading/PushUpInstructions";
 //----
 // import Popup from "../Popup/Popup"
-import { Route, Routes } from "react-router-dom";
 import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
@@ -36,14 +34,11 @@ import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 import Results from "../../../pages/TrainFocus/TrainFocusResults";
 import StartFocus from "../../../pages/TrainFocus/StartFocus/StartFocus";
 import Instructions from "../../../pages/FreeStyle/Instructions";
-// import Exercise from "../../../pages/TrainFocus/Exercise";
-import Exercise from "../../../pages/TrainFocus/Exercise";
+import GraphDashBoard from "../../common/graphDashboard"
 //  import Popup from "./popup/Popup";
 // import { Outlet, Route, Routes } from "react-router-dom";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
-import Popup from "../Popup";
-import Header from "../header"
 import TeamF from "../../teams/TeamF";
 
 function Main() {
@@ -56,8 +51,8 @@ function Main() {
         <Route path="teama">
           <Route path="page1" element={<Page1 />} />
           <Route path="page3" element={<Page3 />} />
-          <Route path="page4" element={<Page4 />} />
-          <Route path="page5" element={<Page5 />} />
+          {/* <Route path="page4" element={<Page4 />} /> */}
+          {/* <Route path="page5" element={<Page5 />} /> */}
           <Route path="page6" element={<Page6 />} />
           <Route index element={<TeamA />} />
         </Route>
@@ -108,14 +103,16 @@ function Main() {
         {/* <Route path="/result" element={<Results />} /> */}
         {/* </Route> */}
 
-        {/* Team H
-        <Route path="/teams/TeamH">
-          {/* <Route index element={<TeamH />} /> */}
-        {/* <Route path="/teams/TeamH/Training" element={<Training />} /> */}
-        {/* <Route path="components-path" element={<>team's components</>} /> */}
-        {/* </Route> */}
+        {/* Team H */}
+        <Route path="/teamH">
+          <Route index element={<TeamH />} />
+        <Route path="/teamH/training" element={<Training />} />
+        <Route path="/teamH/instructions" element={<Instructions />} />
+        <Route path="/teamH/dashBoard" element={<GraphDashBoard />} />
+        <Route path="components-path" element={<>team's components</>} />
+        </Route>
 
-        {/* Test */}
+        {/*  Test */ }
         <Route path="/test" element={<Test />} />
         {/* <Route path="test/Dashboard" element={} /> */}
       </Routes>

@@ -1,17 +1,22 @@
 import styles from "./style.module.css";
 import Clock from "../../../components/common/Clock";
 import SoundFooter from "../../../components/common/SoundFooter"
-import React from "react";
+import React, { useContext } from "react";
 import {useEffect, useState, useRef} from "react"
-
+import SubmitBtn from "../../../components/common/SubmitBtn";
+import { dataContext } from "../../../context/context";
 
 // Creator : Team H - Nurit & Milka & Batia
 function Training() {
+  const localDataContext = useContext(dataContext)
+  const tr = localDataContext.userDetails.TR
+  console.log('userLpm',tr[tr.length-1]);
   
-  const [lpm,setLpm] = useState(52) // we have to pull it from the server!!!!!!!!
+  const [lpm,setLpm] = useState(tr[tr.length-1].Value) // we have to pull it from the server!!!!!!!!
   let fileName = pickFile(lpm); // return a Number - indicates which file to require 
   const file = require(`../../../assets/wush_mp3/wush_${fileName}_1min.mp3`);
   const [audio, setAudio] = useState(new Audio(file));  //rewrite??
+  const [playing, setPlaying] = useState(0)
   
   function pickFile(lpm) {
     let array = [10, 20, 40, 60, 80, 100];
@@ -27,22 +32,23 @@ function Training() {
     return array[index];
   }
 
-  function change() {
-    
-
-  }
 
 function onPlay(){
-  change();
-  // audioRef.current.play(); //not working on 
-  // audioRef.current.playbackRate = changePercent;
   audio.play();
-  // audio.playbackRate(6)
+  audio.playbackRate = lpm/fileName
+  console.log(audio.playbackRate);
+  setPlaying(1)
 
 }
 
 function onPause(){
 audio.pause();  console.log(file);
+setPlaying(0)
+}
+
+function rapid(newLpm){
+  setLpm(newLpm);
+  console.log("rapid")
 }
 
 function onComplete(){
@@ -52,7 +58,7 @@ function onComplete(){
 const freeStyleFuncs = {
   onPlay: onPlay, //will turn on the music + remove button and add footer
   onPause: onPause, //will pause the music + remove footer and add button
-  rapid: (newLpm)=>{setLpm(newLpm); console.log("rapid")}, // what to send when freeStyle false??
+  rapid: rapid, // what to send when freeStyle false??
   onComplete: onComplete
 }
 
@@ -61,7 +67,9 @@ const freeStyleFuncs = {
     <>
     {/* <audio playbackRate={1} ref={audioRef}> </audio> */}
     <Clock freeStyle={true} time={180} funcs={freeStyleFuncs}  initRapidValue={lpm} ></Clock>
-    <SoundFooter song = {file}></SoundFooter>
+    {playing ?
+      <SoundFooter song = {file}></SoundFooter> : <SubmitBtn type={"link"} name={"Done"} path = {"/teamH/graphDashboard"}></SubmitBtn>}
+    {/* <SoundFooter song = {file}></SoundFooter> */}
     </>
   );
 }

@@ -17,10 +17,10 @@ import RoundedButton from "../RoundedButton";
 //  5. "initRapidValue" with a value of the last user's LPM.
 
 function Clock(props) {
-  let freeStyle = props.freeStyle; //Todo: change to props.freeStyle
+  let freeStyle = props.freeStyle; 
   const [play, setPlay] = useState(false);
   const [isplay, setIsPlay] = useState(false);
-  let timeInSeconds = props.time; //Todo: change to props.time;
+  let timeInSeconds = props.time; 
   const [rapidValue, setRapidValue] = useState(props.initRapidValue);
   const [isFinish, setIsFinish] = useState(false);
 
@@ -29,13 +29,13 @@ function Clock(props) {
     setIsFinish(true);
     props.funcs.onComplete();
   }
-  ////////////////////////////////////////////////
+  
   const renderTime = ({ remainingTime }) => {
     const minutes = Math.floor(remainingTime / 60);
     const seconds = remainingTime - minutes * 60;
     return (
-      <div className={styles.intimer}>
-        {/* <div className={styles.square}> */}
+      <div className={styles.wrapping}>
+        <div className={styles.timer}>
         {freeStyle ? (
           <div className={styles.squarebutton}>
             <SquareButton>
@@ -50,11 +50,10 @@ function Clock(props) {
             {seconds}
           </div>
         )}
-        {/* </div> */}
         {remainingTime === 0 && complete()}
         {!isFinish && (
           <div
-            // className={styles.roundButton}
+            className={styles.playPause}
             onClick={() => {
               !freeStyle && setPlay(!play);
               !isplay && props.funcs.onPlay();
@@ -66,9 +65,9 @@ function Clock(props) {
             </div>
           )}
           </div>
+          </div>
     );
   };
-  // isplay&&props.funcs.onPlay()
 
   return (
     
@@ -78,7 +77,7 @@ function Clock(props) {
           className={styles.plusMinus}
           onClick={() => {
             setRapidValue(rapidValue - 1);
-            props.funcs.rapid(rapidValue - 1);
+            props.funcs.rapid(rapidValue);
             
           }}
         >
@@ -104,19 +103,14 @@ function Clock(props) {
           className={styles.plusMinus}
           onClick={() => {
             rapidValue > 0 && setRapidValue(rapidValue + 1);
-            props.funcs.rapid(rapidValue + 1);
+            props.funcs.rapid(rapidValue);
           }}
         >
           +
         </button>
       )}
-      </div>
-      
+      </div>   
   );
-  
-
-  // return <CountdownCircleTimer></CountdownCircleTimer>;
-  // console.log("stop");
 }
 
 

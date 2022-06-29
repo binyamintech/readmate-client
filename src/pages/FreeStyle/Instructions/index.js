@@ -1,6 +1,5 @@
 import styles from './style.module.css'
 import { Link, Route, Routes } from "react-router-dom"
-// import FreeStyleTraining from "../Training"
 import SubmitBtn from "../../../components/common/SubmitBtn"
 import Text from "../../../components/common/Text"
 import Underline from '../../../components/common/Underline'
@@ -12,7 +11,7 @@ let text = "It is a long established fact that a reader will be distracted by th
 function Instructions() {
     return <>
         <div><Text text={text} title={"instructions"}></Text></div>
-        <div><SubmitBtn path= {"/teamH/training"} name={"Training"}></SubmitBtn></div>
+        <div><SubmitBtn type={"link"} path= {"/teamH/training"} name={"Training"}></SubmitBtn></div>
     </>
 }
 
