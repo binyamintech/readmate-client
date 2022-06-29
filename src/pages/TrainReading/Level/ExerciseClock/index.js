@@ -9,17 +9,18 @@ import SquareButton from '../../../../components/common/SquareButton';
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
 
-export default function ExerciseClock(){
-  // setHeader
+const ExerciseClock = () => {
+
   const pageNameHeader = useContext(pageNameContext);
   pageNameHeader.setPageName("Level Exercise");
 
-  const rout = '/train_reading_level/rate'
-
-const ExerciseClock = () => {
   const LPM2 = useLocation()
   // console.log(LPM2.state.LPM);
   const LPM = LPM2.state.LPM
+
+
+
+
 
   // const audioRef = useRef();
   // const [lpm, setLpm] = useState(16); // i have to set the LPM here
@@ -96,9 +97,6 @@ const ExerciseClock = () => {
   const navigate = useNavigate();
 
   const route = '/train_reading_level/rate'
-
-
-
 
   const shaulFuncs = {
     // onPlay: shaulOnPlay,

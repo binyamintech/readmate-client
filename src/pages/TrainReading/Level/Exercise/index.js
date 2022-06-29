@@ -11,12 +11,11 @@ import { useNavigate } from "react-router-dom";
 
 // import conus from './path from assets'
 
-export default function Exercise() {
-  // setHeader
+const Exercise = () => {
+
   const pageNameHeader = useContext(pageNameContext);
   pageNameHeader.setPageName("Level Exercise");
-
-const Exercise = () => {
+  
   const BookName = " Harry Potter " // i need to receive this info fromm shachar
   const title = 'Start Now'
   const textTitle = "With your headphones on,"

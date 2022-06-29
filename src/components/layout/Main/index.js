@@ -1,9 +1,8 @@
 import Test from "../../test/Test";
-import Header from "../header";
+import Header from "../Header";
 import Nav from "../Nav";
 import Popup from "../Popup";
 import { Outlet, Route, Routes } from "react-router-dom"
-// import TextArea from "../common/TextArea/Index";
 import TeamH from "../../teams/TeamH";
 import Training from "../../../pages/FreeStyle/Training"
 
