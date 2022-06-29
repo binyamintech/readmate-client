@@ -1,7 +1,10 @@
-.back-purple {
-    position: relative;    
-}
-.back-purple::before {
+
+.back-purple{
+    position: relative;
+  }
+  .back-purple::before{
+      top: 0;
+      right: 0;
     position: absolute;
     content: '';
     width: 100%;
