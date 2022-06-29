@@ -1,18 +1,18 @@
-import { NavBackButt } from "../../common/navBackButt";
-import CancelBtn from "../../common/cancelBtn";
-import DashboardBtn from "../../common/DashboardBtn";
-import TrueBtn from "../../common/trueBtn";
-import { NavBar } from "../../common/Nav";
+// import NavBackButt from "../../common/NavBackButt/index";
+// import CancelBtn from "../../common/cancelBtn";
+// import DashboardBtn from "../../common/DashboardBtn";
+// import TrueBtn from "../../common/trueBtn";
+// import { NavBar } from "../../common/Nav";
 
 // Creator : Team F-Oren
 function TeamF() {
   return (
     <>
-      <CancelBtn />
+      {/* <CancelBtn />
       <DashboardBtn />
       <TrueBtn />
       <NavBackButt />
-      <NavBar />
+      <NavBar /> */}
     </>
   );
 }

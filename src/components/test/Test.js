@@ -1,13 +1,20 @@
-
-import Settings from "../../pages/Settings";
-import SubmitBtn from "../../components/common/SubmitBtn";
-
-
-
+import Dashboard from "../../pages/Dashboard";
+import TeamF from "../teams/TeamF";
+import { dataContext } from "../../context/context";
+import { useContext, useEffect } from "react";
 function Test() {
-    return (<>
-
-    </>)
-
+  const localDataContext = useContext(dataContext);
+  useEffect(() => {
+    console.log("das");
+    console.log(localDataContext);
+  });
+  return (
+    <>
+      <TeamF />
+      {/* <Options /> */}
+      {/* <Nav /> */}
+      {/* <Dashboard /> */}
+    </>
+  );
 }
 export default Test;

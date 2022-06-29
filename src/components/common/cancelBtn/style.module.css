@@ -22,15 +22,15 @@ height: 16px;
 left: 182px;
 top: 718px; */
 
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    /* identical to box height, or 114% */
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height, or 114% */
 
-    text-align: center;
+        text-align: center;
 
-    color: #252525;
-  }
+        color: #252525;
+    }
 }
