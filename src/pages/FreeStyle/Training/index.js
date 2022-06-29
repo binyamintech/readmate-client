@@ -3,8 +3,8 @@ import Clock from "../../../components/common/Clock";
 // import SoundFooter from "../../../components/common/SoundFooter"
 import React from "react";
 import {useEffect, useState, useRef} from "react"
-//import audioSrc from "./wush_mp3/wush_10_1min.mp3"
-//import SoundFooter from "../../../components/common/SoundFooter"
+import audioSrc from "./wush_mp3/wush_10_1min.mp3"
+import SoundFooter from "../../../components/common/SoundFooter"
 
 
 // TODO: implement the rapid function that will implement the audio changes
@@ -55,7 +55,7 @@ const freeStyleFuncs = {
 
   return (
     <>
-    {/* <audio src={audioSrc} ref={audioRef}> </audio> */}
+    <audio src={audioSrc} ref={audioRef}> </audio>
     <Clock freeStyle={true} time={180} funcs={freeStyleFuncs}></Clock>
       {/* <SoundFooter></SoundFooter> */}
     </>

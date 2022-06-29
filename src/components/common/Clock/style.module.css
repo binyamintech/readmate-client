@@ -1,119 +1,80 @@
-h1 {
-    font-family: "Roboto";
-    text-align: center;
-    margin-bottom: 40px;
-  }
+.wrapping{
+  flex-direction: column;
+}
+/* .squarebutton{
   
-  .timer_wrapper {
-    box-sizing: border-box;
-  
-    position: absolute;
-    width: 262px;
-    height: 262px;
-    left: 76px;
-    top: 256.62px;
-  
-    background: #feefec;
-    border: 1.5px solid #000000;
-  }
-  
-  .timer {
-    font-family: "Montserrat";
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .text {
-    color: #aaa;
-  }
-  
-  .value {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
-    /* position: absolute; */
-    /* width: 63px; */
-    /* height: 19px; */
-    /* left: 176px;
-    top: 378px; */
-  
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 18px;
-    /* identical to box height, or 77% */
-  
-    text-align: center;
-    text-transform: uppercase;
-  
-    color: #252525;
-  }
-  
-  .info {
-    max-width: 360px;
-    margin: 40px auto 0;
-    text-align: center;
-    font-size: 16px;
-  }
-  .squarebutton {
-    top: 50%;
-  }
-  .playPause {
-    box-sizing: border-box;
-  
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    left: 7%;
-    top: 37%;
-  }
-  
-  .plusMinus {
-    box-sizing: border-box;
-  
-    position: relative;
-    border-radius: 50px;
-    width: 40px;
-    height: 40px;
-    left: 357px;
-    top: 430px;
-  
-    background: #feefec;
-    border: 1.5px solid #252525;
-    /* 1 */
-  
-    box-shadow: 2px 2px 0px #d35400;
-  
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 1000;
-    font-size: 16.32px;
-    line-height: 25px;
-    /* or 179% */
-  
-    /* display: flex;
-    align-items: center; */
-  
-    color: #000000;
-  }
-  
-  /* .playPauseSign { */
-    /* /* position: relative; */
-    /* width: 14.12px; */
-    /* height: 16.47px; */
-    /* left: 199.94px;
-    top: 447.38px; */
-  
-    /* background: #252525; */
-  /* } */
-  
-  .plusMinusSign {
-    width: 16.32px;
-    height: 16.32px;
-    color: #5c2680;
-    text-align: center;
-  }
+} */
+
+.wrapClock{
+display: flex;
+justify-content: center;
+padding: 10%;
+gap: 5%;
+
+}
+
+/* .timer_wrapper {
+  display: flex;
+  box-sizing: border-box;
+  position: absolute;
+  width: 262%;
+  height: 262%;
+  left: 76%;
+  top: 256.62%;
+  background: #feefec;
+  border: 1.5px solid #000000; */
+
+/* } */ 
+
+.timer {
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* gap: 20px; */
+}
+
+.text {
+  /* height: 19px; */
+  /* top: 378px; */ 
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  /* font-size: 24; */
+  /* line-height: 18px; */
+  /* identical to box height, or 77% */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #252525;
+}
+
+.info {
+  /* max-width: 360px;
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 16px; */
+}
+
+.plusMinus {
+  box-sizing: border-box;
+  /* align-items:center ; */
+  align-self: center;
+  /* position: relative; */
+  border-radius: 50%;
+  width: 13%;
+  /* height: 40%; */
+
+  background: #feefec;
+  border: 1.5px solid #252525;
+
+  box-shadow: 2px 2px 0px #d35400;
+  font-size: x-large;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  color: #000000;
+}

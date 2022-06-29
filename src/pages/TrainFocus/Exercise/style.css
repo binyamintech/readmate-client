@@ -53,7 +53,7 @@
     background: #f39c12;
     border: 2px solid #000000;
     border-radius: 80px;
-    position: absolute;
+    /* position: absolute; */
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 101%;

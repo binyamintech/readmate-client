@@ -35,6 +35,7 @@ import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 
 import Results from "../../../pages/TrainFocus/TrainFocusResults";
 import StartFocus from "../../../pages/TrainFocus/StartFocus/StartFocus";
+import Instructions from "../../../pages/FreeStyle/Instructions";
 // import Exercise from "../../../pages/TrainFocus/Exercise";
 //  import Popup from "./popup/Popup";
 // import { Outlet, Route, Routes } from "react-router-dom";
