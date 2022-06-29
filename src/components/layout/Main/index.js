@@ -1,5 +1,5 @@
 import Test from "../../test/Test";
-import Header from "../header";
+import Header from "../Header";
 import Nav from "../Nav";
 import Popup from "../Popup";
 import { Outlet, Route, Routes } from "react-router-dom";
@@ -23,6 +23,8 @@ import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 
 import Results from "../../../pages/TrainFocus/TrainFocusResults";
 import StartFocus from "../../../pages/TrainFocus/StartFocus/StartFocus";
+import Settings from "../../../pages/Settings";
+import { Contact } from "../../../pages/Contact";
 //  import Popup from "./popup/Popup";
 // import { Outlet, Route, Routes } from "react-router-dom";
 
@@ -30,7 +32,7 @@ function Main() {
   return (
     <>
       <Header />
-      {/* content */}
+      {/* content */}{" "}
       <Routes>
         {/* Team A */}
         {/* <Route path="teama">
@@ -67,9 +69,12 @@ function Main() {
         </Route> */}
 
         {/* Team F */}
-        <Route path="/teamf">
-          {/* <Route index element={<TeamF />} /> */}
-          {/* <Route path="components-path" element={<TeamF />} /> */}
+        <Route path="/">
+          <Route index element={<TeamF />} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="sign-out" element={<>sign-out</>} />
         </Route>
 
         {/* Team G */}
