@@ -1,29 +1,14 @@
 @media screen and (max-width: 600px) {
-  .train-focus-result-image  {
-    position: absolute;
+  .train-focus-result-image {
     width: 70%;
     height: 50%;
-    left: 20%;
-    top: 20%;
+    margin-left: 20%;
+    margin-top: 35%;
   }
-  
-  .train-focus-result-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    gap: 4px;
 
-    position: absolute;
-    width: 167px;
-    height: 93px;
-    left: 124px;
-    top: 15%;
-  }
-  .text {
-    width: 167px;
-    height: 20px;
+  .train-focus-text {
+    width: 75%;
+    height: 10%;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
@@ -32,22 +17,19 @@
     text-align: center;
     color: #252525;
   }
-  .btn {
-    margin-top: 5px;
+  /* .btn {
     height: 30px;
     width: 50%;
-    position: fixed;
-    bottom: 0%;
-    left: 35%;
-  }
-  .rectangle1 {
+    position: fixed !important;
+    margin-top: 20%;
+    top: 85% !important;
+    left: 35% !important;
+  } */
+  .train-focus-rectangle1 {
     box-sizing: border-box;
-
-    position: absolute;
-    width: 382px;
-    height: 135px;
-    left: 15%;
-    top: 70%;
+    margin-top: 20%;
+    width: 99%;
+    height: 15%;
     background: #eed4ec;
     border: 1.5px solid #252525;
     border-radius: 20px;
@@ -58,31 +40,18 @@
     align-items: center;
     /* transform: rotate(2.46deg); */
   }
-  .avg {
+  .train-focus-avg {
     color: purple;
   }
-  .circle {
-    height: 7px;
-    width: 7px;
-    border-radius: 50%;
-    /* display: inline-block; */
-    background-color: #eed4ec;
-    border: 1px solid black;
-    /* position: absolute; */
-    /* top: 1%; */
-  }
-  .image2 {
+
+  .train-focus-image2 {
     display: flex;
     flex-direction: row;
-    gap: 10%;
-    position: absolute;
+    gap: 3%;
+    margin-left: 2%;
+    margin-top: 2%;
+    /* position: absolute;
     top: 10%;
-    left: 35%;
-  }
-  .person {
-    display: flex;
-    flex-direction: column;
-    gap: 5%;
-    align-items: center;
+    left: 35%; */
   }
 }

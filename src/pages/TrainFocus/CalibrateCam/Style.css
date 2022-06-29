@@ -2,7 +2,7 @@
     
 
     /* Creator : Team G - Orit */
-    img {
+    .dragImg {
         padding-top:10px;
         /* display: block;
         margin: auto; */
@@ -14,15 +14,14 @@
     }
 
 
-    button{
+    .continueBtn{
         width: 90%;
         height: 48px;
-        /* left:50%; */
         position:fixed;
         bottom: 50px;
         /* border: 10px solid black; */
-        display: block;
-        margin: auto;
+        /* display: block;
+        margin: auto;*/
     }
 
     .place {
