@@ -1,7 +1,9 @@
-const API_loadUmooveLibrary = () => {
+let videoWidth = 960;
+const API_loadUmooveLibrary = (vidWidth = 960, vidHeight = 720) => {
+  videoWidth = vidWidth;
   return new Promise((resolve, reject) => {
     window
-      .loadUmooveLibrary()
+      .loadUmooveLibrary(vidWidth, vidHeight)
       .then((stream) => {
         window.initUmoove();
         resolve(stream);
@@ -22,7 +24,6 @@ const API_getAlignment = () => {
   let UMheadPos = window.UMheadPos;
   let diam = window.UMDiam;
   let FOV_H = 58.5;
-  let videoWidth = 960;
   let degreesToRadians = 0.0174533;
   let detectedDistance =
     ((1.18 / diam) * (videoWidth / 2.0)) /
@@ -43,8 +44,8 @@ const API_startUmoove = () => {
 };
 const API_stopUmoove = () => {
   window.stopUmoove();
-  if (this.window.stream) {
-    this.window.stream.getTracks().forEach(function (track) {
+  if (window.UMStream) {
+    window.UMStream.getTracks().forEach(function (track) {
       track.stop();
     });
   }

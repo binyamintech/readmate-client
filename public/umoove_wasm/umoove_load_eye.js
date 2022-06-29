@@ -1,6 +1,6 @@
 var umooveHasStarted = false;
-var videoWidth = 640;
-var videoHeight = 480;
+let videoWidth = 960;
+let videoHeight = 720;
 
 function PointXY(x, y) {
   this.x = x;
@@ -31,7 +31,7 @@ var UMirisPixFiltered = new EyePointsXY(0, 0, 0, 0);
 var UMCombinedIrisPos = new PointXY(0, 0);
 
 function initUmoove() {
-  wasmWorker.postMessage(["init", [0], [0]]);
+  wasmWorker.postMessage(["init", [{ videoWidth, videoHeight }], [0]]);
   umooveStarted = true;
 }
 function startUmoove(isAuto) {
@@ -187,7 +187,9 @@ wasmWorker.onmessage = function (e) {
 };
 
 //this listener waits for the wasm files and ambient be fully loaded
-var loadUmooveLibrary = () => {
+var loadUmooveLibrary = (vidWidth = 960, vidHeight = 720) => {
+  videoHeight = vidHeight;
+  videoWidth = vidWidth;
   return new Promise((resolve, reject) => {
     const canvas = document.createElement("canvas");
     canvas.width = videoWidth;
@@ -255,8 +257,8 @@ var loadUmooveLibrary = () => {
         .getUserMedia({
           audio: false,
           video: {
-            height: { min: 420, max: 420 },
-            width: { min: 640, max: 640 },
+            height: { min: videoHeight, max: videoHeight },
+            width: { min: videoWidth, max: videoWidth },
             frameRate: { min: 15, ideal: 28, max: 30 },
             facingMode: "user",
           },
