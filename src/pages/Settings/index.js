@@ -13,7 +13,7 @@ export default function Settings() {
       <img src={userImg} className="settingUserImage" />
       <BiCamera className="cameraIcon"/>
       </div>
-      <
+      {/* //todo */}
       <Input type="text" legend="First name" content="First name" name="first name"/>
       <Input type="text" legend="Last name" content="Last name" name="last name"/>
       <Input type="email" legend="Email" content="Email" name="email"/>

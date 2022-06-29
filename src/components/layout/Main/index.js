@@ -5,6 +5,8 @@ import Popup from "../Popup";
 import { Outlet, Route, Routes } from "react-router-dom";
 // import TextArea from "../common/TextArea/Index";
 import Dashboard from "../../../pages/Dashboard";
+import TeamH from "../../teams/TeamH";
+import Training from "../../../pages/FreeStyle/Training";
 
 import Exercise from "../../../pages/TrainReading/Level/Exercise";
 import ExerciseClock from "../../../pages/TrainReading/Level/ExerciseClock";
@@ -66,8 +68,8 @@ function Main() {
 
         {/* Team F */}
         <Route path="/teamf">
-          <Route index element={<TeamF />} />
-          <Route path="components-path" element={<TeamF />} />
+          {/* <Route index element={<TeamF />} /> */}
+          {/* <Route path="components-path" element={<TeamF />} /> */}
         </Route>
 
         {/* Team G */}

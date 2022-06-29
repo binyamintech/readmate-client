@@ -1,12 +1,11 @@
-.GGG {
-    height: 300px;
+.DashGraph {
     background-color: rgb(255, 229, 195);
-    top: 40%;
-}
-
-.Select {
-    top: 10%;
     position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    left: 20%;
+    width: 50%;
 }
 
 .Tabs {
@@ -18,9 +17,36 @@
 }
 
 .Tab {
-    background-color: darkcyan;
+    background-color: rgb(255, 241, 215);
     height: 100px;
-    width: 100px;
+    width: 200px;
     text-align: center;
     justify-content: center;
+    margin: 10px;
+    border-style: outset;
+    border-radius: 10px;
+    border-color: rgb(205, 205, 226);
+    box-shadow: 5px 5px rgb(11, 50, 63);
+}
+
+.TabOn {
+    background-color: rgb(255, 176, 29);
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    border-style: outset;
+    border-radius: 10px;
+    border-color: rgb(205, 205, 226);
+    box-shadow: 5px 5px rgb(11, 50, 63);
+
+}
+
+.SelectBtn {
+    position: absolute;
+    right: 5px;
+
+    
+
 }
