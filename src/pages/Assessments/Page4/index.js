@@ -13,15 +13,15 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 function Page4() {
     const l = useLocation()
-    console.log("this what i get : ", l.state.data.data.img);
+    console.log(l);
     const navigate = useNavigate();
 
     const nextPage = () => {
-        navigate('/teama/page5', { state: { data: l.state } });
         console.log("clicked");
         // UmooveApi.API_stopReading();//לבדוק
         // UmooveApi.API_stopUmoove();
-        console.log("that what i send :", { state: { data: l.state } });
+        navigate('/teama/page5', { state: { data: l.data.questions } });
+        console.log("that what i send :", { state: { data: l.data.questions } });
     }
 
     useEffect(() => { UmooveApi.API_startReading() }, [])
