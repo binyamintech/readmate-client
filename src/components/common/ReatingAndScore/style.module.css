@@ -13,6 +13,22 @@
   margin-top: 105%;
   margin-left: 10%;
 }
+.back {
+  width: 80%;
+  box-sizing: border-box;
+  height: 178.82px;
+  background: #7d56a5;
+  border: 1.5px solid #252525;
+  border-radius: 20px;
+  transform: matrix(1, 0.06, 0.03, -1, 0, 0);
+  z-index: 0;
+  margin-top: 105%;
+  margin-left: 10%;
+}
+.vector {
+  /* position: absolute; */
+  /* left: 177px; */
+}
 .bText {
   width: 84px;
   height: 40px;
