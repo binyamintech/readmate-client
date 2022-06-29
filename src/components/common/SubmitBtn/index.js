@@ -1,6 +1,6 @@
 import "./style.css";
 import { Link } from "react-router-dom";
-export default function SubmitBtn({ path = "", name, type, click = () => {} }) {
+export default function SubmitBtn({ path="", name, onclick }) {
   return (
     // creator : nehorai
     // team f
