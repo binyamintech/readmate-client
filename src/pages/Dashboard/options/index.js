@@ -15,22 +15,16 @@ import { useEffect, useState } from "react";
 function Box1() {
   const navigate = useNavigate();
   const [assessment, setAssessment] = useState({ available: false, days: 2 });
-  const [pathFocus, setPathFocus] = useState("");
 
   // creator: nehorai, team f , chane the remote in path, use /  inside path
 
   const button = [
     { name: "Train Reading", icon: icon1, path: "/" },
-    { name: "Train Focus", icon: icon2, path: pathFocus },
+    { name: "Train Focus", icon: icon2, path: "Start-focus/StartFocus" },
     { name: "Weekly Assessment", icon: FiFileText, path: "/" },
     { name: "Freestyle", icon: icon4, path: "/" },
   ];
   useEffect(() => {
-    const trainFocus = () => {
-      localStorage.getItem("posX")
-        ? setPathFocus("Start-focus")
-        : setPathFocus("CalibrateCam");
-    };
     async function caldulateDate() {
       try {
         let lastTest = await fetch();
@@ -45,7 +39,6 @@ function Box1() {
       }
     }
     // caldulateDate();
-    trainFocus();
   }, []);
 
   // yishai
