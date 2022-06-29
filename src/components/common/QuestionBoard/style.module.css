@@ -12,6 +12,12 @@
   display: flex;
   justify-content: space-evenly;
   margin-top: 4px;
+  
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
 }
 .buttons button {
   text-align: center;
@@ -23,7 +29,9 @@
   border-radius: 80px;
 }
 .active {
-  background-color: aqua !important;
+  /* background-color: #F39C12 ; */
+  background-color: #F39C12 !important;
+  color: white;
 }
 .back-purple{
   position: relative;
@@ -43,7 +51,18 @@
 .left.back-purple::before{
   transform: rotate(-2.3deg);
 }
+.QuestionBoard{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px
 
+}
+.buttons button:hover{
+  color: white;
+
+}
 /* .Truefalsetext {
   width: 38px;
   height: 16px;
