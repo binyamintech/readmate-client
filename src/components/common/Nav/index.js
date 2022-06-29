@@ -5,9 +5,8 @@ import { FiSettings } from "react-icons/fi";
 import { MdLogout } from "react-icons/md";
 import { FaRegAddressBook } from "react-icons/fa";
 import { NavButton } from "../NavButton/NavButton";
-
+import NavBackButt from "../NavBackButt";
 import { NavHead } from "../NavHead";
-import { NavBackButt } from "../NavBackButt";
 
 // creator: shmuel asherov team-f
 export const NavBar = (props) => {

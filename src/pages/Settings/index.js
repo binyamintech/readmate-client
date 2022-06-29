@@ -20,17 +20,17 @@ export default function Settings() {
     classId,
   });
 
-  const navigate= useNavigate()
+  const navigate = useNavigate();
 
   let update = (field, value) => {
     setUpdatedUser({ ...updatedUser, [field]: value });
   };
   function bbb() {
-    navigate("/")
+    navigate("/");
   }
 
   return (
-    <div className="settingsContainer">
+    <>
       <div className="img_camera">
         <img src={userImg} className="settingUserImage" />
         <BiCamera className="cameraIcon" />
@@ -46,7 +46,7 @@ export default function Settings() {
             legend="First name"
             content="First name"
             name="firstName"
-            />
+          />
           <Input
             value={updatedUser.lastName}
             type="text"
@@ -56,7 +56,7 @@ export default function Settings() {
             legend="Last name"
             content="Last name"
             name="lastName"
-            />
+          />
           <Input
             value={updatedUser.email}
             type="email"
@@ -66,7 +66,7 @@ export default function Settings() {
             legend="Email"
             content="Email"
             name="email"
-            />
+          />
           <Input
             value={updatedUser.classId}
             type="text"
@@ -84,6 +84,6 @@ export default function Settings() {
           </div>
         </SubmitForm>
       </div>
-    </div>
+    </>
   );
 }
