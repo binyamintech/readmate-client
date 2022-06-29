@@ -3,22 +3,21 @@
     justify-content: center;
     align-items: center;
     margin: 5%;
-    left: 20%;
     background: #FEEFEC;
     border: 1.5px solid #252525;
     border-radius: 20px;
-    width: 382px;
-    height: 338px;
+    width: 70%;
+    height: 70%;
     box-sizing: border-box;
 }
 
 .Border {
     box-sizing: border-box;
     position: absolute;
-    width: 382px;
-    height: 338px;
+    width: 70%;
+    height: 70%;
     top: 21%;
-    left: 25%;
+    left: 5%;
     background: #7D56A5;
     border: 1.5px solid #252525;
     border-radius: 20px;
@@ -79,9 +78,9 @@
 
 .Graph { 
     position: absolute;
-    width: 80%;
-    height: 137px;
-    left: 10%;
+    width: 60%;
+    height: 300px;
+    left: 20%;
     bottom: 10%;
-    background: linear-gradient(128.87deg, #F39C12 -0.48%, rgba(243, 156, 18, 0) 81.7%);
+    /* background: linear-gradient(128.87deg, #F39C12 -0.48%, rgba(243, 156, 18, 0) 81.7%); */
 }

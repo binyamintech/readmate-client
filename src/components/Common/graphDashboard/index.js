@@ -47,8 +47,9 @@ export default function GraphContainer() {
             />;
           })}
         </div>
+        {fakeData.days}
         <div className="Graph">
-          <Graph d={dataSrc} labs={fakeData.daysArr}/>
+          <Graph d={dataSrc} labs={fakeData.xValues}/>
         </div>
       </div>
     </>

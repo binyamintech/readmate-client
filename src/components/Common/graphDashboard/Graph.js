@@ -28,7 +28,9 @@ export default function Graph(props){
     const dataArr = props.d.data;
     const options = {
       responsive: true,
+      
       plugins: {
+        
         legend: {
           position: 'top',
           display: false,
@@ -36,20 +38,23 @@ export default function Graph(props){
       },
     };
 
+    
+
     const labels = props.labs
     const data = {
       labels,
       datasets: [
+
         {
-            data: dataArr,
-            borderColor: '#F39C12',
-            backgroundColor: 'yellow'
-            
-          },
+          data: dataArr,
+          borderColor: '#7D56A5',
+          backgroundColor: 'yellow'
+        }
           
         ],
     };
-    
+    console.log('labels' + labels);
+    console.log('data' + dataArr);
       return <Line options={options} data={data} />;
 
 
