@@ -1,12 +1,11 @@
 import Settings from "../../pages/Settings";
 import SubmitBtn from "../common/SubmitBtn";
-
+import Box1 from "../../pages/Dashboard/options/index";
 
 function Test() {
   return (
     <>
-   <Settings/>
-  
+      <Box1 />
     </>
   );
 }

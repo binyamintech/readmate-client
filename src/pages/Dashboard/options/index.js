@@ -6,6 +6,8 @@ import { FiUnlock } from "react-icons/fi";
 import { FiLock } from "react-icons/fi";
 import { FiFileText } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { dataContext } from "../../../context/context";
 
 import icon1 from "../../../assets/img/dashboard icons/icon1.png";
 import icon2 from "../../../assets/img/dashboard icons/icon2.png";
@@ -16,6 +18,23 @@ function Box1() {
   const navigate = useNavigate();
   const [assessment, setAssessment] = useState({ available: false, days: 2 });
 
+  const localDataContext = useContext(dataContext);
+
+  function calculateDate(lastExam) {
+    //creator shmuel asherov team-f
+    function parserDate(str) {
+      var mdy = str.split("/");
+      return new Date(mdy[2], mdy[0] - 1, mdy[1]);
+    }
+
+    let curentTime = new Date().toLocaleDateString();
+    curentTime = parserDate(curentTime);
+    lastExam = parserDate(lastExam);
+
+    var diffDays = curentTime.getDate() - lastExam.getDate();
+    return diffDays;
+  }
+
   // creator: nehorai, team f , chane the remote in path, use /  inside path
 
   const button = [
@@ -25,20 +44,22 @@ function Box1() {
     { name: "Freestyle", icon: icon4, path: "/" },
   ];
   useEffect(() => {
-    async function caldulateDate() {
-      try {
-        let lastTest = await fetch();
-        lastTest = lastTest.now();
-        let currentTime = Date.now();
-        let res = Math.floor((currentTime - lastTest) / (24 * 3600 * 1000));
-        res <= 7
-          ? setAssessment({ days: res, available: true })
-          : setAssessment({ days: res, available: false });
-      } catch (err) {
-        console.log("Failed to pull information from server");
-      }
-    }
-    // caldulateDate();
+    let lastExam =
+      localDataContext.assesmentResults[
+        localDataContext.assesmentResults.length - 1
+      ].date;
+    // try{   need to gate the data from the real  server
+    //   fetch()
+    //}
+    //   catch(err){
+    //     console.log(err)
+    //   }
+    // }
+    let day = calculateDate(lastExam);
+    day >= 7
+      ? setAssessment({ available: true, days: day })
+      : setAssessment({ available: false, days: day });
+    console.log(assessment);
   }, []);
 
   // yishai
@@ -56,7 +77,7 @@ function Box1() {
                     icon={v.icon}
                     path={v.path}
                     lock={FiUnlock}
-                    box=" bb box1"
+                    box=" box box1"
                     color="white"
                   >
                     <button
@@ -76,7 +97,7 @@ function Box1() {
                     icon={v.icon}
                     path={v.path}
                     lock={FiLock}
-                    box=" bb box2"
+                    box=" box box2"
                     color="blue"
                   >
                     <p className="color-btn-doAssessment">
