@@ -12,16 +12,18 @@ import { useNavigate, useLocation } from 'react-router-dom';
 // const [pageName, setPageName] = useContext(pageNameContext)
 
 function Page4() {
-    let navigate = useNavigate()
     const l = useLocation()
+    console.log(l);
+    const navigate = useNavigate()
 
-    function onclick() {
+    const nextPage = () => {
+        navigate('/teama/page5', { state: { exam: exams } });
         console.log("clicked");
         // UmooveApi.API_stopReading();//לבדוק
         // UmooveApi.API_stopUmoove();
-        navigate('/teama/page5', { state: { exam: exams } })
+        console.log({ exam: exams });
     }
-
+    // 
     useEffect(() => { UmooveApi.API_startReading() }, [])
 
     let exams = [
@@ -165,7 +167,7 @@ function Page4() {
             {/* //scrollbar
         //bottom button "done" - import whith props */}
 
-            <SubmitBtn onclick={onclick} name={"Done"} />
+            <SubmitBtn startFunction={() => { nextPage() }} name={"Done"} />
         </div>
     </>
 }

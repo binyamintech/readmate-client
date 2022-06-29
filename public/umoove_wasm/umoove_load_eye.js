@@ -146,7 +146,7 @@ wasmWorker.onmessage = function (e) {
 
   // console.log(
   //   "State = " +
-  //     UMFaceState +
+  //   UMFaceState);
   //     " Combined iris: reliability= " +
   //     UMCombinedReliability +
   //     " position = " +
@@ -262,7 +262,7 @@ var loadUmooveLibrary = () => {
           },
         })
         .then(function (stream) {
-
+          resolve(stream);
           window.UMStream = stream;
           video.srcObject = stream;
           // videoPreview.srcObject = stream;
@@ -270,7 +270,7 @@ var loadUmooveLibrary = () => {
           //video.height = videoHeight;
           video.play();
 
-          resolve(stream);
+
           // videoPreview.play();
           // video.addEventListener('play', function (e) {
           // if (e.type == 'play') {
