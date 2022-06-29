@@ -1,10 +1,20 @@
-import { NavHead } from "../../components/common/NavHead"
-import ContactEmail from "./Compomemts/ContactEmail"
-import ContactPhone from "./Compomemts/ContactPhone"
-import ContactWeb from "./Compomemts/ContactWeb"
+// import { NavHead } from "../../components/common/NavHead"
+import { BsTelephone } from "react-icons/bs"
+import { FiMail } from "react-icons/fi"
+import { IoOpenOutline } from "react-icons/io5"
+import ContactDetail from "./Components/ContactDetail"
 
-// Creator : TeamF - asael
 
+// Creator : TeamF - asael 
+function phoneCall(){
+
+}
+function sentMail(){
+
+}
+function goToWebsit(){
+
+}
 
 function Contact(){
 
@@ -12,9 +22,9 @@ function Contact(){
         <div>
             Contact
             {/* <NavHead /> */}
-            <ContactPhone />
-            <ContactEmail />
-            <ContactWeb />
+            <ContactDetail icon={<BsTelephone />} name="Phone" detail="0525666820" func={phoneCall} />
+            <ContactDetail icon={<FiMail />} name="Email Us" detail="king@gmail.com" func={sentMail}/>
+            <ContactDetail icon={<IoOpenOutline />} name="Website" detail="www.kikar.co.il" func={goToWebsit}/>
         </div>
     )
 }

@@ -6,6 +6,7 @@ import Dashboard from "../../pages/Dashboard";
 import TeamF from "../teams/TeamF";
 import { dataContext } from "../../context/context";
 import { useContext, useEffect } from "react";
+import Contact from "../../pages/Contact";
 function Test() {
   const localDataContext = useContext(dataContext);
   useEffect(() => {
@@ -14,7 +15,7 @@ function Test() {
   });
   return (
     <>
-      <Box1 />
+      {/* <Box1 /> */}
       {/* <TeamF /> */}
       {/* <Options /> */}
       {/* <Nav /> */}
