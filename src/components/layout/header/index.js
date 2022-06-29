@@ -16,35 +16,35 @@ export default function Header() {
 
 
    return (
-      // pageNameContextLocal.showHeader?
-      <div className='header'>
-         <div className='left'>
-            {!navState ? (
-               <div
-                  onClick={() => {
-                     setNavState(true);
-                  }}
-               >
-                  <img src={nav} alt="" />
-               </div>
-            ) : (
-               <NavBar
-                  setClose={() => {
-                     setNavState(!navState);
-                  }}
-               />
-            )}
+      pageNameContextLocal.showHeader ?
+         <div className='header'>
+            <div className='left'>
+               {!navState ? (
+                  <div
+                     onClick={() => {
+                        setNavState(true);
+                     }}
+                  >
+                     <img src={nav} alt="" />
+                  </div>
+               ) : (
+                  <NavBar
+                     setClose={() => {
+                        setNavState(!navState);
+                     }}
+                  />
+               )}
 
-         </div>
+            </div>
 
-         <div className='mid'>
-            {pageNameContextLocal.pageName}
-         </div>
+            <div className='mid'>
+               {pageNameContextLocal.pageName}
+            </div>
 
-         <div className='right'>
-            <img src={photoPic} alt="User Name" />
+            <div className='right'>
+               <img src={photoPic} alt="User Name" />
+            </div>
          </div>
-      </div>
-      // :console.log("no header")
+         : console.log("no header")
    )
 }
