@@ -20,7 +20,7 @@ function Page4() {
         navigate('/teama/page5', { state: { exam: exams } });
         console.log("clicked");
         // UmooveApi.API_stopReading();//לבדוק
-        // UmooveApi.API_stopUmoove();
+        UmooveApi.API_stopUmoove();
         console.log({ exam: exams });
     }
     // 
