@@ -92,7 +92,9 @@ function Main() {
         {/* </Route> */}
 
         {/* Test */}
-        <Route path="/test" element={<Test />} />
+        <Route path='/test' element={<Test />} />
+
+
       </Routes>
 
       <Nav />

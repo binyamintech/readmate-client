@@ -1,3 +1,6 @@
+import { useContext } from 'react';
+import { pageNameContext } from '../../../../components/layout/Layout';
+
 import React from 'react'
 import './style.css';
 import Headphone from './Level_Headphone.png'
@@ -8,6 +11,10 @@ import { useNavigate } from "react-router-dom";
 
 // import conus from './path from assets'
 
+export default function Exercise() {
+  // setHeader
+  const pageNameHeader = useContext(pageNameContext);
+  pageNameHeader.setPageName("Level Exercise");
 
 const Exercise = () => {
   const BookName = " Harry Potter " // i need to receive this info fromm shachar
@@ -60,4 +67,4 @@ export default Exercise
 
 //   </>)
 // }
-// export default Test;
+// export default Test

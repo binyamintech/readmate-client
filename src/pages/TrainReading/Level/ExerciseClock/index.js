@@ -1,3 +1,6 @@
+import { useContext } from 'react';
+import { pageNameContext } from '../../../../components/layout/Layout';
+
 import React from 'react'
 import './style.css';
 import SoundBar from "./SoundBar.png"
@@ -6,7 +9,12 @@ import SquareButton from '../../../../components/common/SquareButton';
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
 
+export default function ExerciseClock(){
+  // setHeader
+  const pageNameHeader = useContext(pageNameContext);
+  pageNameHeader.setPageName("Level Exercise");
 
+  const rout = '/train_reading_level/rate'
 
 const ExerciseClock = () => {
   const LPM2 = useLocation()

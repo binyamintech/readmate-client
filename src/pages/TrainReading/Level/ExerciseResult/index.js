@@ -16,7 +16,7 @@ import result from './result.png'
 export default function ExerciseResult() {
   // setHeader
   const pageNameHeader = useContext(pageNameContext);
-  pageNameHeader.setPageName("Exercise Result");
+  pageNameHeader.setPageName("Result Summary");
 
   //TODO: wait for implementation of userContext
   // get user LPM
