@@ -3,15 +3,53 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  height: 40vh;
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+
+}
+.graf-container{
+  display: flex;
+  justify-content: center;
+  background: #FEEFEC;
+  border: 1.5px solid #252525;
+  margin-top: 5%;
+  border-radius: 20px;
+}
+.center-contxt{
+  display: flex;
+  flex-direction: column;
   
 }
+.icon-assessment{
+  display: flex;
+}
+.btn-info{
+  display: flex;
+  flex-direction: column;
+}
+.container-icon-lock{
+  display: flex;
+  justify-content: end;
+  width: 95%;
+}
+
 .box {
   border: 1.5px solid #252525;
   border-radius: 20px;
   flex-basis: 45% ;
   margin-top: 5%;
-  
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 30%;
+  justify-content: center;
 }
+
+
 .right.box::before{
   transform: rotate(6.3deg);
 }
@@ -35,9 +73,8 @@
 .icon1 {
   display: flex;
   justify-content: center;
- flex-direction: column;
  align-items: center;
-
+ flex: 1 1 auto;
 }
 .icon2 {
   
@@ -47,7 +84,7 @@
 .lock{
  
  margin-left:50%;
- margin-top: 3%;
+
  size: 10%;
 
 }
@@ -62,10 +99,7 @@
 .color-btn-doAssessment{
   color: #f39c12;
 }
-.i{
-  margin-left:10%;
-  margin-top: 20%;
-}
+
 .white{
   color:white;
 }
@@ -73,5 +107,5 @@
  color: #7D56A5
 }
 .imgSize{
-  width: 22%;
+  width: 20%;
 }

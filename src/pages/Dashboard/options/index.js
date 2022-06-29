@@ -8,6 +8,7 @@ import { FiFileText } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { dataContext } from "../../../context/context";
+import GraphDasboard from "../../../components/common/graphDashboard";
 
 import icon1 from "../../../assets/img/dashboard icons/icon1.png";
 import icon2 from "../../../assets/img/dashboard icons/icon2.png";
@@ -65,53 +66,54 @@ function Box1() {
   // yishai
 
   return (
-    <>
-      <div className="grid-container">
-        <>
-          {button.map((v) => {
-            if (v.name === "Weekly Assessment") {
-              if (assessment.available) {
-                return (
-                  <BtnAssessment
-                    name={v.name}
-                    icon={v.icon}
-                    path={v.path}
-                    lock={FiUnlock}
-                    box=" box box1"
-                    color="white"
-                  >
-                    <button
-                      className="btn-doNow"
-                      onClick={() => {
-                        navigate(v.path);
-                      }}
-                    >
-                      Due now!
-                    </button>
-                  </BtnAssessment>
-                );
-              } else {
-                return (
-                  <BtnAssessment
-                    name={v.name}
-                    icon={v.icon}
-                    path={v.path}
-                    lock={FiLock}
-                    box=" box box2"
-                    color="blue"
-                  >
-                    <p className="color-btn-doAssessment">
-                      Access in {assessment.days} days
-                    </p>
-                  </BtnAssessment>
-                );
-              }
-            }
-            return <BtnOptions name={v.name} icon={v.icon} path={v.path} />;
-          })}
-        </>
+    <div className="main-container">
+      <div className="graf-container right back-purple box-grhaf	">
+        <GraphDasboard />
       </div>
-    </>
+      <div className="grid-container">
+        {button.map((v) => {
+          if (v.name === "Weekly Assessment") {
+            if (assessment.available) {
+              return (
+                <BtnAssessment
+                  name={v.name}
+                  icon={v.icon}
+                  path={v.path}
+                  lock={FiUnlock}
+                  box=" box box1"
+                  color="white"
+                >
+                  <button
+                    className="btn-doNow"
+                    onClick={() => {
+                      navigate(v.path);
+                    }}
+                  >
+                    Due now!
+                  </button>
+                </BtnAssessment>
+              );
+            } else {
+              return (
+                <BtnAssessment
+                  name={v.name}
+                  icon={v.icon}
+                  path={v.path}
+                  lock={FiLock}
+                  box=" box box2"
+                  color="blue"
+                >
+                  <p className="color-btn-doAssessment">
+                    Access in {assessment.days} days
+                  </p>
+                </BtnAssessment>
+              );
+            }
+          }
+          return <BtnOptions name={v.name} icon={v.icon} path={v.path} />;
+        })}
+      </div>
+    </div>
   );
 }
 
