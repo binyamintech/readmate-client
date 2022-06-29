@@ -23,7 +23,7 @@ export default function Header() {
         <div className="mid">{pageNameContextLocal.pageName}</div>
 
         <div className="right">
-          <img src={photoPic} alt="User Name" />
+          <img src={photoPic} alt="User Name " />
         </div>
       </div>
       <div>
