@@ -1,8 +1,8 @@
 importScripts("umoove_eye.js");
 linkForFetchLocal = " http://localhost:3000";
 linkForFetchOnline = " https://peripherex-patient-test.wl.r.appspot.com/";
-const videoWidth = 960;
-const videoHeight = 720;
+let videoWidth = 960;
+let videoHeight = 720;
 
 var started = false;
 var initialized = false;
@@ -100,6 +100,8 @@ onmessage = function (e) {
   switch (command) {
     case "init":
       initialized = true;
+      videoWidth = params[0].videoWidth;
+      videoHeight = params[0].videoHeight;
       init_wasm();
 
       break;

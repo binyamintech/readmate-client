@@ -29,13 +29,13 @@ function Clock(props) {
     setIsFinish(true);
     props.funcs.onComplete();
   }
-
+  ////////////////////////////////////////////////
   const renderTime = ({ remainingTime }) => {
     const minutes = Math.floor(remainingTime / 60);
     const seconds = remainingTime - minutes * 60;
     return (
-      <div className={styles.wrapping}>
-      <div className= {styles.timer}>
+      <div className={styles.intimer}>
+        {/* <div className={styles.square}> */}
         {freeStyle ? (
           <div className={styles.squarebutton}>
             <SquareButton>
@@ -50,10 +50,11 @@ function Clock(props) {
             {seconds}
           </div>
         )}
+        {/* </div> */}
         {remainingTime === 0 && complete()}
         {!isFinish && (
           <div
-            className={styles.playPause}
+            // className={styles.roundButton}
             onClick={() => {
               !freeStyle && setPlay(!play);
               !isplay && props.funcs.onPlay();
@@ -65,7 +66,6 @@ function Clock(props) {
             </div>
           )}
           </div>
-      </div>
     );
   };
   // isplay&&props.funcs.onPlay()
@@ -73,7 +73,6 @@ function Clock(props) {
   return (
     
     <div className={styles.wrapClock}>
-      {/*  this clock refers to freeStyle */}
       {freeStyle && (
         <button
           className={styles.plusMinus}
