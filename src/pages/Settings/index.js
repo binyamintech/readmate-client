@@ -20,13 +20,13 @@ export default function Settings() {
     classId,
   });
 
-  const navigate= useNavigate()
+  const navigate = useNavigate();
 
   let update = (field, value) => {
     setUpdatedUser({ ...updatedUser, [field]: value });
   };
   function bbb() {
-    navigate("/")
+    navigate("/");
   }
 
   return (
@@ -68,7 +68,7 @@ export default function Settings() {
             legend="Email"
             content="Email"
             name="email"
-            />
+          />
           <Input
             value={updatedUser.classId}
             type="text"

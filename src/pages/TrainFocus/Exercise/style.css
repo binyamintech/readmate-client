@@ -1,7 +1,7 @@
 .back_center_Right {
     position: absolute;
     width: 99px;
-    height: 120px;
+    height: 132px;
     left: 4%;
     top: 10%;
     background: rgba(125, 86, 165, 0.2);
@@ -53,9 +53,18 @@
     background: #f39c12;
     border: 2px solid #000000;
     border-radius: 80px;
-    position: absolute;
+    /* position: absolute; */
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 101%;
     color: #252525;
+}
+.purpleDot{
+    position: absolute;
+    margin-top: 5px;
+    width: 18px;
+    height: 18px;  
+    border-radius: 50%;
+    background: #7D56A5;
+    
 }

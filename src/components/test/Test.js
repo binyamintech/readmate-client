@@ -1,12 +1,23 @@
-import Settings from "../../pages/Settings";
-import SubmitBtn from "../common/SubmitBtn";
 
+// import { NavBar } from "../Common/Nav/index";
 
+import Box1 from "../../pages/Dashboard/options/index";
+
+import Dashboard from "../../pages/Dashboard";
+import TeamF from "../teams/TeamF";
+import { dataContext } from "../../context/context";
+import { useContext, useEffect } from "react";
+import Contact from "../../pages/Contact";
 function Test() {
+
   return (
     <>
-   <Settings/>
-  
+      {/* <Box1 /> */}
+      {/* <TeamF /> */}
+      {/* <Options /> */}
+      {/* <Nav /> */}
+
+      <Contact />
     </>
   );
 }
