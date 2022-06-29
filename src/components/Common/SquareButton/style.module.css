@@ -2,14 +2,13 @@
   box-sizing: border-box;
 
   /* Auto layout */
-
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px 7px;
   gap: 8px;
-
   width: 70px;
   height: 70px;
 
@@ -19,12 +18,18 @@
 
   box-shadow: 2px 2px 0px #d35400;
   border-radius: 20px;
-
+  bottom: 10%;
   /* Inside auto layout */
 
-  flex: none;
+  transform: translateX(-50%);
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  /* position: relative; */
+
+  /* flex: none;
   order: 0;
-  flex-grow: 0;
+  flex-grow: 0; */
 
   font-family: "Poppins";
   font-style: normal;

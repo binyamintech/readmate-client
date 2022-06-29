@@ -5,8 +5,10 @@ import Header from "../header";
 import Nav from "../Nav";
 import Popup from "../Popup";
 import { Outlet, Route, Routes } from "react-router-dom";
+import Training from "../../../pages/FreeStyle/Training";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
+import Instructions from "../../../pages/FreeStyle/Training";
 
 function Main() {
   return (
@@ -58,9 +60,11 @@ function Main() {
         </Route>
 
         {/* Team H */}
-        <Route path="/teams/TeamH">
+        <Route path="teamH">
           <Route index element={<TeamH />} />
           <Route path="components-path" element={<>team's components</>} />
+          <Route path="/teamH/training" element={<Training />} />
+          <Route path="/teamH/instructions" element={<Instructions />} />
         </Route>
 
         {/* Test */}

@@ -5,6 +5,10 @@
   gap: 5%;
 }
 
+.intimer {
+  text-align: center;
+  position: relative;
+}
 .rapid {
   font-family: "Poppins";
   font-style: normal;
@@ -90,25 +94,26 @@
 
 .roundButton {
   /* padding: 100px; */
-  position: relative;
+  position: absolute;
   /* display: flex; */
   justify-content: center;
   align-items: center;
-  padding: 10%;
+  /* padding: 10%; */
+  bottom: 0%;
 }
 
-.squarebutton {
-  /* display: flex;
+/* .squarebutton { */
+/* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px 7px;
   gap: 8px; */
 
-  flex: none;
+/* flex: none;
   order: 0;
-  flex-grow: 0;
-}
+  flex-grow: 0; */
+/* } */
 
 /* .circle {
   position: absolute;
@@ -118,6 +123,6 @@
   top: 322.62px;
 } */
 
-.square {
+/* .square {
   display: flex;
-}
+} */

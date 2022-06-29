@@ -1,4 +1,4 @@
-import Clock from "../../components/Common/Clock";
+import Clock from "../../components/common/Clock";
 
 function Test() {
   const testFuncs = {
@@ -22,7 +22,7 @@ function Test() {
         freeStyle={true}
         time={180}
         funcs={testFuncs}
-        rapidValue={10}
+        initRapidValue={10}
       ></Clock>
     </>
   );
