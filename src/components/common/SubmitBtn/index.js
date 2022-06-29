@@ -7,7 +7,7 @@ export default function SubmitBtn({ path="", name,type, click=()=>{}}) {
     // enter the path with /
     // you must have function!! not a code 
       <Link to={path}>
-        <button className="submit" type={type}  onClick={(e) => click(e)}>
+        <button className="submit" type={type}  onClick={click}>
           <div className="word">{name}</div>
         </button>
       </Link>

@@ -12,11 +12,11 @@ export default function Settings() {
       <div className="img_camera">
       <img src={userImg} className="settingUserImage" />
       <BiCamera className="cameraIcon"/>
-      
       </div>
-      <Input type="text"  content="first name" name="first name"/>
-      <Input type="text"  content="last name" name="last name"/>
-      <Input type="email"  content="email" name="email"/>
+      <
+      <Input type="text" legend="First name" content="First name" name="first name"/>
+      <Input type="text" legend="Last name" content="Last name" name="last name"/>
+      <Input type="email" legend="Email" content="Email" name="email"/>
       <ChangePass/>
       <div className="btnContaine">
         <SubmitBtn name="Submit" type={"button"} path="/"/>
