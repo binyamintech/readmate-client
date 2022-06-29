@@ -1,31 +1,26 @@
 const dataSrcInit = {
-    count: 80,
+    last: 80,
     data: [3, 5, 33, 70, 10, 40],
   };
   
-const assesmentsData = {
-      count: 80,
+const assessmentsData = {
+      last: 80,
       data: [3,5,33,70,10,40],
     };
 const readingData = {
-        count: 8,
+        last: 8,
         data: [10,5,30,,,,,,,,33,6,12,2,40],
       };
 const focusData = {
-    count: 50,
+    last: 50,
     data: [40,7,40,22,33,11,9],
   };
 
-const get = [{date: '10/2/2022', grade: 90}, {'2/2/2022':30}]
-
-const fakeUser = {
-  id: 1234,
-  userName: 'Joe',
-  assesments: {
-    wpm: 70,
-    firstDate: '06/10/2022',
-    data: []
-  }
+const fakeUser1 = {
+  firstName: 'Joe',
+  assesments: [{date:'02/05/2022', score:70}, {date:'08/05/2022', score:30}, {date:'15/05/2022', score:90}],
+  reading: [{date:'02/05/2022', score:70}, {date:'08/05/2022', score:30}, {date:'15/05/2022', score:90}],
+  focus: [{date:'02/05/2022', score:70}, {date:'08/05/2022', score:30}, {date:'15/05/2022', score:90}]
 
 }
 
@@ -42,5 +37,5 @@ for(let i = 1; i < days; i++) {
   ddd.setDate(date1.getDate()+1);
   daysArr.push(ddd.toISOString().slice(0, 10));  
 }
-const fakeData= {dataSrcInit,assesmentsData,readingData,focusData,daysArr}
+const fakeData= {dataSrcInit,assessmentsData,readingData,focusData,daysArr, fakeUser1}
 export default fakeData

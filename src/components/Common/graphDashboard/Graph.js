@@ -1,5 +1,7 @@
 import React from 'react';
 import './Style.css';
+
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -41,7 +43,6 @@ export default function Graph(props){
         {
             data: dataArr,
             borderColor: '#F39C12',
-            
             backgroundColor: 'yellow'
             
           },

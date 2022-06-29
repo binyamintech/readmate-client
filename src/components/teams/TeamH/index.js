@@ -1,5 +1,5 @@
 import Clock from '../../common/Clock'
-import GraphContainer from '../../common/graphDashboard'
+import GraphContainer from '../../common/GraphDashboard'
 function TeamH() {
     return (
         <>

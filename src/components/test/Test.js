@@ -1,5 +1,5 @@
 import React from 'react'
-import GraphContainer from '../common/graphDashboard'
+import GraphContainer from '../common/GraphDashboard'
  function Test() {
   return (
     < GraphContainer/>

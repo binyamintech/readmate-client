@@ -6,21 +6,21 @@ import Tab from "./Tab";
 
 export default function GraphContainer() {
   const [dataSrc, setDataSrc] = useState(fakeData.dataSrcInit);
-  const [selectedTab, setSelectedTab] = useState("Assesments");
+  const [selectedTab, setSelectedTab] = useState("Assessments");
   const tabs = [
     {
-      name: "Assesments",
-      count: `${fakeData.assesmentsData.count} WPM`,
-      dataArrayName: "assesmentsData",
+      tabName: "Assessments",
+      last: `${fakeData.assessmentsData.last} WPM`,
+      dataArrayName: "assessmentsData",
     },
     {
-      name: "Reading",
-      count: `${fakeData.readingData.count} LPM`,
+      tabName: "Reading",
+      last: `${fakeData.readingData.last} LPM`,
       dataArrayName: "readingData",
     },
     {
-      name: "Focus",
-      count: `${fakeData.focusData.count} CM`,
+      tabName: "Focus",
+      last: `${fakeData.focusData.last} CM`,
       dataArrayName: "focusData",
     },
     
@@ -34,8 +34,8 @@ export default function GraphContainer() {
         <div className="Tabs">
           {tabs.map((tab) => {
             return <Tab
-            name={tab.name}
-            count={tab.count}
+            tabName={tab.tabName}
+            last={tab.last}
             dataArrayName={tab.dataArrayName}
             selectedTab={selectedTab}
             updateSelectedTab={(tabName) => {
