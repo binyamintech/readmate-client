@@ -12,26 +12,26 @@ export default function QuestionsLevel() {
   }, []);
 
 
-  // 1
-  const roundNum = () => {
-     if (numOfRound<3){
-      // send to DB and then go back to music with clock
-     }
-     else{
-      // send to DB and go to result
-     }
-  }
+//   // 1
+//   const roundNum = () => {
+//      if (numOfRound<3){
+//       // send to DB and then go back to music with clock
+//      }
+//      else{
+//       // send to DB and go to result
+//      }
+//   }
 
-  // 2.
-  const speedGood = () => {
+//   // 2.
+//   const speedGood = () => {
 
-    if (speedIsGood===true){
-      // send to DB and go to result
-    }
-    else{
-      // send to DB and then go back to music with clock
-    }
- }
+//     if (speedIsGood===true){
+//       // send to DB and go to result
+//     }
+//     else{
+//       // send to DB and then go back to music with clock
+//     }
+//  }
 
 // 3
 //  const roundNum = () => {

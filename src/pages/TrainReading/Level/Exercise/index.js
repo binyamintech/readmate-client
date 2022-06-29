@@ -2,8 +2,9 @@ import React from 'react'
 import './style.css';
 import Headphone from './Level_Headphone.png'
 import FooterStart from '../../../../components/common/FooterStart'
-import { BrowserRouter as Router, Link, Navigate } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+// import { useContext, useEffect } from 'react';
+// import { dataContext } from '../../context/context'
 
 // import conus from './path from assets'
 
@@ -13,26 +14,33 @@ const Exercise = () => {
   const title = 'Start Now'
   const textTitle = "With your headphones on,"
   const text = "Continue reading" + BookName + "book at the pace of the sound, for the next 3 minutes – we will notify you when time is up."
-  const rout = '/train_reading_level/exercise_clock'
+  const route = '/train_reading_level/exercise_clock'
   const navigate = useNavigate()
+
+  //   const localDataContext = useContext(dataContext)
+  //   useEffect(() => {
+  //     console.log('dsadasasd');
+  //     console.log(localDataContext);
+
+
   // const img = conus
-  // title={title} textTitle={textTitle} text={text} rout={rout}
 
   // i will receive from shachar an obj with the book info and the LPM
   // send the props to exercise_clock
+  const objProps = { LPM: 12 }
 
-  function onclickHandler() {
-    console.log('button')
+  function startFunction() {
+    navigate(route, { state: objProps })
   }
-  function startFunction(){
-    navigate(rout)
-  }
+
+
   return (
-    <div className='level_page'>
-      {/* <h1>Level Exercise</h1> */}
-      <img src={Headphone} alt="Headphone" />
+    <>
+      <div className="level_exercise">
+        <img src={Headphone} alt="Headphone" />
+      </div>
       <FooterStart title={title} subtitle={textTitle} explanation={text} startFunction={startFunction} /*img={conus}*/ />
-    </div>
+    </>
   )
 }
 

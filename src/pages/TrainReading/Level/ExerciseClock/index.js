@@ -3,13 +3,15 @@ import './style.css';
 import SoundBar from "./SoundBar.png"
 import Clock from "../../../../components/common/Clock"
 import SquareButton from '../../../../components/common/SquareButton';
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
 
 
 
 const ExerciseClock = () => {
-  const LPM = 12 // i have to take this info from props or userContext
+  const LPM2 = useLocation()
+  // console.log(LPM2.state.LPM);
+  const LPM = LPM2.state.LPM
 
   // const audioRef = useRef();
   // const [lpm, setLpm] = useState(16); // i have to set the LPM here
@@ -17,8 +19,8 @@ const ExerciseClock = () => {
   // let [fileName, lpmFile] = pickFile(lpm);
   // console.log("fileName ", fileName);
   // // console.log("lpmFile ", lpmFile);
-  
-  
+
+
   // useEffect(() => {
   //   const audio = require('../../../../assets/audio/wush_mp3/wush_100_1min.mp3');
   //   console.log("audio ", audio);
@@ -85,11 +87,10 @@ const ExerciseClock = () => {
 
   const navigate = useNavigate();
 
-  const rout = '/train_reading_level/rate'
+  const route = '/train_reading_level/rate'
 
-  function onclickHandler() {
-    console.log('button')
-  }
+
+
 
   const shaulFuncs = {
     // onPlay: shaulOnPlay,
@@ -97,24 +98,20 @@ const ExerciseClock = () => {
     onComplete: shaulOnComplete
   }
 
+  const objProps = { LPM: LPM }
+
   function shaulOnComplete() {
-    navigate(rout, { replace: true })
+    navigate(route, { state: objProps })
   }
 
   return (
     <>
-      <div className="level_page">
-        <div>
-          <Clock freeStyle={false} time={5} funcs={shaulFuncs}></Clock>
-        </div>
-        <div>
-          <SquareButton>{LPM}</SquareButton>
-        </div>
-        <div>
-          <img src={SoundBar} />
-        </div>
+      <div className="level_clock">
+        <Clock freeStyle={false} time={5} funcs={shaulFuncs}></Clock>
+        <div className="squareButton2"><strong>{LPM} LPM</strong></div>
+        <img src={SoundBar} />
 
-{/* 
+        {/* 
         <div>
           <audio autoplay ref={audioRef}> </audio>
           <p>{changePercent / (lpm / lpmFile)}</p>
