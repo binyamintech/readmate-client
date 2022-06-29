@@ -59,7 +59,7 @@ export default function Page5() {
     // }]
     // let navigate = useNavigate()
     const checkResults = () => {
-        console.log("aaa");
+        
         // let count = 0;
         // ans.map((v, i) => {
         //     if (v.ans == arr1[(i + 1)].answer) {
@@ -83,12 +83,14 @@ export default function Page5() {
                 arrOfAnswers.push({ orderNum: arr1.orderNum, answer: false })
             }
         })
-        // console.log(arr1)
+        console.log(arr1)
         // console.log(count);
-        // console.log(arrOfAnswers)
+        console.log(arrOfAnswers)
         let a = Calc()
         n('/teama/page6', { state: { count: count, WPM: a[0], STD: a[1], AVG: a[2] } })
-        console.log(count);
+        console.log('answers'+count);
+        console.log("student choice"+arr1)
+       
     }
 
     // const arr = data.exam[0].questions
@@ -105,6 +107,13 @@ export default function Page5() {
             <div>
                 <SubmitBtn startFunction={() => { checkResults() }} name={'next'} />
             </div>
+            {
+                console.log("student choice"+arr1)
+               
+            }
+            {
+                //  console.log("resulte"+arrOfAnswers)
+            }
 
         </>
     )
