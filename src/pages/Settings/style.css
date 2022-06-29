@@ -1,0 +1,41 @@
+.userPic {
+  height: 400px;
+  
+  /* position: relative; */
+  /* width: 84px; */
+  /* height: 84px; */
+  /* left: 16px; */
+  /* top: 94px; */
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)),
+    url(.png); */
+  flex-direction: column;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.btnContaine {
+  position: fixed;
+  /* display: block; */
+  bottom: 82px;
+  width: 94%;
+  height: 0px;
+  left: 3%;
+}
+.settingUserImage {
+  height: 50px;
+  width: 50px;
+  z-index: 0;
+  border-radius: 50%;
+}
+.cameraIcon {
+  color: white;
+  z-index: 1;
+  position: relative;
+  top: 2.4vh;
+  left: -9%;
+}
+.img_camera {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+}
