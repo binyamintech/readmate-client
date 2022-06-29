@@ -7,32 +7,29 @@ import React from "react";
 // Creator : Team A - Keren and Efrat
 function RatingAndScore({ wpm, std, compScore }) {
   return (
-    <>
-      {/* <div className={styles.back}></div> */}
-      <div className={styles.front}>
-        <div className={styles.left}>
-          <img src={Time} alt="" className={styles.time} />
-          <div className={styles.sText}>Reading Rate</div>
-          <div className={styles.bText}>
-            {wpm}WPM <br />
-            (+/-{std})
-          </div>
-          <div className={styles.bText}></div>
+    <div className={`${styles.front} back-purple left `}>
+      <div className={styles.left}>
+        <img src={Time} alt="" className={styles.time} />
+        <div className={styles.sText}>Reading Rate</div>
+        <div className={styles.bText}>
+          {wpm}WPM <br />
+          (+/-{std})
         </div>
-        <div>
-          <img src={Vector} alt="" className={styles.vector} />
-          <img src={VectorOrange} alt="" className={styles.VectorOrange} />
-        </div>
-        <div>
-          <img src={Brain} alt="" className={styles.brain} />
-          <div className={styles.sText}>Comprehension Score</div>
+        <div className={styles.bText}></div>
+      </div>
+      <div>
+        <img src={Vector} alt="" className={styles.vector} />
+        <img src={VectorOrange} alt="" className={styles.VectorOrange} />
+      </div>
+      <div>
+        <img src={Brain} alt="" className={styles.brain} />
+        <div className={styles.sText}>Comprehension Score</div>
 
-          <div className={styles.bText}>
-            <div style={{ fontSize: "25px" }}>{compScore}</div>/10
-          </div>
+        <div className={styles.bText}>
+          <div style={{ fontSize: "25px" }}>{compScore}</div>/10
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
