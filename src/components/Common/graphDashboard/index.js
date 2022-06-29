@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import Days from "./Days";
 import fakeData from "./fakeData";
 import Graph from "./Graph";
-// import SelectPeriod from "./SelectPeriod";
 import "./Style.css";
 import Tab from "./Tab";
 
 export default function GraphContainer() {
-  // const [period, setPeriod] = useState(fakeData.lastWeek);
   const [dataSrc, setDataSrc] = useState(fakeData.dataSrcInit);
   const [selectedTab, setSelectedTab] = useState("Assesments");
   const tabs = [
@@ -50,9 +47,8 @@ export default function GraphContainer() {
             />;
           })}
         </div>
-          <Days />
         <div className="Graph">
-          <Graph d={dataSrc} labs={Days}/>
+          <Graph d={dataSrc} labs={fakeData.daysArr}/>
         </div>
       </div>
     </>

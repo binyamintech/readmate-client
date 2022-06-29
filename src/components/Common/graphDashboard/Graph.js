@@ -34,8 +34,7 @@ export default function Graph(props){
       },
     };
 
-    const labels = dataArr.map((v, i)=>i+1)
-    // const labels = props.labs; // get the data as props - props.xAxis
+    const labels = props.labs
     const data = {
       labels,
       datasets: [
