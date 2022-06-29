@@ -1,20 +1,16 @@
-import Dashboard from "../../pages/Dashboard";
-import TeamF from "../teams/TeamF";
-import { dataContext } from "../../context/context";
-import { useContext, useEffect } from "react";
+
+import { useContext, useEffect } from 'react';
+import { dataContext } from '../../context/context'
 function Test() {
-  const localDataContext = useContext(dataContext);
+  const localDataContext = useContext(dataContext)
   useEffect(() => {
-    console.log("das");
+    console.log('data');
     console.log(localDataContext);
-  });
-  return (
-    <>
-      <TeamF />
-      {/* <Options /> */}
-      {/* <Nav /> */}
-      {/* <Dashboard /> */}
-    </>
-  );
+  })
+
+
+  return (<>
+    {/* <Page5 /> */}
+  </>)
 }
 export default Test;
