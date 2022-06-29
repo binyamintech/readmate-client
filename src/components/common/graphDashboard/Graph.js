@@ -1,5 +1,7 @@
 import React from 'react';
 import './Style.css';
+
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -23,29 +25,36 @@ ChartJS.register(
   Legend
 );
 export default function Graph(props){
+    const dataArr = props.d.data;
     const options = {
       responsive: true,
+      
       plugins: {
+        
         legend: {
           position: 'top',
+          display: false,
         }
       },
     };
+
     
-    const labels = props.labs; // get the data as props - props.xAxis
+
+    const labels = props.labs
     const data = {
       labels,
       datasets: [
+
         {
-            label: "",
-            data: props.d.data,
-            borderColor: 'blue',
-            backgroundColor: 'yellow'
-          },
+          data: dataArr,
+          borderColor: '#7D56A5',
+          backgroundColor: 'yellow'
+        }
           
         ],
     };
-    
+    console.log('labels' + labels);
+    console.log('data' + dataArr);
       return <Line options={options} data={data} />;
 
 

@@ -1,36 +1,41 @@
 import React, { useState } from "react";
 import fakeData from "./fakeData";
 import Graph from "./Graph";
-import SelectPeriod from "./SelectPeriod";
 import "./Style.css";
 import Tab from "./Tab";
 
 export default function GraphContainer() {
-  const [period, setPeriod] = useState(fakeData.lastWeek);
   const [dataSrc, setDataSrc] = useState(fakeData.dataSrcInit);
-  const [selectedTab, setSelectedTab] = useState("Assesments");
+  const [selectedTab, setSelectedTab] = useState("Assessments");
   const tabs = [
     {
-      name: "Assesments",
-      dataArrayName: "assesmentsData",
+      tabName: "Assessments",
+      last: `${fakeData.assessmentsData.last} WPM`,
+      dataArrayName: "assessmentsData",
     },
     {
-      name: "Reading",
+      tabName: "Reading",
+      last: `${fakeData.readingData.last} LPM`,
       dataArrayName: "readingData",
     },
     {
-      name: "Focus",
+      tabName: "Focus",
+      last: `${fakeData.focusData.last} CM`,
       dataArrayName: "focusData",
     },
     
   ];
  
   return (
-    <div className="DashGraph">
-      <div className="Tabs">
-        {tabs.map((tab) => {
-        return <Tab
-            name={tab.name}
+    <>
+    <div className="Border">
+          </div>
+      <div className="DashGraph">
+        <div className="Tabs">
+          {tabs.map((tab) => {
+            return <Tab
+            tabName={tab.tabName}
+            last={tab.last}
             dataArrayName={tab.dataArrayName}
             selectedTab={selectedTab}
             updateSelectedTab={(tabName) => {
@@ -39,17 +44,14 @@ export default function GraphContainer() {
             updateDataSource={(data) => {
               setDataSrc(fakeData[data]);
             }}
-          />;
-        })}
+            />;
+          })}
+        </div>
+        {fakeData.days}
+        <div className="Graph">
+          <Graph d={dataSrc} labs={fakeData.xValues}/>
+        </div>
       </div>
-      <div className="SelectBtn">
-        <SelectPeriod updatePeriod={(peri) => {
-          setPeriod(fakeData[peri]);
-        }} />
-      </div>
-      <div className="Graph">
-        <Graph d={dataSrc} labs={period}/>
-      </div>
-    </div>
+    </>
   );
 }
