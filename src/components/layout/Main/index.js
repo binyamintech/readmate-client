@@ -8,12 +8,46 @@ import Page6 from "../../../pages/Assessments/Page6";
 import Page5 from "../../../pages/Assessments/Page5";
 import Page4 from "../../../pages/Assessments/Page4";
 import Page3 from "../../../pages/Assessments/Page3";
-import Header from "../Header";
+import Header from "../header";
 import RatingAndScore from "../../common/ReatingAndScore";
+import { Outlet, Route, Routes } from "react-router-dom"
+import TeamH from "../../teams/TeamH";
+import Training from "../../../pages/FreeStyle/Training"
+import Exercise from "../../../pages/TrainReading/Level/Exercise"
+import ExerciseClock from "../../../pages/TrainReading/Level/ExerciseClock"
+import ExerciseQuestion from "../../../pages/TrainReading/Level/ExerciseQuestion"
+import ExerciseRate from "../../../pages/TrainReading/Level/ExerciseRate"
+import ExerciseResult from "../../../pages/TrainReading/Level/ExerciseResult"
+// import TeamC from '../../teams/TeamC'
+//---- נא לקבל שינויים לפופאפ קונטקטס -team-b
+import { useContext } from "react";
+import { popupContext } from "../../../context/context";
+import BookDetails from "../../../pages/TrainReading/BookDetails";
+import BookInfo from '../../common/BookInfo'
+import PushUpTimer from "../../../pages/TrainReading/PushUpTimer";
+import PushUpInstructions from "../../../pages/TrainReading/PushUpInstructions";
+//----
+// import Popup from "../Popup/Popup"
+import { Route, Routes } from "react-router-dom";
+import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 // import TextArea from "../common/TextArea/Index";
 // import Context from "../../../context";
 
+import Results from "../../../pages/TrainFocus/TrainFocusResults";
+import StartFocus from "../../../pages/TrainFocus/StartFocus/StartFocus";
+import Instructions from "../../../pages/FreeStyle/Instructions";
+// import Exercise from "../../../pages/TrainFocus/Exercise";
+import Exercise from "../../../pages/TrainFocus/Exercise";
+//  import Popup from "./popup/Popup";
+// import { Outlet, Route, Routes } from "react-router-dom";
+// import TextArea from "../common/TextArea/Index";
+// import Context from "../../../context";
+import Popup from "../Popup";
+import Header from "../header"
+import TeamF from "../../teams/TeamF";
+
 function Main() {
+  const { popup } = useContext(popupContext);
   return (
     <>
       <Header />
@@ -29,10 +63,12 @@ function Main() {
         </Route>
 
         {/* Team B */}
-        {/* <Route path="teams-path">
-          <Route index element={<>team's components</>} />
-          <Route path="components-path" element={<>team's components</>} />
-        </Route> */}
+        <Route path="train-reading">
+          <Route index element={<BookDetails />} />
+          <Route path="book-info" element={<BookInfo />} />
+          <Route path="instructions" element={<PushUpInstructions />} />
+          <Route path="timer" element={<PushUpTimer />} />
+        </Route>
 
         {/* Team C */}
         {/* <Route path="train_reading_level"> */}
@@ -84,7 +120,9 @@ function Main() {
         {/* <Route path="test/Dashboard" element={} /> */}
       </Routes>
       <Nav />
-      {/* <Popup /> */}
+      {popup && (
+        <Popup bookDetails={{ name: "harry potter", genre: "novel" }} />
+      )}
     </>
   );
 }

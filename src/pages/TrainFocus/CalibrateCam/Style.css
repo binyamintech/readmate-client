@@ -2,7 +2,7 @@
     
 
     /* Creator : Team G - Orit */
-    img {
+    .dragImg {
         padding-top:10px;
         /* display: block;
         margin: auto; */
@@ -14,16 +14,24 @@
     }
 
 
-    button{
+<<<<<<< HEAD:src/pages/TrainFocus/CalibrateCam/moveDot.css
+    /* button{
+        width: 90%;
+        height: 48px; */
+        /* left:50%; */
+        /* position:fixed;
+        bottom: 50px; */
+=======
+    .continueBtn{
         width: 90%;
         height: 48px;
-        /* left:50%; */
         position:fixed;
         bottom: 50px;
+>>>>>>> binyamin/team-g:src/pages/TrainFocus/CalibrateCam/Style.css
         /* border: 10px solid black; */
-        display: block;
+        /* display: block;
         margin: auto;
-    }
+    } */
 
     .place {
         position: fixed;
