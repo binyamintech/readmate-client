@@ -103,6 +103,8 @@ function Main() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="contact" element={<Contact />} />
           <Route path="sign-out" element={<SignIn />} />
+          <Route path="change-password" element={<SignIn />} />
+
         </Route>
 
         {/* Team G */}
