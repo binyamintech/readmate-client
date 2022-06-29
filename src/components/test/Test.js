@@ -4,7 +4,7 @@ import { dataContext } from '../../context/context'
 function Test() {
   const localDataContext = useContext(dataContext)
   useEffect(() => {
-    console.log('dsadasasd');
+    console.log('data');
     console.log(localDataContext);
   })
 
