@@ -108,7 +108,7 @@ export default function Page5() {
                 <SubmitBtn startFunction={() => { checkResults() }} name={'next'} />
             </div>
             {
-                console.log("student choice"+arr1)
+                console.log(result)
                
             }
             {
