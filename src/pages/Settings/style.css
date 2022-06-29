@@ -1,17 +1,15 @@
 .userPic {
-  height: 400px;
-  
+  /* height: 400px; */
   /* position: relative; */
   /* width: 84px; */
   /* height: 84px; */
   /* left: 16px; */
   /* top: 94px; */
-  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)),
-    url(.png); */
+  
   flex-direction: column;
-  /* display: flex;
-    justify-content: center;
-    align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .btnContaine {
   position: fixed;
@@ -20,12 +18,16 @@
   width: 94%;
   height: 0px;
   left: 3%;
+  
 }
 .settingUserImage {
   height: 50px;
   width: 50px;
   z-index: 0;
   border-radius: 50%;
+  padding-top: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)),
+  /* {,url(.png)}; */ 
 }
 .cameraIcon {
   color: white;

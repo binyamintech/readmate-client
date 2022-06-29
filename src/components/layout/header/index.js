@@ -33,7 +33,7 @@ export default function Header() {
               setNavState(true);
             }}
           >
-            <img src={nav} alt="" />
+            {/* <img src={nav} alt="" /> */}
           </div>
         ) : (
           <NavBar
