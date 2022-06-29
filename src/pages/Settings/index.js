@@ -26,7 +26,7 @@ export default function Settings() {
     setUpdatedUser({ ...updatedUser, [field]: value });
   };
   function bbb() {
-    navigate("/");
+    navigate("/dashboard");
   }
 
   return (
@@ -47,7 +47,7 @@ export default function Settings() {
             content="First name"
             name="firstName"
             valid={false}
-            />
+          />
           <Input
             value={updatedUser.lastName}
             type="text"
@@ -58,7 +58,7 @@ export default function Settings() {
             content="Last name"
             name="lastName"
             valid={true}
-            />
+          />
           <Input
             value={updatedUser.email}
             type="email"
