@@ -8,7 +8,7 @@ import Page6 from "../../../pages/Assessments/Page6";
 import Page5 from "../../../pages/Assessments/Page5";
 import Page4 from "../../../pages/Assessments/Page4";
 import Page3 from "../../../pages/Assessments/Page3";
-import Header from "../Header";
+import Header from "../header";
 // import RatingAndScore from "../../common/ReatingAndScore";
 // import { Outlet, Route, Routes } from "react-router-dom"
 import TeamH from "../../teams/TeamH";
