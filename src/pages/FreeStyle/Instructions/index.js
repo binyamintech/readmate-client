@@ -11,7 +11,6 @@ let text = "It is a long established fact that a reader will be distracted by th
 // Creator : Team h
 function Instructions() {
     return <>
-        <Underline></Underline>
         <div><Text text={text} title={"instructions"}></Text></div>
         <div><SubmitBtn path= {"/teamH/training"} name={"Training"}></SubmitBtn></div>
     </>

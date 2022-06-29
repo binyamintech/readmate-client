@@ -3,7 +3,7 @@ import Instructions from "../../pages/FreeStyle/Instructions";
 
 function Test() {
     return (<>
-    <Instructions></Instructions>
+    {/* <Instructions></Instructions> */}
 {/* <Clock></Clock> */}
     </>)
 }

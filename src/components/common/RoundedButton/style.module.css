@@ -1,36 +1,23 @@
 .RoundedButton {
-  /* Ellipse 34 */
+  background: #feefec;
 
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   width: 30px;
   height: 30px;
-  text-align: center;
-  align-self: center;
-  background: #feefec;
   border: 2px solid #252525;
   box-shadow: 2px 2px 0px #d35400;
   border-radius: 50%;
+  font-size:x-small;
 }
 
 .RoundedButtonPlay {
-  /* Ellipse 34 */
-/* display: flex; */
-
   box-sizing: border-box;
-text-align: center;
+  text-align: center;
   width: 30px;
   height: 30px;
-  left: 0px;
-  top: 0px;
-
   background: #f39c12;
   border: 2px solid #252525;
-  /* 1 */
-
   box-shadow: 2px 2px 0px #d35400;
   border-radius: 50%;
   font-size: large;
