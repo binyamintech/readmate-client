@@ -12,19 +12,27 @@ import data from './data'
 import { dataContext } from '../../../context/context'
 
 
-// Creator : Team A - Daniel
+// Creator : Team A - Daniel 
 export default function Page1() {
     // const pageName = useContext(pageNameContext)
     // pageName.setPageName("assessments Test")
     let navigate = useNavigate()
     const localDataContext = useContext(dataContext)
+
+    //    const getData = async ()=> {
+    //        const response = await fetch(url)
+    //        const data = await response.json()
+    //     }
+
     useEffect(() => {
+        // getData()
         console.log('page 1:', localDataContext.assesmentTemplates[1]);
     })
+
     const startFunction = () => {
         const data = localDataContext.assesmentTemplates[1];
-        console.log('data:' , data, typeof data);
-        navigate('/teama/page3',{state:{data}})
+        console.log('data:', data, typeof data);
+        navigate('/teama/page3', { state: { data } })
     }
 
     return (
