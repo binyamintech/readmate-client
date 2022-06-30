@@ -25,10 +25,15 @@
   margin-top: 105%;
   margin-left: 10%;
 }
-/* .vector { */
-  /* position: absolute; */
-  /* left: 177px; */
-/* } */
+.vector { 
+  position: relative;
+  margin-left: 39%;
+}
+.VectorOrange { 
+  position: relative;
+  margin-left: -107%;
+}
+
 .bText {
   width: 84px;
   height: 40px;
