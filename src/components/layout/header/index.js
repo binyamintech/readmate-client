@@ -16,7 +16,6 @@ export default function Header() {
    console.log(pageNameContextLocal);
 
    return (
-
       <div className='header'>
          <div className='left'>
             {!navState ? (
