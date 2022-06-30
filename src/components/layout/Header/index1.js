@@ -16,7 +16,7 @@ export default function Header() {
 
 
 return (
-   pageNameContextLocal.showHeader?
+  
    <div className='header'>
       <div className='left'>
          {!navState ? (
@@ -44,6 +44,6 @@ return (
       <div className='right'>
          <img src={photoPic} alt="User Name" />
       </div>
-   </div>:console.log("no header")
+   </div>
 )
 }
