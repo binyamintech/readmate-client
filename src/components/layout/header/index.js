@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { pageNameContext, navBarContext } from "../Layout";
 import nav from './img/nav-icon.png';
 import { NavBar } from "../../common/Nav/index";
@@ -13,38 +13,37 @@ export default function Header() {
 
    // console.log(pageNameContextLocal.pageName);
    const [navState, setNavState] = useState(false);
-   console.log(pageNameContextLocal);
 
-   return (
-      <div className='header'>
-         <div className='left'>
-            {!navState ? (
-               pageNameContextLocal.showNavIcon &&
-               <div
-                  onClick={() => {
-                     setNavState(true);
-                  }}
-               >
-                  <img src={nav} alt="" />
-               </div>
-            ) : (
-               <NavBar
-                  setClose={() => {
-                     setNavState(!navState);
-                  }}
-               />
-            )}
 
-         </div>
-         {/* :console.log("no nav button")} */}
-
-         <div className='mid'>
-            {pageNameContextLocal.pageName}
-         </div>
-
-         <div className='right'>
-            <img src={photoPic} alt="User Name" />
-         </div>
+return (
+   pageNameContextLocal.showHeader?
+   <div className='header'>
+      <div className='left'>
+         {!navState ? (
+            <div
+               onClick={() => {
+                  setNavState(true);
+               }}
+            >
+               <img src={nav} alt="" />
+            </div>
+         ) : (
+            <NavBar
+               setClose={() => {
+                  setNavState(!navState);
+               }}
+            />
+         )}
+         
       </div>
-   )
+
+      <div className='mid'>
+         {pageNameContextLocal.pageName}
+      </div>
+
+      <div className='right'>
+         <img src={photoPic} alt="User Name" />
+      </div>
+   </div>:console.log("no header")
+)
 }
