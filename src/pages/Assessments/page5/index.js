@@ -66,7 +66,7 @@ export default function Page5() {
         // console.log(count);
         // console.log(arrOfAnswers)
         let a = Calc()
-        n('/teama/page6', { state: { count: count, WPM: a[0], STD: a[1], AVG: a[2] } })
+        // n('/teama/page6', { state: { count: count, WPM: a[0], STD: a[1], AVG: a[2] } })
     }
 
     const arr = data[0].data.questions

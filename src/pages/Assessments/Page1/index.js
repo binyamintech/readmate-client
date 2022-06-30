@@ -7,21 +7,24 @@ import UmooveApi from "../../../components/api/UmooveApi";
 import { useNavigate } from "react-router-dom";
 import data from './data'
 import { dataContext } from '../../../context/context'
-import { pageNameContext } from '../../../components/layout/Layout'
+// import { pageNameContext } from '../../../components/layout/Layout'
 
 // Creator : Team A - Daniel
 
 export default function Page1() {
-    // const pageNameHeader = useContext(pageNameContext);
-    // pageNameHeader.setPageName("page 1");
 
     const localDataContext = useContext(dataContext)
-    // console.log('data:', localDataContext[0], typeof localDataContext[0]);
+    // const currentName = pageNameHeader.changePageName;
+    // const fun = (localDataContext.changePageName);
+    // const m = () => fun("page")
+    // m()
+    // console.log(localDataContext.changePageName);
 
     let navigate = useNavigate()
     useEffect(() => {
         console.log('page 1:', localDataContext.assesmentsTemplates[0]);
-    })
+        localDataContext.changePageName('')
+    }, [])
 
     const startFunction = () => {
         const testData = localDataContext.assesmentsTemplates[0];
