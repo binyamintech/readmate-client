@@ -19,8 +19,10 @@ function RatingAndScore({ wpm, std, compScore }) {
       </div>
       <div>
         <img src={Vector} alt="" className={styles.vector} />
-        <img src={VectorOrange} alt="" className={styles.VectorOrange} />
       </div>
+      <div>
+        <img src={VectorOrange} alt="" className={styles.VectorOrange} />
+        </div>
       <div>
         <img src={Brain} alt="" className={styles.brain} />
         <div className={styles.sText}>Comprehension Score</div>
