@@ -11,14 +11,15 @@ function Page3() {
   // pageNameHeader.setPageName("page 3");
 
   const l = useLocation()
-
+  console.log(l);
+  console.log(l.state.testData);
   const navigate = useNavigate()
   let videoRef = useRef()
   const [stream, setStream] = useState()
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    console.log("effect data page 3:", l.state);
+    // console.log("effect data page 3:", l.state);
     setTimeout(() => {
       setStream('')
 
@@ -50,8 +51,8 @@ function Page3() {
       console.log(sucsses);
       if (sucsses === true) {
         clearInterval(interval)
-        console.log("gggg"+l.state.data)
-        navigate("/teama/page4", { state: { data: l.state } })
+        // console.log("gggg" + l.state.data)
+        navigate("/teama/page4", { state: { data: l.state.testData } })
       }
       setCount(count + 1);
     }, 1000);

@@ -16,22 +16,23 @@ function Page4() {
     // pageNameHeader.setPageName("Comprehension");
 
     const l = useLocation()
-    console.log("page4"+l.state);
+    console.log(l.state.data);
+    console.log("page4" + l.state);
     const navigate = useNavigate();
 
     const nextPage = () => {
-        console.log("clicked", "that what i send :", { state: { data: l.state.data.data } });
+        console.log("clicked", "that what i send :", { state: { data: l.state.data } });
         let mspr = UmooveApi.API_stopReading();//לבדוק
         console.log("x:", mspr);
         {
             UmooveApi.API_stopUmoove();
-            // console.log("reading info: ", res);
-            navigate('/teama/page5', { state: [{ data: l.state.data.data }, { mspr: mspr }] });
+            console.log(l.state.data);
+            navigate('/teama/page5', { state: [{ data: l.state.data }, { mspr: mspr }] });
         }
     }
     useEffect(() => { UmooveApi.API_startReading() }, [])
 
-    // console.log(`${l.state.data.data.img}`)
+    // console.log(`${l.state.data.img}`)
 
     return <>
         <div className="Page4" >
@@ -42,7 +43,7 @@ function Page4() {
                 {/* <TitleRead /> */}
             </div>
             <div>
-                <img className={styles.img} src={require(`../../../assets/img/exams/${l.state.data.data.img}.png`)} alt="" />
+                <img className={styles.img} src={require(`../../../assets/img/exams/${l.state.data.img}`)} alt="" />
             </div>
             <ButtonA name={"done"} startFunction={() => nextPage()} />
         </div>

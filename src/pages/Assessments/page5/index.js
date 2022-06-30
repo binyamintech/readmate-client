@@ -10,6 +10,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 // import Calc from '../Calc';
 export default function Page5() {
     let location = useLocation();
+    console.log(location);
     const data = location.state;
     console.log("page 5 : ", data)
     // console.log(data.exam[0].questions)
@@ -68,7 +69,7 @@ export default function Page5() {
         n('/teama/page6', { state: { count: count, WPM: a[0], STD: a[1], AVG: a[2] } })
     }
 
-    const arr = data.data.questions
+    const arr = data[0].data.questions
     // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     return (
         <>

@@ -20,13 +20,13 @@ export default function Page1() {
 
     let navigate = useNavigate()
     useEffect(() => {
-        console.log('page 1:', localDataContext.assesmentsTemplates);
+        console.log('page 1:', localDataContext.assesmentsTemplates[0]);
     })
 
     const startFunction = () => {
         const testData = localDataContext.assesmentsTemplates[0];
         // console.log('data:', data, typeof data);
-        navigate('/teama/page3', { state: { testData} })
+        navigate('/teama/page3', { state: { testData: testData } })
     }
 
     return (
