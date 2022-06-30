@@ -1,0 +1,24 @@
+.note {
+  position: relative;
+  /* width: 111px; */
+  width: fit-content;
+  /* height: 25px; */
+  height: 4vh;
+  /* left: 151px; */
+  left: 36%;
+  /* top: 543px; */
+  top: auto;
+  margin-top: 3.125vh;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 25px;
+  /* identical to box height, or 208% */
+  text-align: center;
+  text-decoration-line: underline;
+  color: #7d56a5;
+  display: flex;
+  justify-content: center;
+
+}
