@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { pageNameContext } from '../../../../components/layout/Layout';
 import { } from '../../../../components/common/ReatingAndScore';
 // import SubmitBtn from '../../../../components/common/SubmitBtn';
@@ -16,7 +16,10 @@ import result from './result.png'
 export default function ExerciseResult() {
   // setHeader
   const pageNameHeader = useContext(pageNameContext);
-  pageNameHeader.setPageName("Result Summary");
+  
+  useEffect(() => {
+    pageNameHeader.setPageName("Result Summary");
+  }, [])
 
   //TODO: wait for implementation of userContext
   // get user LPM
@@ -33,7 +36,7 @@ export default function ExerciseResult() {
     <>
       <div className="level_page">
         <span>
-          <img src={result} alt="Result Page Background"/>
+          <img src={result} alt="Result Page Background" />
         </span>
 
         <span>
