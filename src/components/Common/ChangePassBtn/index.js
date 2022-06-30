@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function ChangePass() {
   return (
-    <Link to="change-password">
+    <Link to="changePassword">
       <div className="note">Change Password</div>
     </Link>
   );
