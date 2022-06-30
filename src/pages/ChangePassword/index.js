@@ -6,6 +6,7 @@ import "./style.css"
 
 
 export default function ChangePassword() {
+    
     const [erroroldPassword, setErrorOldPassword] = useState(false);
     const [errorNewPassword, setErrorNewPassword] = useState(false);
     const [errorConfirmPassword, setErrorConfirmPassword] = useState(false);
@@ -22,15 +23,15 @@ export default function ChangePassword() {
             setErrorOldPassword(true);
         }
         else
-            setErrorOldPassword(false);
+        setErrorOldPassword(false);
 
     }
     function validateErrorNewPassword(e) {
         setNewPassword(e.target.value)
         if ((newPassword === oldPassword)
             //  || (newPassword.length < 5)
-        ) {
-            setErrorNewPassword(true);
+            ) {
+                setErrorNewPassword(true);
         }
         else
             setErrorNewPassword(false);
@@ -45,19 +46,20 @@ export default function ChangePassword() {
             setErrorConfirmPassword(false);
         }
         return errorConfirmPassword;
-
+        
     }
 
     // פונקציה להעברת סיסמא ל DB
     // const changePassword = async () => {
-    //     const changePass = {
-    //         newPass: "",
+        //     const changePass = {
+            //         newPass: "",
     //         oldPass: ""
     //     };
     //     return changePass;
     // }
     return (
-
+        
+        <div className="pageContent">
         <form >
             <Input type="text" content="Enter old password" legend="Old Password" name="OldPassword" onInput={e => validateErrorOldPassword(e)} />
             {erroroldPassword && <span> Password should be at least 5 charecters</span>}
@@ -66,15 +68,17 @@ export default function ChangePassword() {
             <Input type="text" content="Enter confirm password" legend="Confirm Password" name="Confirm Password" onInput={e => validateErrorConfirmPassword(e)} />
             {errorConfirmPassword && <span> confirmed password is not matched</span>}
 
-            <div className="cpSubmitContainer">
+            <div className="posSub">
                 <SubmitBtn name="Submit" path="login" type="button" value="Click to Open Popup" onSubmit={e => validateErrorConfirmPassword(e)} />
                 {/* {errorConfirmPassword && <span> One of the fields is not valid</span>} */}
             </div>
 
             {/* <div className="cpSubmitContainer">
                 <div className="cpSubmit">Submit</div>
-
+                
             </div> */}
         </form>
+    
+            </div>
     )
 }

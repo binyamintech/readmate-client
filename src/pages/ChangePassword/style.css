@@ -1,49 +1,11 @@
-.overlay {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.075);
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.posSub{
+position: fixed;
+bottom: 10%;
+  width: 94%;
+  height: 0px;
+  left: 3%;
 }
-.overlay.close {
-  display: none;
-}
-
-.popup {
-  background-color: white;
-  padding: 10px;
-  border-radius: 10px;
-  width: 500px;
-  height: 500px;
-}
-/* .cpSubmitContainer {
-display: flex;
-width: 92%;
-margin-right: auto;
-margin-left: auto;
-text-align: center;
-flex-direction: column;
-justify-content: space-between;
-height: 500px;  
-position: fixed ;
-bottom: 1%;
-
+.pageContent{
+height: 100px;
 
 }
-.cpSubmit{
-width: 100%;
-background-color: #f39c12;
-border-radius: 80px ;
-padding: 3%;
-border: 2px solid #252525;
-box-shadow: 2px 2px 0px #d35400;
-font-family: "Poppins";
-Font-style: "SemiBold";
-font-size: 14px;
-color: #ffffff;
-;} */
