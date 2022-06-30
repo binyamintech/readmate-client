@@ -12,21 +12,21 @@ import { pageNameContext } from '../../../components/layout/Layout'
 // Creator : Team A - Daniel
 
 export default function Page1() {
-    const pageNameHeader = useContext(pageNameContext);
-    pageNameHeader.setPageName("page 1");
+    // const pageNameHeader = useContext(pageNameContext);
+    // pageNameHeader.setPageName("page 1");
 
     const localDataContext = useContext(dataContext)
-    console.log('data:', localDataContext[0], typeof localDataContext[0]);
+    // console.log('data:', localDataContext[0], typeof localDataContext[0]);
 
     let navigate = useNavigate()
     useEffect(() => {
-        console.log('page 1:', localDataContext);
+        console.log('page 1:', localDataContext.assesmentsTemplates);
     })
 
     const startFunction = () => {
-        const data = localDataContext[0];
-        console.log('data:', data, typeof data);
-        navigate('/teama/page3', { state: { data } })
+        const testData = localDataContext.assesmentsTemplates[0];
+        // console.log('data:', data, typeof data);
+        navigate('/teama/page3', { state: { testData} })
     }
 
     return (

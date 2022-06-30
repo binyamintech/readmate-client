@@ -7,8 +7,8 @@ import { useEffect, useRef, useState, useContext } from "react";
 import UmooveApi from "../../../components/api/UmooveApi";
 // Creator : Team A -efrat & Yehoantan
 function Page3() {
-  const pageNameHeader = useContext(pageNameContext);
-  pageNameHeader.setPageName("page 3");
+  // const pageNameHeader = useContext(pageNameContext);
+  // pageNameHeader.setPageName("page 3");
 
   const l = useLocation()
 
@@ -50,6 +50,7 @@ function Page3() {
       console.log(sucsses);
       if (sucsses === true) {
         clearInterval(interval)
+        console.log("gggg"+l.state.data)
         navigate("/teama/page4", { state: { data: l.state } })
       }
       setCount(count + 1);

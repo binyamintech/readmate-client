@@ -1,8 +1,9 @@
 import { createContext, useState } from "react";
 import { dataContext } from "./context";
-import { fakeData } from "./fakeData";
+import  fakeData  from "./fakeData";
 export const DataProvider = ({ children }) => {
   const [userDetails, setUserDetails] = useState(fakeData.userDetails);
+  const [assesmentsTemplates, setAssesmentsTemplates] = useState(fakeData.assesmentsTemplates);
   const [assesmentResults, setAssesmentsResults] = useState(
     fakeData.assesmentResults
   );
@@ -38,6 +39,7 @@ export const DataProvider = ({ children }) => {
         updateUserDetails,
         updateUserAssesments,
         assesmentResults,
+        assesmentsTemplates,
         popup,
         changePopupState,
         update,

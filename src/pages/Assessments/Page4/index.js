@@ -12,11 +12,11 @@ import { pageNameContext } from '../../../components/layout/Layout'
 
 function Page4() {
 
-    const pageNameHeader = useContext(pageNameContext);
-    pageNameHeader.setPageName("Comprehension");
+    // const pageNameHeader = useContext(pageNameContext);
+    // pageNameHeader.setPageName("Comprehension");
 
     const l = useLocation()
-    console.log(l);
+    console.log("page4"+l.state);
     const navigate = useNavigate();
 
     const nextPage = () => {
@@ -31,7 +31,7 @@ function Page4() {
     }
     useEffect(() => { UmooveApi.API_startReading() }, [])
 
-    console.log(`${l.state.data.data.img}`)
+    // console.log(`${l.state.data.data.img}`)
 
     return <>
         <div className="Page4" >
