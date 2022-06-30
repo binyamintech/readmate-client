@@ -1,5 +1,5 @@
 import Test from "../../test/Test";
-import Header from "../Header";
+import Header from "../Header/index";
 import Nav from "../Nav";
 import Popup from "../Popup";
 import { Route, Routes } from "react-router-dom";
@@ -51,6 +51,8 @@ import Dashboard from "../../../pages/Dashboard";
 // import Context from "../../../context";
 
 import TeamF from "../../teams/TeamF";
+import ChangePassword from "../../../pages/ChangePassword";
+
 
 function Main() {
   const { popup } = useContext(popupContext);
@@ -105,7 +107,7 @@ function Main() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="contact" element={<Contact />} />
           <Route path="sign-out" element={<SignIn />} />
-          <Route path="change-password" element={<SignIn />} />
+          <Route path="settings/changePassword" element={<ChangePassword  />} />
         </Route>
 
         {/* Team G */}

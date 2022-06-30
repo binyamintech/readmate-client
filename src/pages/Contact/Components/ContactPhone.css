@@ -2,6 +2,7 @@
     .contact-phone{
         display: grid;
         justify-items: center;
+        margin-top: 15%;
     }
     .icon{
         box-sizing: border-box;
@@ -31,7 +32,6 @@
 }
 .name{
 
-    width: 44px;
     height: 25px;
 left: 185px;
 top: 206px;

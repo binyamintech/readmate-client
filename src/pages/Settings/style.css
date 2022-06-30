@@ -12,7 +12,7 @@
   align-items: center;
 }
 .btnContaine {
-  position: fixed;
+  /* position: fixed; */
   /* display: block; */
   bottom: 82px;
   width: 94%;

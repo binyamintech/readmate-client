@@ -37,3 +37,28 @@ order: 0;
 flex-grow: 0;
 }
 
+.cpSubmitContainer {
+  display: flex;
+  width: 92%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;  
+  position: fixed ;
+  bottom: 2%;
+  
+  }
+  .cpSubmit{
+  width: 100%;
+  background-color: #f39c12;
+  border-radius: 80px ;
+  padding: 3%;
+  border: 2px solid #252525;
+  box-shadow: 2px 2px 0px #d35400;
+  font-family: "Poppins";
+  Font-style: "SemiBold";
+  font-size: 14px;
+  color: #ffffff;
+  ;}
