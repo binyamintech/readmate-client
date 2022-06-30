@@ -4,7 +4,7 @@ import userImg from "../../assets/img/user image/userImg.jpg";
 import CancelBtn from "../../components/common/cancelBtn";
 import SubmitBtn from "../../components/common/SubmitBtn";
 import Input from "../../components/common/Input";
-import ChangePass from "../../components/common/ChangePass";
+import ChangePass from "../../components/common/ChangePassBtn";
 import SubmitForm from "../../components/common/forms";
 import { dataContext } from "../../context/context";
 import { useContext, useState } from "react";
