@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom";
 export default function Settings() {
   let localDataContext = useContext(dataContext);
   let { firstName, lastName, email, classId } = localDataContext.userDetails;
+
   const [updatedUser, setUpdatedUser] = useState({
     firstName,
     lastName,
@@ -25,7 +26,7 @@ export default function Settings() {
   let update = (field, value) => {
     setUpdatedUser({ ...updatedUser, [field]: value });
   };
-  function bbb() {
+  function submitChanges() {
     navigate("/dashboard");
   }
 
@@ -36,7 +37,7 @@ export default function Settings() {
         <BiCamera className="cameraIcon" />
       </div>
       <div className="userPic">
-        <SubmitForm onSubmit={bbb}>
+        <SubmitForm onSubmit={submitChanges}>
           <Input
             value={updatedUser.firstName}
             type="text"
