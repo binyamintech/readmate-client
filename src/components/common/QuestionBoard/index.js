@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import YesBtn from '../yesBtn';
 import styles from './style.module.css'
 
 // Creator : Team A - Amos
@@ -36,6 +37,7 @@ function QuestionBoard({ setResult, result, i, title,arr }) {
             </div>
         </div>
     </>
+    
 }
 
 
