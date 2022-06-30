@@ -8,6 +8,8 @@ export const DataProvider = ({ children }) => {
   );
   const [popup, setPopup] = useState(false);
   const [navBar, setNavBar] = useState(false);
+  const [showNavIcon, setShowNavIcon] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
   const [update, setUpdate] = useState(false);
   const [pageName, setPageName] = useState("Default page name");
 
@@ -43,6 +45,10 @@ export const DataProvider = ({ children }) => {
         pageName,
         changePageName,
         changeNavBarState,
+        showNavIcon,
+        setShowNavIcon,
+        showHeader,
+        setShowHeader,
       }}
     >
       {children}
