@@ -6,7 +6,16 @@ fieldset {
   margin: 0.3rem;
   margin-top: 1rem;
 }
+.unvalid{
+    border: 1px solid red; 
+}
 
+.unvalidLabel{
+    color: red;
+}
+.unvalidPlaceholder::placeholder{
+    color: red;
+}
 .allInputs {
   box-sizing: border-box;
 

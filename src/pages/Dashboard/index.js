@@ -9,7 +9,6 @@ function Dashboard() {
 
   return (
     <div>
-      Dashboard
       <div className={`${styles.dashboardPhoto}`}>
         <img src={dashboard} alt="dashboardPhoto" />
       </div>

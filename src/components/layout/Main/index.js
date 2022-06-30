@@ -39,7 +39,9 @@ import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 import Results from "../../../pages/TrainFocus/TrainFocusResults";
 import StartFocus from "../../../pages/TrainFocus/StartFocus";
 import Settings from "../../../pages/Settings";
-import Contact from "../../../pages/Contact/index";
+
+import Contact from "../../../../src/pages/Contact";
+
 import Instructions from "../../../pages/FreeStyle/Instructions";
 // import Exercise from "../../../pages/TrainFocus/Exercise";
 import Dashboard from "../../../pages/Dashboard";
@@ -103,6 +105,7 @@ function Main() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="contact" element={<Contact />} />
           <Route path="sign-out" element={<SignIn />} />
+          <Route path="change-password" element={<SignIn />} />
         </Route>
 
         {/* Team G */}
