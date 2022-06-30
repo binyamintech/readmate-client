@@ -4,13 +4,13 @@ import "./style.css";
 // Team C
 const TextArea = (props) => {
   return (
-    <div className="ta_box">
+    <div className='ta_box'>
       <div className="form-group">
         <label>{props.children}</label>
-        <input type="text" className="form-control" />
+        <input type="text" className="form-control" name={props.name} />
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default TextArea;

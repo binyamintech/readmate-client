@@ -1,15 +1,15 @@
 import styles from "./style.module.css";
 import FooterStart from "../../../components/common/FooterStart";
-// import './style.css';
-// import  useContext from 'react';
-// import { pageNameContext } from '../../../components/common/';
-// import FooterStart from '../../../components/common/FooterStart';
+import { pageNameContext } from '../../../components/layout/Layout'
 import group from "./group.jpg";
 import { useNavigate, Link, useLocation } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
 import UmooveApi from "../../../components/api/UmooveApi";
 // Creator : Team A -efrat & Yehoantan
 function Page3() {
+  const pageNameHeader = useContext(pageNameContext);
+  pageNameHeader.setPageName("page 3");
+
   const l = useLocation()
 
   const navigate = useNavigate()

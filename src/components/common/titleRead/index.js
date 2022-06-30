@@ -1,5 +1,5 @@
 // Creator : Team A - Daniel & Yehonatan
-import styles from './style.module.css'
+import './style.module.css';
 
 export default function TitleRead(props) {
 

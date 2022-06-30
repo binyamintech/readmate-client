@@ -1,36 +1,30 @@
-// import styles from './style.module.css'
 import "./style.css";
 import FooterStart from "../../../components/common/FooterStart";
 import Frame from "./Frame.jpg";
 import student from "./student.jpg";
-import { Link } from "react-router-dom";
 import { useEffect, useContext } from "react";
 import UmooveApi from "../../../components/api/UmooveApi";
 import { useNavigate } from "react-router-dom";
 import data from './data'
-// import { pageNameContext } from '../../../components/layout/Layout';
 import { dataContext } from '../../../context/context'
+import { pageNameContext } from '../../../components/layout/Layout'
 
+// Creator : Team A - Daniel
 
-// Creator : Team A - Daniel 
 export default function Page1() {
-    // const pageName = useContext(pageNameContext)
-    // pageName.setPageName("assessments Test")
-    let navigate = useNavigate()
+    const pageNameHeader = useContext(pageNameContext);
+    pageNameHeader.setPageName("page 1");
+
     const localDataContext = useContext(dataContext)
+    console.log('data:', localDataContext[0], typeof localDataContext[0]);
 
-    //    const getData = async ()=> {
-    //        const response = await fetch(url)
-    //        const data = await response.json()
-    //     }
-
+    let navigate = useNavigate()
     useEffect(() => {
-        // getData()
-        console.log('page 1:', localDataContext.assesmentTemplates[1]);
+        console.log('page 1:', localDataContext);
     })
 
     const startFunction = () => {
-        const data = localDataContext.assesmentTemplates[1];
+        const data = localDataContext[0];
         console.log('data:', data, typeof data);
         navigate('/teama/page3', { state: { data } })
     }
