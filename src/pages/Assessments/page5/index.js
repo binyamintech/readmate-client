@@ -2,7 +2,7 @@
 import React from 'react'
 import styles from "./style.module.css";
 import QuestionBoard from '../../../components/common/QuestionBoard'
-import SubmitBtn from '../../../components/common/SubmitBtn'
+import ButtonA from '../../../components/common/ButtonA'
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -39,25 +39,24 @@ export default function Page5() {
     const [result, setResult] = useState([])
     const n = useNavigate();
 
-    // const [arrOfAnswers,setarrOfAnswers]=useState([{orderNum:'',answer:''}])
     const arrOfAnswers = []
     let arr1 = [];
     arr1.length = 10;
     result.map((v, i) => {
         arr1[v.orderNum] = v;
-        // console.log(arr1)
-    // let navigate = useNavigate()
+    })
+
     const checkResults = () => {
-        
+        console.log("בחייאת");
+        n('/teama/page6', { state: { count: "count, WPM: a[0], STD: a[1], AVG: a[2] " } })
+        arrOfAnswers.push({ orderNum: arr1.orderNum, answer: false })
         let count = 0;
-        (data.exam[0].questions).map((v, i) => {
-            if (data.exam[0].questions[0].answer == arr1[(i + 1)].answer) {
-                //    setarrOfAnswers({orderNum:v.orderNum,answer:true})
+        (data.questions).map((d, i) => {
+            if (d.questions[i].answer == arr1[(i + 1)].answer) {
                 arrOfAnswers.push({ orderNum: arr1.orderNum, answer: true })
                 count++;
             }
             else {
-                // setarrOfAnswers({orderNum:v.orderNum,answer:false})
                 arrOfAnswers.push({ orderNum: arr1.orderNum, answer: false })
             }
         })
@@ -66,32 +65,29 @@ export default function Page5() {
         // console.log(arrOfAnswers)
         let a = Calc()
         n('/teama/page6', { state: { count: count, WPM: a[0], STD: a[1], AVG: a[2] } })
-       
     }
-
-    // const arr = data.exam[0].questions
-    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const arr = data.data[0].questions
+    // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     return (
         <>
             <div className={styles.questions}>
                 {arr.map((v, i) => {
                     return (
-                        <QuestionBoard title={data.exam[0].questions[i].title} key={i} result={result} setResult={setResult} i={i} arr={arr1} />
+                        <QuestionBoard title={v.title} key={i} result={result} setResult={setResult} i={i} arr={arr1} />
                     )
                 })}
             </div>
             <div>
-                <SubmitBtn startFunction={() => { checkResults() }} name={'next'} />
+                <ButtonA name={"done"} startFunction={() => checkResults()} />
             </div>
             {
                 console.log(result)
-               
+
             }
             {
-                //  console.log("resulte"+arrOfAnswers)
             }
 
         </>
     )
-        
-    
+
+}
