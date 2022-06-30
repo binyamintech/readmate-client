@@ -12,12 +12,12 @@ function QuestionBoard({ setResult, result, i, title,arr }) {
 
     const handleClick = () => {
         setResult([...result, { title: "", orderNum: (i + 1), answer: true }])
-        console.log(result)
+        // console.log(result)
 
     }
     const handleClick2 = () => {
         setResult([...result, { title: "", orderNum: (i + 1), answer: false }])
-        console.log(result)
+        // console.log(result)
     }
     // const Answer=()=>{
     //     setResult([...result, { title: "", orderNum: (i + 1), answer: true }])

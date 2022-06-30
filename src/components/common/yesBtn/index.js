@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './style.module.css'
-export default function YesBtn({ handleClick, yes, no }) {
+export default function YesBtn({ handleClickyes,handleClickno, yes, no }) {
     return (
         <div className={styles.buttons}>
-            <button onClick={handleClick} >{yes}
+            <button onClick={handleClickyes} >{yes}
             </button>
-            <button onClick={handleClick} >{no}
+            <button onClick={handleClickno} >{no}
             </button>
         </div>
     )
