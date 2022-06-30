@@ -1,6 +1,6 @@
 .DashGraph {
     background-color: rgb(255, 229, 195);
-    position: absolute;
+    
     justify-content: center;
     align-items: center;
     margin: 5%;
@@ -44,7 +44,7 @@
 }
 
 .SelectBtn {
-    position: absolute;
+
     right: 5px;
 
     

@@ -5,7 +5,7 @@ import { FiSettings } from "react-icons/fi";
 import { MdLogout } from "react-icons/md";
 import { FaRegAddressBook } from "react-icons/fa";
 import { NavButton } from "../NavButton/NavButton";
-import NavBackButt from "../NavBackButt";
+
 import { NavHead } from "../NavHead";
 
 // creator: shmuel asherov team-f
@@ -14,7 +14,6 @@ export const NavBar = (props) => {
     <div className={`${styles.opacity}`}>
       <div className={`${styles.box}`}>
         <NavHead setClose={props.setClose} />
-        <NavBackButt />
         <ul>
           <li className={`${styles.btn}`}>
             <NavButton
