@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { dataContext } from "./context";
-import fakeData from "./fakeData";
+import { fakeData } from "./fakeData";
 export const DataProvider = ({ children }) => {
   const [userDetails, setUserDetails] = useState(fakeData.userDetails);
   const [assesmentResults, setAssesmentsResults] = useState(
