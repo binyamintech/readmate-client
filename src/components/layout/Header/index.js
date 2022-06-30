@@ -8,6 +8,7 @@ import "./header.css";
 //group c- yoav & yehoshua
 
 export default function Header() {
+
   const pageNameContextLocal = useContext(pageNameContext); //assuming context is in use
 
   // console.log(pageNameContextLocal.pageName);
@@ -31,6 +32,7 @@ export default function Header() {
             }}
           />
         )}
+
       </div>
 
       <div className="mid">{pageNameContextLocal.pageName}</div>
@@ -38,6 +40,8 @@ export default function Header() {
       <div className="right">
         <img src={photoPic} alt="User Name" />
       </div>
+
     </div>
   );
+
 }
