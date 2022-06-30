@@ -1,5 +1,5 @@
 import React from "react";
-import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import { CountdownCircleTimer } from "react-countdown-circle-timer"
 import { useState } from "react";
 import styles from "./style.module.css";
 import SquareButton from "../SquareButton";

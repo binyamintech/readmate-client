@@ -1,5 +1,5 @@
 import Test from "../../test/Test";
-import Header from "../header";
+import Header from "../Header"
 import Nav from "../Nav";
 import { Route, Routes } from "react-router-dom"
 import Exercise from "../../../pages/TrainReading/Level/Exercise"

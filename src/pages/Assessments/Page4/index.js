@@ -9,12 +9,11 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { pageNameContext } from '../../../components/layout/Layout'
 
 // Creator : Team A - Amos
-// const [pageName, setPageName] = useContext(pageNameContext)
 
 function Page4() {
 
     const pageNameHeader = useContext(pageNameContext);
-    pageNameHeader.setPageName("page 4");
+    pageNameHeader.setPageName("Comprehension");
 
     const l = useLocation()
     console.log(l);
@@ -22,11 +21,14 @@ function Page4() {
 
     const nextPage = () => {
         console.log("clicked", "that what i send :", { state: { data: l.state.data.data } });
-        // UmooveApi.API_stopReading();//לבדוק
-        // UmooveApi.API_stopUmoove();
-        navigate('/teama/page5', { state: { data: l.state.data.data } });
+        let mspr = UmooveApi.API_stopReading();//לבדוק
+        console.log("x:", mspr);
+        {
+            UmooveApi.API_stopUmoove();
+            // console.log("reading info: ", res);
+            navigate('/teama/page5', { state: [{ data: l.state.data.data }, { mspr: mspr }] });
+        }
     }
-
     useEffect(() => { UmooveApi.API_startReading() }, [])
 
     console.log(`${l.state.data.data.img}`)
@@ -46,4 +48,5 @@ function Page4() {
         </div>
     </>
 }
+
 export default Page4

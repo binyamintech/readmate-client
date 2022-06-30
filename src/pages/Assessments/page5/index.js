@@ -12,7 +12,7 @@ export default function Page5() {
 
     let location = useLocation();
     const data = location.state;
-    console.log(data)
+    console.log("page 5 : ", data)
     // console.log(data.exam[0].questions)
     function Calc() {
         // server
@@ -94,7 +94,7 @@ export default function Page5() {
 
     }
 
-    const arr = data.data[0].questions
+    const arr = data.data.questions
     // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     return (
         <>
