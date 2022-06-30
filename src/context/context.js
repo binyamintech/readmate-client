@@ -1,6 +1,8 @@
 import { createContext } from "react";
+import { tests } from "./fakeData";
 
-export const dataContext = createContext();
+const dataContext = createContext(tests);
 
 //---נא לקבל שינויים של קונטקטס לpopup
-export const popupContext = createContext();
+const popupContext = createContext();
+export { dataContext, popupContext }
