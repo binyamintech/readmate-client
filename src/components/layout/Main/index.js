@@ -1,5 +1,5 @@
 import Test from "../../test/Test";
-import Header from "../Header/index1";
+import Header from "../Header";
 import Nav from "../Nav";
 import Popup from "../Popup";
 import { Route, Routes } from "react-router-dom";
