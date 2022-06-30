@@ -14,7 +14,6 @@ export default function Header() {
   const [navState, setNavState] = useState(false);
 
   return (
-    // pageNameContextLocal.showHeader?
     <div className="header">
       <div className="left">
         {!navState ? (
@@ -40,6 +39,5 @@ export default function Header() {
         <img src={photoPic} alt="User Name" />
       </div>
     </div>
-    // :console.log("no header")
   );
 }

@@ -39,7 +39,9 @@ import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 import Results from "../../../pages/TrainFocus/TrainFocusResults";
 import StartFocus from "../../../pages/TrainFocus/StartFocus";
 import Settings from "../../../pages/Settings";
+
 import Contact from "../../../../src/pages/Contact";
+
 import Instructions from "../../../pages/FreeStyle/Instructions";
 // import Exercise from "../../../pages/TrainFocus/Exercise";
 import Dashboard from "../../../pages/Dashboard";
