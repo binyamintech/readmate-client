@@ -59,16 +59,16 @@ export default function ChangePassword() {
     return (
 
         <form >
-            <Input type="text" content="Enter old password" legend="Old Password" name="OldPassword" onInput={e => validateErrorOldPassword(e)} />
+            <Input type="password" content="Enter old password" legend="Old Password" name="OldPassword" onInput={e => validateErrorOldPassword(e)} />
             {erroroldPassword && <span> Password should be at least 5 charecters</span>}
-            <Input type="text" content="Enter new password" legend="New Password" name="NewPassword" onInput={e => validateErrorNewPassword(e)} />
+            <Input type="password" content="Enter new password" legend="New Password" name="NewPassword" onInput={e => validateErrorNewPassword(e)} />
             {errorNewPassword && <span> New password should be different from the old one</span>}
-            <Input type="text" content="Enter confirm password" legend="Confirm Password" name="Confirm Password" onInput={e => validateErrorConfirmPassword(e)} />
+            <Input type="password" content="Enter confirm password" legend="Confirm Password" name="Confirm Password" onInput={e => validateErrorConfirmPassword(e)} />
             {errorConfirmPassword && <span> confirmed password is not matched</span>}
 
             <div className="cpSubmitContainer">
                 <SubmitBtn name="Submit" path="login" type="button" value="Click to Open Popup" onSubmit={e => validateErrorConfirmPassword(e)} />
-                {errorConfirmPassword && <span> One of the fields is not valid</span>}
+                {/* {errorConfirmPassword && <span> One of the fields is not valid</span>} */}
             </div>
 
             {/* <div className="cpSubmitContainer">
