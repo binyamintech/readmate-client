@@ -11,6 +11,7 @@ import CalibrateCam from "../../../pages/TrainFocus/CalibrateCam";
 import Results from "../../../pages/TrainFocus/TrainFocusResults";
 import StartFocus from "../../../pages/TrainFocus/StartFocus/StartFocus";
 import { pageNameContext } from "../Layout";
+import { dataContext } from "../../../context/context";
 import { useContext } from "react";
 import TeamA from "../../teams/TeamA";
 import Page1 from "../../../pages/Assessments/Page1";
@@ -18,13 +19,13 @@ import Page6 from "../../../pages/Assessments/Page6";
 import Page5 from "../../../pages/Assessments/Page5";
 import Page4 from "../../../pages/Assessments/Page4";
 import Page3 from "../../../pages/Assessments/Page3";
-
+import Popup from '../Popup'
 
 function Main() {
-  const pageNameContextLocal = useContext(pageNameContext)
+  const localDataContext = useContext(dataContext)
   return (
     <>
-      {pageNameContextLocal.showHeader && <Header />}
+      {localDataContext.showHeader && <Header />}
 
 
 
@@ -46,14 +47,14 @@ function Main() {
         </Route> */}
 
         {/* Team C */}
-        {/* <Route path="train_reading_level"> */}
-        {/* <Route index element={<>team's components</>} /> */}
-        {/* <Route path="exercise" element={<Exercise />} />
+        <Route path="train_reading_level">
+          {/* <Route index element={<>team's components</>} /> */}
+          <Route path="exercise" element={<Exercise />} />
           <Route path="exercise_clock" element={<ExerciseClock />} />
           <Route path="rate" element={<ExerciseRate />} />
           <Route path="question" element={<ExerciseQuestion />} />
           <Route path="result" element={<ExerciseResult />} />
-        </Route> */}
+        </Route>
 
         {/* Team D */}
         {/* <Route path="teams-path">
@@ -95,7 +96,9 @@ function Main() {
       </Routes>
 
       <Nav />
-      {/* <Popup /> */}
+      {localDataContext.popup && (
+        <Popup bookDetails={{ name: "harry potter", genre: "novel" }} />
+      )}
     </>
   );
 }
