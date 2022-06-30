@@ -22,6 +22,7 @@ export default function Page1() {
     useEffect(() => {
         console.log('page 1:', localDataContext);
     })
+
     const startFunction = () => {
         const data = localDataContext[0];
         console.log('data:', data, typeof data);

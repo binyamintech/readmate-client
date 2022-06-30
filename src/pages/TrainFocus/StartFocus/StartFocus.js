@@ -1,3 +1,4 @@
+// import FooterStart from "../../../components/common/FooterStart/"
 import "./style.css";
 import FooterStart from "../../../components/common/FooterStart";
 import Frame from "../../../assets/img/logo/Frame.png";
@@ -64,6 +65,13 @@ function StartFocus() {
           <source src={mirror} type="video/mp4"></source>
         </video>
       </div>
+
+      {/* <FooterStart
+        startFunction={startFunction}
+        title={title}
+        explanation={RoundNumber === 1 ? explanation1 : explanation2}
+      img={Frame}
+      /> */}
     </div>
     //       <FooterStart
     //   startFunction={startFunction}
