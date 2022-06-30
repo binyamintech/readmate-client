@@ -1,7 +1,7 @@
 import styles from "./style.module.css";
 import UseRedirectValidation from "../../hooks/useRedirectValidation";
 import dashboard from "../../assets/img/dashboard icons/dashboard.jpeg";
-
+import Box1 from "./options";
 // Creator : Team F - Asael
 
 function Dashboard() {
@@ -9,9 +9,7 @@ function Dashboard() {
 
   return (
     <div>
-      <div className={`${styles.dashboardPhoto}`}>
-        <img src={dashboard} alt="dashboardPhoto" />
-      </div>
+      <Box1 />
     </div>
   );
 }
