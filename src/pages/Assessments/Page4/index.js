@@ -22,8 +22,8 @@ function Page4() {
 
     const nextPage = () => {
         console.log("clicked", "that what i send :", { state: { data: l.state.data.data } });
-        // UmooveApi.API_stopReading();//לבדוק
-        // UmooveApi.API_stopUmoove();
+        UmooveApi.API_stopReading();//לבדוק
+        UmooveApi.API_stopUmoove();
         navigate('/teama/page5', { state: { data: l.state.data.data } });
     }
 
