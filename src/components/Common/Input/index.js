@@ -2,6 +2,7 @@ import "./style.css";
 
 // Creator : Team d - oriya
 export default function Input(props) {
+  
     const border= props.valid?"":"unvalid"
     const label= props.valid?"":"unvalidLabel"
     const text= props.valid?"":"unvalidLabel"
