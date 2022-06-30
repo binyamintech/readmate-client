@@ -30,28 +30,28 @@ export default function Settings() {
  const [validText2, setValidText2] = useState(true) 
  const [validText3, setValidText3] = useState(true) 
   function validate(field, value) {
-    if (updatedUser[field].length < 2) {
+    if (updatedUser[field].length < 1) {
         setValidText(false)
     }else{
         setValidText(true)
     }
   }
   function validate1(field, value) {
-    if (updatedUser[field].length < 2) {
+    if (updatedUser[field].length < 1) {
         setValidText1(false)
     }else{
         setValidText1(true)
     }
   }
   function validate2(field, value) {
-    if (updatedUser[field].length < 2) {
+    if (updatedUser[field].length < 1) {
         setValidText2(false)
     }else{
         setValidText2(true)
     }
   }
   function validate3(field, value) {
-    if (updatedUser[field].length < 2) {
+    if (updatedUser[field].length < 1) {
         setValidText3(false)
     }else{
         setValidText3(true)
