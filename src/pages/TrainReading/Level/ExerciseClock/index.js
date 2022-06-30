@@ -1,213 +1,99 @@
-import { useContext } from 'react';
-import { pageNameContext } from '../../../../components/layout/Layout';
-
-import React from 'react'
-import './style.css';
-import SoundBar from "./SoundBar.png"
-import Clock from "../../../../components/common/Clock"
-import SquareButton from '../../../../components/common/SquareButton';
+import styles from "./style.module.css";
+import Clock from "../../../../components/common/Clock";
+// import SoundFooter from "../../../../../components/common/SoundFooter"
+import React, { useContext } from "react";
+import { useState } from "react"
+import { dataContext } from "../../../../context/context";
+import SquareButton from "../../../../components/common/SquareButton";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useState, useEffect, useRef } from 'react';
 
-const ExerciseClock = () => {
 
-  const pageNameHeader = useContext(pageNameContext);
-  pageNameHeader.setPageName("Level Exercise");
+// Creator : Team C bu the amazing Help from Nurit & Milka
+function ExerciseClock() {
 
   const LPM2 = useLocation()
-  // console.log(LPM2.state.LPM);
-  const LPM = LPM2.state.LPM
+  //   // console.log(LPM2.state.LPM);
+  const rapidValue = 16 // LPM2.state.LPM
 
+  // const localDataContext = useContext(dataContext)
+  // const tr = localDataContext.userDetails.TR
+  // console.log('userLpm', tr[tr.length - 1]);
 
+  const [lpm, setLpm] = useState(rapidValue)
+  // const [lpm, setLpm] = useState(tr[tr.length - 1].Value)
+  let fileName = pickFile(lpm);
+  const file = require(`../../../../assets/audio/wush_mp3/wush_${fileName}_1min.mp3`);
 
+  const [audio, setAudio] = useState(new Audio(file));
+  const [playing, setPlaying] = useState(0)
 
-
-  // const audioRef = useRef();
-  // const [lpm, setLpm] = useState(16); // i have to set the LPM here
-
-  // let [fileName, lpmFile] = pickFile(lpm);
-  // console.log("fileName ", fileName);
-  // // console.log("lpmFile ", lpmFile);
-
-
-  // useEffect(() => {
-  //   const audio = require('../../../../assets/audio/wush_mp3/wush_100_1min.mp3');
-  //   console.log("audio ", audio);
-  //   audioRef.current.src = audio;
-  //   console.log(audioRef.current.src);
-  // }, []);
-
-
-  // const [changePercent, setChangePercent] = useState(lpm / lpmFile);
-  // const [sec, setSec] = useState(1);
-  // console.log("lpm ", lpm);
-  // console.log("lpmFile ", lpmFile);
-  // const [play, setPlay] = useState(false);
-  // ///////////////////////////////////////////////////////////////////////////////////
-  // function change() {
-  //   setTimeout(() => {
-  //     // let count = changePercent + ((0.125 * (lpm / lpmFile)) / 180)
-  //     let count = changePercent + ((0.125 * (lpm / lpmFile)) / 180)
-  //     // let count = changePercent * (1 + (0.125 / 180))
-
-  //     setChangePercent(count)
-  //   }, 1000);
-  // }
-  // //////////////////////////////////////////////////////////////////////////////////
-  // useEffect(() => {
-  //   if (play) {
-  //     change();
-  //     setSec(sec + 1)
-  //     // debugger;
-  //     // audioRef.current.src = audio;
-  //     // console.log(audioRef.current.src);
-  //     audioRef.current.playbackRate = changePercent;
-  //     audioRef.current.play();
-  //     // console.log(Date.now().toString());
-  //     console.log(changePercent);
-  //   }
-  // }, [changePercent, play])
-
-  // // audioRef.current.src = audio;
-  // // console.log(audioRef.current.src)
-  // // audioRef.current.playbackRate = changePercent;
-
-
-
-
-
-  // function pickFile(lpm) {
-  //   let array = [10, 20, 40, 60, 80, 100];
-  //   let index = 0;
-  //   for (let i in array) {
-  //     if (lpm > array[i]) {
-  //       index = Number(i);
-  //     }
-  //   }
-  //   if (lpm - array[index] > array[index + 1] - lpm) {
-  //     index++;
-  //   }
-  //   // console.log("index  ", index);
-  //   // console.log(array[index]);
-  //   let fileName = "../../../../assets/audio/wush_mp3/wush_" + array[index] + "_1min.mp3";
-  //   // console.log(fileName);
-  //   return [fileName, array[index]];
-  // }
-
-  const navigate = useNavigate();
-
-  const route = '/train_reading_level/rate'
-
-  const shaulFuncs = {
-    // onPlay: shaulOnPlay,
-    // onPause: shaulOnPause,
-    onComplete: shaulOnComplete
+  function pickFile(lpm) {
+    let array = [10, 20, 40, 60, 80, 100];
+    let index = 0;
+    for (let i in array) {
+      if (lpm > array[i]) {
+        index = Number(i);
+      }
+    }
+    if (lpm - array[index] > array[index + 1] - lpm) {
+      index++;
+    }
+    return array[index];
   }
 
-  const objProps = { LPM: LPM }
 
-  function shaulOnComplete() {
+  function onPlay() {
+    audio.play();
+    audio.playbackRate = lpm / fileName
+    setPlaying(1)
+
+  }
+
+  function onPause() {
+    audio.pause();
+    // console.log(file);
+    setPlaying(0) // soundfooter
+  }
+
+  // function rapid(newLpm) {
+  //   setLpm(newLpm);
+  //   console.log(file)
+  //   audio.playbackRate = lpm / fileName
+  //   console.log(audio.playbackRate);
+
+  // }
+
+  const objProps = { LPM: rapidValue }
+
+  const route = '/train_reading_level/rate'
+  const navigate = useNavigate()
+
+  function onComplete() {
+    audio.pause();
     navigate(route, { state: objProps })
   }
 
+  const freeStyleFuncs = {
+    onPlay: onPlay, //will turn on the music + remove button and add footer
+    onPause: onPause, //will pause the music + remove footer and add button
+    // rapid: rapid, // what to send when freeStyle false??
+    onComplete: onComplete
+  }
+
+
   return (
     <>
-      <div className="level_clock">
-        <Clock freeStyle={false} time={5} funcs={shaulFuncs}></Clock>
-        <div className="squareButton2"><strong>{LPM} LPM</strong></div>
-        <img src={SoundBar} />
-
-        {/* 
-        <div>
-          <audio autoplay ref={audioRef}> </audio>
-          <p>{changePercent / (lpm / lpmFile)}</p>
-          <p>{sec}</p>
-          <button onClick={() => { setPlay(true); audioRef.current.play(); }}>play </button>
-          <button onClick={() => { setPlay(false); audioRef.current.pause() }}>pause </button>
-        </div> */}
-      </div>
+      {/* <audio playbackRate={1} ref={audioRef}> </audio> */}
+      <Clock freeStyle={false} time={5} funcs={freeStyleFuncs} initRapidValue={lpm} ></Clock>
+      <SquareButton><div className={styles.rapid}>{rapidValue}</div>LPM</SquareButton>
+      {/* {playing ? */}
+      {/* <SoundFooter song = {file}></SoundFooter> : <SubmitBtn type={"link"} name={"Done"} path = {"/teamH/graphDashboard"}></SubmitBtn>} */}
+      {/* <SoundFooter song={file}></SoundFooter> */}
     </>
-  )
+  );
 }
 
-export default ExerciseClock
+export default ExerciseClock;
 
 
-// import React from 'react'
-// import { useState, useEffect, useRef } from 'react';
 
-// export default function PushUpTimer() {
-
-
-//     const audioRef = useRef();
-//     const [lpm, setLpm] = useState(9); // i have to set the LPM here
-
-//     let [fileName, lpmFile] = pickFile(lpm);
-//     useEffect(() => {
-//         const audio = require(fileName + "");
-//         audioRef.current.src = audio;
-//         console.log(audioRef.current.src);
-//     }, []);
-
-
-//     const [changePercent, setChangePercent] = useState(lpm / lpmFile);
-//     const [sec, setSec] = useState(1);
-//     console.log("lpm ", lpm);
-//     console.log("lpmFile ", lpmFile);
-//     const [play, setPlay] = useState(false);
-/////////////////////////////////////////////////////////////////////////////////////
-//     function change() {
-//         setTimeout(() => {
-//             // let count = changePercent + ((0.125 * (lpm / lpmFile)) / 180)
-//             let count = changePercent + ((0.125 * (lpm / lpmFile)) / 180)
-//             // let count = changePercent * (1 + (0.125 / 180))
-
-//             setChangePercent(count)
-//         }, 1000);
-//     }
-////////////////////////////////////////////////////////////////////////////////////
-//     useEffect(() => {
-//         if (play) {
-//             change();
-//             setSec(sec + 1)
-//             // debugger;
-//             // audioRef.current.src = audio;
-//             // console.log(audioRef.current.src);
-//             audioRef.current.playbackRate = changePercent;
-//             audioRef.current.play();
-//             // console.log(Date.now().toString());
-//             console.log(changePercent);
-//         }
-//     }, [changePercent, play])
-
-//     // audioRef.current.src = audio;
-//     // console.log(audioRef.current.src)
-//     // audioRef.current.playbackRate = changePercent;
-
-//     return (
-//         <div>
-//             <audio ref={audioRef}> </audio>
-//             <p>{changePercent / (lpm / lpmFile)}</p>
-//             <p>{sec}</p>
-//             <button onClick={() => { setPlay(true); audioRef.current.play(); }}>play </button>
-//             <button onClick={() => { setPlay(false); audioRef.current.pause() }}>pause </button>
-
-//         </div>)
-// }
-////////////////////////////////////////////////////////////////////////////////////
-// function pickFile(lpm) {
-//     let array = [10, 20, 40, 60, 80, 100];
-//     let index = 0;
-//     for (let i in array) {
-//         if (lpm > array[i]) {
-//             index = Number(i);
-//         }
-//     }
-//     if (lpm - array[index] > array[index + 1] - lpm) {
-//         index++;
-//     }
-//     // console.log(index);
-//     let fileName = `./wush_mp3/wush_${array[index]}_1min.mp3`; // the real path need to be added
-
-//     return [fileName, array[index]];
-// }
