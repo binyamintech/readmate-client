@@ -14,16 +14,11 @@ import { dataContext } from '../../../context/context'
 export default function Page1() {
 
     const localDataContext = useContext(dataContext)
-    // const currentName = pageNameHeader.changePageName;
-    // const fun = (localDataContext.changePageName);
-    // const m = () => fun("page")
-    // m()
-    // console.log(localDataContext.changePageName);
-
+    const header = localDataContext.changePageName
     let navigate = useNavigate()
     useEffect(() => {
         console.log('page 1:', localDataContext.assesmentsTemplates[0]);
-        localDataContext.changePageName('Page 1')
+        header('Page 1')
     }, [])
 
     const startFunction = () => {

@@ -5,17 +5,18 @@ import group from "./group.jpg";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState, useContext } from "react";
 import UmooveApi from "../../../components/api/UmooveApi";
+import { dataContext } from '../../../context/context'
 // Creator : Team A -efrat & Yehoantan
 function Page3() {
   // const pageNameHeader = useContext(pageNameContext);
   // pageNameHeader.setPageName("page 3");
 
 
-  // const localDataContext = useContext(dataContext)
-  // useEffect(() => {
-  //   console.log('page 1:', localDataContext.assesmentsTemplates[0]);
-  //   localDataContext.changePageName('Page 3')
-  // }, [])
+  const localDataContext = useContext(dataContext)
+  useEffect(() => {
+    console.log('page 1:', localDataContext.assesmentsTemplates[0]);
+    localDataContext.changePageName('Page 3')
+  }, [])
 
   const l = useLocation()
   console.log(l);

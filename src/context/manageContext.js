@@ -8,9 +8,9 @@ export const DataProvider = ({ children }) => {
     fakeData.assesmentResults
   );
   const [popup, setPopup] = useState(false);
-  const [navBar, setNavBar] = useState(false);
+  const [navBar, setNavBar] = useState(true);
   const [showNavIcon, setShowNavIcon] = useState(false);
-  const [showHeader, setShowHeader] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
   const [update, setUpdate] = useState(false);
   const [pageName, setPageName] = useState("Default page name");
 

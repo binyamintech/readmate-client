@@ -1,21 +1,26 @@
-// import SubmitBtn from "../../../components/common/SubmitBtn";
 import ButtonA from "../../../components/common/ButtonA";
 import styles from "../Page6";
 import Result from "./Result.svg";
 import RatingAndScore from "../../../components/common/ReatingAndScore";
-import { useContext } from "react";
-import pageNameContext from "../../../components/layout/Layout";
-import { useLocation, useNavigate} from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { dataContext } from '../../../context/context'
+
+
 // Creator : Team A - Efart
 function Page6() {
-  console.log("222");
-  // const [pageName, setPageName] = useContext(pageNameContext);
-  // setPageName("Result Summary");
+
+  const localDataContext = useContext(dataContext)
+  useEffect(() => {
+    localDataContext.changePageName('Page 6')
+  }, [])
+
   const l = useLocation()
   const n = useNavigate()
 
   const nextPage = () => {
-     n('/dashboard') }
+    n('/dashboard')
+  }
 
 
   console.log(l.state);
@@ -25,18 +30,18 @@ function Page6() {
         <img src={Result} alt="" className={styles.img} />
       </div>
       <div className={styles.ratingAndScore}>
-        <RatingAndScore wpm={120} std={5} compScore={8} className={styles.front}/>
+        <RatingAndScore wpm={120} std={5} compScore={8} className={styles.front} />
       </div>
-                < ButtonA name={"Go to Dashboard"} startFunction={() => nextPage()} />
-        </div>
-      
+      < ButtonA name={"Go to Dashboard"} startFunction={() => nextPage()} />
+    </div>
+
   )
-      {/* <SubmitBtn
+  {/* <SubmitBtn
         path={"/dashboard"}
         name={"Go to Dashboard"}
         onclick={() => {}}
       /> */}
-    // </div>
+  // </div>
   ;
 }
 

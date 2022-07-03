@@ -3,12 +3,16 @@ import React from 'react'
 import styles from "./style.module.css";
 import QuestionBoard from '../../../components/common/QuestionBoard'
 import ButtonA from '../../../components/common/ButtonA'
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-
+import { dataContext } from '../../../context/context'
 
 // import Calc from '../Calc';
 export default function Page5() {
+    const localDataContext = useContext(dataContext)
+    useEffect(() => {
+        localDataContext.changePageName('Page 5')
+    }, [])
     let location = useLocation();
     console.log(location);
     const data = location.state;

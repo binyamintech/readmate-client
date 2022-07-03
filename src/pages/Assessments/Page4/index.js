@@ -3,17 +3,19 @@ import styles from './style.module.css'
 import ButtonA from '../../../components/common/ButtonA'
 import { useContext, useEffect, useState } from 'react'
 import '../../../components/api/UmooveApi'
-// import { Link } from 'react-router-dom'
+import { dataContext } from '../../../context/context'
 import UmooveApi from '../../../components/api/UmooveApi'
 import { useNavigate, useLocation } from 'react-router-dom';
-import { pageNameContext } from '../../../components/layout/Layout'
 
 // Creator : Team A - Amos
 
 function Page4() {
 
-    // const pageNameHeader = useContext(pageNameContext);
-    // pageNameHeader.setPageName("Comprehension");
+
+    const localDataContext = useContext(dataContext)
+    useEffect(() => {
+        localDataContext.changePageName('Page 4')
+    }, [])
 
     const l = useLocation()
     console.log(l.state.data);

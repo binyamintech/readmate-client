@@ -5,13 +5,15 @@ import { pageNameContext, navBarContext } from "../Layout";
 import nav from "./img/nav-icon.png";
 import photoPic from "./img/userPhoto.png";
 import "./header.css";
+import { dataContext } from "../../../context/context";
 
 //group c- yoav & yehoshua
 
 export default function Header() {
-  const pageNameContextLocal = useContext(pageNameContext); //assuming context is in use
+  // const pageNameContextLocal = useContext(pageNameContext); //assuming context is in use
+  const pageNameContextLocal = useContext(dataContext); //assuming context is in use
   const [navState, setNavState] = useState(false);
-  console.log(pageNameContextLocal.pageName);
+  // console.log(pageNameContextLocal.pageName);
 
   return (
     <>
@@ -30,19 +32,19 @@ export default function Header() {
         {!navState ? (
           <div
             onClick={() => {
-              setNavState(true);
-            }}
+              setNavState(false);
+              }}
           >
             <img src={nav} alt="" />
           </div>
-        ) : (
-          <NavBar
-            setClose={() => {
-              setNavState(!navState);
-            }}
-          />
-        )}
-      </div>
+        (
+      <NavBar
+          setClose={() => {
+          setNavState(!navState);
+        }}
+          
+        
+      v>
     </>
-  );
+    
 }
