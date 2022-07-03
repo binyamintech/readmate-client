@@ -27,7 +27,7 @@ export default function Header() {
             <img src={photoPic} alt="User Name " />
         </div>
 
-        <div>
+        {/* <div>
 
             {!navState ? (
                 <div onClick={() => { setNavState(false); }}>
@@ -37,7 +37,7 @@ export default function Header() {
                 :
                 (<NavBar setClose={() => { setNavState(!navState); }} />)
             }
-        </div>
+        </div> */}
 
     </div>
 

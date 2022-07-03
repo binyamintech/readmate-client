@@ -54,7 +54,7 @@ export default function Page5() {
 
     const checkResults = () => {
         console.log("בחייאת");
-        n('/teama/page6', { state: { count: "count, WPM: a[0], STD: a[1], AVG: a[2] " } })
+        n('/teama/page6', { state: { count: "count, WPM: a[0], STD: a[1], AVG: a[2]" } })
         arrOfAnswers.push({ orderNum: arr1.orderNum, answer: false })
         let count = 0;
         (data.questions).map((d, i) => {

@@ -22,6 +22,7 @@ function Page4() {
     console.log("page4" + l.state);
     const navigate = useNavigate();
 
+    useEffect(() => { UmooveApi.API_startReading() }, [])
     const nextPage = () => {
         console.log("clicked", "that what i send :", { state: { data: l.state.data } });
         let mspr = UmooveApi.API_stopReading();//לבדוק
@@ -32,7 +33,6 @@ function Page4() {
             navigate('/teama/page5', { state: [{ data: l.state.data }, { mspr: mspr }] });
         }
     }
-    useEffect(() => { UmooveApi.API_startReading() }, [])
 
     // console.log(`${l.state.data.img}`)
 
