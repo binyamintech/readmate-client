@@ -23,7 +23,7 @@ export default function Page1() {
     let navigate = useNavigate()
     useEffect(() => {
         console.log('page 1:', localDataContext.assesmentsTemplates[0]);
-        localDataContext.changePageName('')
+        localDataContext.changePageName('Page 1')
     }, [])
 
     const startFunction = () => {

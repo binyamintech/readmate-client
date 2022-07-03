@@ -10,6 +10,13 @@ function Page3() {
   // const pageNameHeader = useContext(pageNameContext);
   // pageNameHeader.setPageName("page 3");
 
+
+  // const localDataContext = useContext(dataContext)
+  // useEffect(() => {
+  //   console.log('page 1:', localDataContext.assesmentsTemplates[0]);
+  //   localDataContext.changePageName('Page 3')
+  // }, [])
+
   const l = useLocation()
   console.log(l);
   console.log(l.state.testData);
